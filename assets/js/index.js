@@ -34,13 +34,10 @@ var MVVM = {
                 { productName: 'Apple USB-C Woven Charge Cable', price: 'Ksh.500', description: 'Fast charging for Apple devices', image: 'assets/img/cables/Apple USB-C Woven Charge Cable.jpg' },
                 { productName: 'Apple Lightning to USB Cable (1 m)', price: 'Ksh.700', description: 'Durable and high-speed charging', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg' },
                 { productName: 'Apple Thunderbolt 3 (USB‑C) Cable (0.8 m)', price: 'Ksh.450', description: 'Supports Thunderbolt 3 data transfer up to 40 Gbps', image: 'assets/img/cables/Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).jpg' },
-                { productName: 'Belkin Boost Charge USB-C to Lightning Cable', price: 'Ksh.600', description: 'Fast charging for Apple devices', image: 'assets/img/cables/belkin-boost-charge-usb-c-to-lightning.jpg' },
-                { productName: 'AmazonBasics USB Type-C to USB Type-C 2.0 Charger Cable', price: 'Ksh.300', description: 'Affordable USB-C to USB-C cable', image: 'assets/img/cables/amazonbasics-usb-type-c-to-usb-type-c.jpg' },
-                { productName: 'UGREEN USB-C to HDMI Cable', price: 'Ksh.800', description: 'Connect USB-C devices to HDMI displays', image: 'assets/img/cables/ugreen-usb-c-to-hdmi.jpg' },
-                { productName: 'Cable Matters USB-C to Ethernet Adapter', price: 'Ksh.350', description: 'Add wired Ethernet to USB-C devices', image: 'assets/img/cables/cable-matters-usb-c-to-ethernet.jpg' },
-                { productName: 'AUKEY USB-C to 3.5mm Audio Adapter', price: 'Ksh.200', description: 'Connect USB-C devices to 3.5mm audio', image: 'assets/img/cables/aukey-usb-c-to-3.5mm-audio-adapter.jpg' },
-                { productName: 'CHOETECH USB-C to USB-C Cable (3-Pack)', price: 'Ksh.550', description: 'Multiple USB-C cables for various uses', image: 'assets/img/cables/choetech-usb-c-to-usb-c.jpg' },
-                { productName: 'JSAUX USB-C to USB-A Cable (2-Pack)', price: 'Ksh.400', description: 'USB-C to USB-A cables for versatile charging', image: 'assets/img/cables/jsaux-usb-c-to-usb-a.jpg' },
+                { productName: 'Otterbox Lightning - USB C (Fast Charge) | 1meter - Cloud Sky', price: 'Ksh.350', description: 'OtterBox Fast Charge Premium Lightning to USB-C Cable', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/5/9/59d2e8f5_3825924a_SW-OS-SW-TAP2-001.jpg' },
+                { productName: 'Apple Watch Magnetic Charging Cable (1 m)', price: 'Ksh.200', description: 'MagSafe technology with inductive charging', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1./preview/e/f/ef535460_64c2a777-Apple-Watch-Magnetic-Charging-Cable-1m.jpg' },
+                { productName: 'Belkin USB-C TO LTG, BRAID SIL, 2M', price: 'Ksh.550', description: 'SKU: Belkin USB-C TO LTG, BRAID SIL, 2M', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/b/8/b892c0a1_e574acb7_SW-OS-SW-TAP2-027.jpg' },
+                { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 'Ksh.400', description: 'supports Thunderbolt 3, Thunderbolt 4 and USB 4 data transfer up to 40Gb/s', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png' },
                 // Add more cables or other products as needed
             ]);
             
