@@ -71,7 +71,7 @@ var MVVM = {
             ]);
             
             
-            this.cartProducts = ko.observable([]);
+            this.cartProducts = ko.observableArray([]);
             var prods = [];
             this.sendMessage = function (value) {
                 debugger;
@@ -110,8 +110,10 @@ var MVVM = {
                 var self = this;
                 this.count(this.count() - 1);
                 //self.cartProducts().push(value);
-                prods.pop(value);
+                //prods.pop(value);
+                //prods.pop()
                 self.cartProducts(prods);
+                self.cartProducts.remove(value);
             }.bind(this);
 
             this.dateTwoDaysFromNow = ko.computed(function () {
