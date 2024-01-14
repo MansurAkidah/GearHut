@@ -155,6 +155,9 @@
                                 <div class="card-header py-3">
                                   <h5 class="mb-0">Cart - <span data-bind="text:count"></span> items</h5>
                                 </div>
+                                <div class="card-body" data-bind="if:count == 0">
+                                    <p><strong>No products in the cart yet</strong></p>
+                                </div>
                                 <div class="card-body" data-bind="foreach:cartProducts">
                                   <!-- Single item -->
                                   <div class="row">
@@ -178,16 +181,18 @@
                       
                                     <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                                       <!-- Quantity -->
-                                      <div class="d-flex mb-4" style="max-width: 300px">
-                                        <button class="btn btn-danger px-3 me-2" data-bind="click:$root.removeCart" >
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                      
+                                      <div class="mb-4" style="max-width: 300px">
+                                        
+                                        
                                         <div class="form-outline">
                                           <input id="form1" min="0" name="quantity" type="number" class="form-control" data-bind="value:quantity"/>
                                           <label class="form-label" for="form1">Quantity</label>
                                         </div>
-                      
+                                        <div class="form-outline">
+                                            <button class="btn btn-danger px-3 me-2" data-bind="click:$root.removeCart" >
+                                                Remove
+                                            </button>
+                                        </div>
                                         <!-- <button class="btn btn-primary px-3 ms-2" data-bind="click:$root.addCart" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                           <i class="fas fa-plus"></i>
                                         </button> -->
