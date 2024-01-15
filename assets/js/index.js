@@ -116,6 +116,17 @@ var MVVM = {
                 self.cartProducts.remove(value);
             }.bind(this);
 
+            this.totalPrizes = ko.computed(function() {
+                // Use ko.utils.arrayMap to create an array of prize values
+                var prizeValues = ko.utils.arrayMap(cartProducts(), function(item) {
+                    return cartProducts.price;
+                });
+        
+                // Use ko.utils.unwrapObservable to handle scenarios where items is not an observable array
+                return ko.utils.unwrapObservable(prizeValues).reduce(function(sum, prize) {
+                    return sum + prize;
+                }, 0);
+            })
             this.dateTwoDaysFromNow = ko.computed(function () {
                 var self = this;
                 var twoDaysFromNow = new Date();
