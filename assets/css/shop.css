@@ -139,6 +139,86 @@ h1, .h1 {
   background: linear-gradient(to right, rgba(37, 150, 190, 1), rgba(37, 135, 190, 1))
 }
 
+.tainer {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px 10px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: rgba(46, 46, 46, 0.2) 0px 8px 24px;
+  color: rgb(255, 255, 255);
+}
+
+#favorite {
+  display: none;
+}
+
+#favorite:checked + .tainer svg {
+  fill: #1e81b0;
+  stroke: #1e81b0;
+  animation: heartButton 1s;
+}
+
+@keyframes heartButton {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#favorite + .tainer .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+
+#favorite + .tainer .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  transition: all 0.5s;
+}
+
+#favorite + .tainer .action span.option-1 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+
+#favorite:checked + .tainer .action span.option-1 {
+  transform: translate(0px, -100%);
+  opacity: 0;
+}
+
+#favorite + .tainer .action span.option-2 {
+  transform: translate(0px, 100%);
+  opacity: 0;
+}
+
+#favorite:checked + .tainer .action span.option-2 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+
+
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
