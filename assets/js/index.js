@@ -9,11 +9,13 @@ var MVVM = {
             this.price = ko.observable();
             this.Description = ko.observable();
             this.image = ko.observable();
+            this.instock = ko.observable();
             this.count = ko.observable(0);
             this.totalSum = ko.observable(0);
             this.names = ko.observable();
             this.phoneNumber = ko.observable();
             this.location = ko.observable();
+            this.inquiryMessage = ko.observable();
             this.AirPodsList = ko.observable([
                 { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'assets/img/menu/airpods7.jpg' },
                 { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'assets/img/menu/airpods10.jpg'},
@@ -34,7 +36,6 @@ var MVVM = {
                 { productName: 'Beats Studio Buds', price: 1800, description: 'True Wireless Noise Cancelling Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg' },
                 { productName: 'JBL Free X', price: 1150, description: 'Truly Wireless In-Ear Headphones', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png' },
             ]);
-
             this.CablesList = ko.observable([
                 { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Fast charging for Apple devices', image: 'assets/img/cables/Apple USB-C Woven Charge Cable.jpg' },
                 { productName: 'Apple Lightning to USB Cable (1 m)', price: 700, description: 'Durable and high-speed charging', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg' },
@@ -45,7 +46,6 @@ var MVVM = {
                 { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'supports Thunderbolt 3, Thunderbolt 4 and USB 4 data transfer up to 40Gb/s', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png' },
                 // Add more cables or other products as needed
             ]);
-            
             this.AvailableList = ko.observable([
                 { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'assets/img/menu/airpods7.jpg', inStock: 1, quantity: 1 },
                 { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'assets/img/menu/airpods10.jpg', inStock: 1, quantity: 1 },
@@ -77,6 +77,30 @@ var MVVM = {
             var prods = [];
             this.sendMessageModal = function(){
                 // $("#messageModal").modal('show');
+            }
+            this.sendInquiry = function(){
+                debugger;
+                var self = this;
+                let num = 254745655524;
+                let msg = "inquire"
+                // this.cartProducts().forEach(function(item) {
+                //     msg += "%0A" +item.productName + "( " + item.image +" )"+ "for Ksh" + item.price ;
+                // });
+                let name = self.names();
+                let location = self.location();
+                debugger;
+                // var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20${msg}.
+                // `, '_blank');
+                let email = 'akidahmansur@gmail.com';
+                let subject = 'Inquiry';
+                let body = `Hi, my name is ${self.names()}. I would like to inquire about Your products:` + self.inquiryMessage();
+            
+                // this.cartProducts().forEach(function (item) {
+                //     body += `${item.productName} ( ${item.image} ) for Ksh ${item.price}\n`;
+                // });
+                var mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                var win = window.open(mailtoLink, '_blank');
             }
             this.sendMessage = function (value) {
                 debugger;
@@ -146,9 +170,22 @@ var MVVM = {
                 //prods.pop(value);
                 //prods.pop()
                 self.cartProducts(prods);
-                self.cartProducts.remove(value);
-            }.bind(this);
+                // self.cartProducts.remove(value);
+                // Find the first occurrence of the item in the array
+                var indexToRemove = self.cartProducts.indexOf(value);
 
+                // Remove the item if found
+                if (indexToRemove !== -1) {
+                    self.cartProducts.splice(indexToRemove, 1);
+                }
+                var totalPrice = 0;
+                // self.AvailableList().forEach(function(item) {
+                self.cartProducts().forEach(function(item) {
+                    totalPrice += item.price * item.quantity;
+                });
+                self.totalSum(totalPrice);
+            }.bind(this);
+            
             this.viewProduct = function(value){
                 debugger;
                 var self = this;
@@ -156,6 +193,7 @@ var MVVM = {
                 self.price(value.price);
                 self.Description(value.description);
                 self.image(value.image);
+                self.instock(value.instock)
                 $('#ProductModal').modal('show');
                 //self.cartProducts(prods);
             }.bind(this);
