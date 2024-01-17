@@ -16,9 +16,10 @@ var MVVM = {
             this.phoneNumber = ko.observable();
             this.location = ko.observable();
             this.inquiryMessage = ko.observable();
+            this.subject = ko.observable();
             this.AirPodsList = ko.observable([
-                { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'assets/img/menu/airpods7.jpg' },
-                { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'assets/img/menu/airpods10.jpg'},
+                { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png' },
+                { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png'},
                 { productName: 'Air R02', price: 1500, description: 'Denise', image: 'assets/img/menu/airr02.jpg' },
                 { productName: 'Sony WF-1000XM4', price: 2000, description: 'Industry-Leading Noise Cancelation', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg'},
                 { productName: 'Samsung Galaxy Buds Pro', price: 1800, description: 'Immersive Sound with Intelligent ANC', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg' },
@@ -37,7 +38,7 @@ var MVVM = {
                 { productName: 'JBL Free X', price: 1150, description: 'Truly Wireless In-Ear Headphones', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png' },
             ]);
             this.CablesList = ko.observable([
-                { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Fast charging for Apple devices', image: 'assets/img/cables/Apple USB-C Woven Charge Cable.jpg' },
+                { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Fast charging for Apple devices', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/1/c162a9b6_ea221940_MQKJ3.jpg' },
                 { productName: 'Apple Lightning to USB Cable (1 m)', price: 700, description: 'Durable and high-speed charging', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg' },
                 { productName: 'Apple Thunderbolt 3 (USB‑C) Cable (0.8 m)', price: 450, description: 'Supports Thunderbolt 3 data transfer up to 40 Gbps', image: 'assets/img/cables/Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).jpg' },
                 { productName: 'Otterbox Lightning - USB C (Fast Charge) | 1meter - Cloud Sky', price: 350, description: 'OtterBox Fast Charge Premium Lightning to USB-C Cable', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/5/9/59d2e8f5_3825924a_SW-OS-SW-TAP2-001.jpg' },
@@ -47,8 +48,8 @@ var MVVM = {
                 // Add more cables or other products as needed
             ]);
             this.AvailableList = ko.observable([
-                { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'assets/img/menu/airpods7.jpg', inStock: 1, quantity: 1 },
-                { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'assets/img/menu/airpods10.jpg', inStock: 1, quantity: 1 },
+                { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1 },
+                { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 },
                 { productName: 'Air R02', price: 1500, description: 'Denise', image: 'assets/img/menu/airr02.jpg', inStock: 1, quantity: 1 },
                 { productName: 'Sony WF-1000XM4', price: 2000, description: 'Industry-Leading Noise Cancelation', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 },
                 { productName: 'Samsung Galaxy Buds Pro', price: 1800, description: 'Immersive Sound with Intelligent ANC', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg', inStock: 1, quantity: 1 },
@@ -92,7 +93,7 @@ var MVVM = {
                 // var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20${msg}.
                 // `, '_blank');
                 let email = 'akidahmansur@gmail.com';
-                let subject = 'Inquiry';
+                let subject = self.subject();
                 let body = `Hi, my name is ${self.names()}. I would like to inquire about Your products:` + self.inquiryMessage();
             
                 // this.cartProducts().forEach(function (item) {
@@ -113,6 +114,10 @@ var MVVM = {
                 let name = self.names();
                 let location = self.location();
                 debugger;
+                if(name === undefined || location === undefined || name === " " || location === " "){
+                    alert("Please provide your name and location");
+                    return;
+                }
                 var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.
                 `, '_blank');
                 // win.focus();

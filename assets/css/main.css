@@ -296,7 +296,7 @@ section {
   height: 100%;
   padding-left: 6px;
   color: #299fff;
-  animation: cycle-words 5s infinite;
+  animation: cycle-words 10s infinite;
 }
 
 @keyframes cycle-words {
