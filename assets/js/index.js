@@ -109,8 +109,8 @@ var MVVM = {
                 let num = 254745655524;
                 let msg = ""
                 this.cartProducts().forEach(function(item) {
-                    msg += "%0A" +item.productName + "( " + item.image +" )"+ "for Ksh" + item.price ;
-                });
+                    msg += "%0A" +item.productName + " for Ksh" + item.price ;
+                });//+ "( " + item.image +" )"
                 let name = self.names();
                 let location = self.location();
                 debugger;
@@ -118,8 +118,11 @@ var MVVM = {
                     alert("Please provide your name and location");
                     return;
                 }
-                var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.
-                `, '_blank');
+                // var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.
+                // `, '_blank');
+                var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
+
+                window.location.href = whatsappLink;
                 // win.focus();
             }
             this.viewCart = function(){
