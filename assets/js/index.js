@@ -18,24 +18,24 @@ var MVVM = {
             this.inquiryMessage = ko.observable();
             this.subject = ko.observable();
             this.AirPodsList = ko.observable([
-                { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png' },
-                { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png'},
-                { productName: 'Air R02', price: 1500, description: 'Denise', image: 'assets/img/menu/airr02.jpg' },
-                { productName: 'Sony WF-1000XM4', price: 2000, description: 'Industry-Leading Noise Cancelation', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg'},
-                { productName: 'Samsung Galaxy Buds Pro', price: 1800, description: 'Immersive Sound with Intelligent ANC', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg' },
-                { productName: 'AirPods Max', price: 3500, description: 'Over-Ear High-Fidelity Headphones', image: 'https://help.apple.com/assets/61AFEC45FA5233173908347B/61B0509E1BF38548362237B5/en_US/b9f519195f84950573eea5088a49b964.png' },
-                { productName: 'Bose QuietComfort Earbuds', price: 1900, description: 'Noise-Canceling True Wireless Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg'},
-                { productName: 'Google Pixel Buds A-Series', price: 1200, description: 'Rich Sound and Clear Calls', image: 'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg' },
-                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 1300, description: 'Hybrid Active Noise Cancellation', image: 'assets/img/menu/ankerSoundCore.jpg' },
-                { productName: 'Jabra Elite 85t', price: 1750, description: 'Advanced Active Noise Cancellation', image: 'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg'},
-                { productName: 'OnePlus Buds Pro', price: 1600, description: 'Smart Adaptive Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png' },
-                // Add more AirPods or other products as needed
-                { productName: 'Beats Powerbeats Pro', price: 1700, description: 'High-Performance Wireless Earphones', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/09/Powerbeats-Pro-b.jpg' },
-                { productName: 'Sennheiser Momentum True Wireless 2', price: 2100, description: 'Exceptional Sound Quality', image: 'https://m.media-amazon.com/images/I/81NXYrn8JiL.jpg' },
-                { productName: 'Skullcandy Indy Evo', price: 1100, description: 'True Wireless In-Ear Earbuds', image: 'https://m.media-amazon.com/images/I/6119HR9g38L.jpg' },
-                { productName: 'Huawei FreeBuds 4i', price: 1250, description: 'Active Noise Cancellation Earbuds', image: 'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg' },
-                { productName: 'Beats Studio Buds', price: 1800, description: 'True Wireless Noise Cancelling Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg' },
-                { productName: 'JBL Free X', price: 1150, description: 'Truly Wireless In-Ear Headphones', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png' },
+                { productName: 'Air R03', price: 1300, description: 'Air-R03 Wireless TWS Earbuds', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 },
+                { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1 },
+                { productName: 'JBL Live Pro 2', price: 3500, description: 'JBL Live Pro 2', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 },
+                { productName: 'Air R02', price: 1200, description: 'Denise', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Sony WF-1000XM4', price: 4000, description: 'Industry-Leading Noise Cancelation', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 },
+                { productName: 'Samsung Galaxy Buds Pro', price: 4800, description: 'Immersive Sound with Intelligent ANC', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg', inStock: 1, quantity: 1 },
+                { productName: 'AirPods Max', price: 3500, description: 'Over-Ear High-Fidelity Headphones', image: 'https://help.apple.com/assets/61AFEC45FA5233173908347B/61B0509E1BF38548362237B5/en_US/b9f519195f84950573eea5088a49b964.png', inStock: 1, quantity: 1 },
+                { productName: 'Bose QuietComfort Earbuds', price: 4900, description: 'Noise-Canceling True Wireless Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Google Pixel Buds A-Series', price: 3200, description: 'Rich Sound and Clear Calls', image: 'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 2300, description: 'Hybrid Active Noise Cancellation', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/918569/1.jpg?3445', inStock: 1, quantity: 1 },
+                { productName: 'Jabra Elite 85t', price: 3750, description: 'Advanced Active Noise Cancellation', image: 'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg', inStock: 0, quantity: 1 },
+                { productName: 'OnePlus Buds Pro', price: 3600, description: 'Smart Adaptive Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png', inStock: 1, quantity: 1 },
+                { productName: 'Beats Powerbeats Pro', price: 3700, description: 'High-Performance Wireless Earphones', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/09/Powerbeats-Pro-b.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Sennheiser Momentum True Wireless 2', price: 2100, description: 'Exceptional Sound Quality', image: 'https://m.media-amazon.com/images/I/81NXYrn8JiL.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Skullcandy Indy Evo', price: 2100, description: 'True Wireless In-Ear Earbuds', image: 'https://m.media-amazon.com/images/I/6119HR9g38L.jpg', inStock: 0, quantity: 1 },
+                { productName: 'Huawei FreeBuds 4i', price: 2250, description: 'Active Noise Cancellation Earbuds', image: 'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Beats Studio Buds', price: 3800, description: 'True Wireless Noise Cancelling Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg', inStock: 0, quantity: 1 },
+                { productName: 'JBL Free X', price: 2500, description: 'Truly Wireless In-Ear Headphones', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png', inStock: 1, quantity: 1 },
             ]);
             this.CablesList = ko.observable([
                 { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Fast charging for Apple devices', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/1/c162a9b6_ea221940_MQKJ3.jpg' },
@@ -48,23 +48,24 @@ var MVVM = {
                 // Add more cables or other products as needed
             ]);
             this.AvailableList = ko.observable([
+                { productName: 'Air R03', price: 1300, description: 'Air-R03 Wireless TWS Earbuds', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 },
                 { productName: 'AirPods Pro', price: 1500, description: 'With Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1 },
-                { productName: 'JBL Live Pro 2', price: 1500, description: 'JBL Live Pro 2', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 },
-                { productName: 'Air R02', price: 1500, description: 'Denise', image: 'assets/img/menu/airr02.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Sony WF-1000XM4', price: 2000, description: 'Industry-Leading Noise Cancelation', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 },
-                { productName: 'Samsung Galaxy Buds Pro', price: 1800, description: 'Immersive Sound with Intelligent ANC', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg', inStock: 1, quantity: 1 },
-                { productName: 'AirPods Max', price: 3500, description: 'Over-Ear High-Fidelity Headphones', image: 'https://help.apple.com/assets/61AFEC45FA5233173908347B/61B0509E1BF38548362237B5/en_US/b9f519195f84950573eea5088a49b964.png', inStock: 0, quantity: 1 },
-                { productName: 'Bose QuietComfort Earbuds', price: 1900, description: 'Noise-Canceling True Wireless Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Google Pixel Buds A-Series', price: 1200, description: 'Rich Sound and Clear Calls', image: 'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 1300, description: 'Hybrid Active Noise Cancellation', image: 'assets/img/menu/ankerSoundCore.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Jabra Elite 85t', price: 1750, description: 'Advanced Active Noise Cancellation', image: 'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg', inStock: 0, quantity: 1 },
-                { productName: 'OnePlus Buds Pro', price: 1600, description: 'Smart Adaptive Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png', inStock: 1, quantity: 1 },
-                { productName: 'Beats Powerbeats Pro', price: 1700, description: 'High-Performance Wireless Earphones', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/09/Powerbeats-Pro-b.jpg', inStock: 1, quantity: 1 },
+                { productName: 'JBL Live Pro 2', price: 4500, description: 'JBL Live Pro 2', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 },
+                { productName: 'Air R02', price: 1200, description: 'Denise', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Sony WF-1000XM4', price: 4000, description: 'Industry-Leading Noise Cancelation', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 },
+                { productName: 'Samsung Galaxy Buds Pro', price: 4800, description: 'Immersive Sound with Intelligent ANC', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg', inStock: 1, quantity: 1 },
+                { productName: 'AirPods Max', price: 3500, description: 'Over-Ear High-Fidelity Headphones', image: 'https://help.apple.com/assets/61AFEC45FA5233173908347B/61B0509E1BF38548362237B5/en_US/b9f519195f84950573eea5088a49b964.png', inStock: 1, quantity: 1 },
+                { productName: 'Bose QuietComfort Earbuds', price: 4900, description: 'Noise-Canceling True Wireless Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Google Pixel Buds A-Series', price: 4200, description: 'Rich Sound and Clear Calls', image: 'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 4300, description: 'Hybrid Active Noise Cancellation', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/918569/1.jpg?3445', inStock: 1, quantity: 1 },
+                { productName: 'Jabra Elite 85t', price: 3750, description: 'Advanced Active Noise Cancellation', image: 'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg', inStock: 0, quantity: 1 },
+                { productName: 'OnePlus Buds Pro', price: 3600, description: 'Smart Adaptive Noise Cancellation', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png', inStock: 1, quantity: 1 },
+                { productName: 'Beats Powerbeats Pro', price: 3700, description: 'High-Performance Wireless Earphones', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/09/Powerbeats-Pro-b.jpg', inStock: 1, quantity: 1 },
                 { productName: 'Sennheiser Momentum True Wireless 2', price: 2100, description: 'Exceptional Sound Quality', image: 'https://m.media-amazon.com/images/I/81NXYrn8JiL.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Skullcandy Indy Evo', price: 1100, description: 'True Wireless In-Ear Earbuds', image: 'https://m.media-amazon.com/images/I/6119HR9g38L.jpg', inStock: 0, quantity: 1 },
-                { productName: 'Huawei FreeBuds 4i', price: 1250, description: 'Active Noise Cancellation Earbuds', image: 'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Beats Studio Buds', price: 1800, description: 'True Wireless Noise Cancelling Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg', inStock: 0, quantity: 1 },
-                { productName: 'JBL Free X', price: 1150, description: 'Truly Wireless In-Ear Headphones', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png', inStock: 1, quantity: 1 },
+                { productName: 'Skullcandy Indy Evo', price: 2100, description: 'True Wireless In-Ear Earbuds', image: 'https://m.media-amazon.com/images/I/6119HR9g38L.jpg', inStock: 0, quantity: 1 },
+                { productName: 'Huawei FreeBuds 4i', price: 2250, description: 'Active Noise Cancellation Earbuds', image: 'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg', inStock: 1, quantity: 1 },
+                { productName: 'Beats Studio Buds', price: 3800, description: 'True Wireless Noise Cancelling Earbuds', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg', inStock: 0, quantity: 1 },
+                { productName: 'JBL Free X', price: 2500, description: 'Truly Wireless In-Ear Headphones', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png', inStock: 1, quantity: 1 },
                 { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Fast charging for Apple devices', image: 'assets/img/cables/Apple USB-C Woven Charge Cable.jpg', inStock: 0, quantity: 1 },
                 { productName: 'Apple Lightning to USB Cable (1 m)', price: 700, description: 'Durable and high-speed charging', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg', inStock: 1, quantity: 1 },
                 { productName: 'Apple Thunderbolt 3 (USB‑C) Cable (0.8 m)', price: 450, description: 'Supports Thunderbolt 3 data transfer up to 40 Gbps', image: 'assets/img/cables/Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).jpg', inStock: 0, quantity: 1 },
@@ -118,11 +119,11 @@ var MVVM = {
                     alert("Please provide your name and location");
                     return;
                 }
-                // var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.
-                // `, '_blank');
-                var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
+                var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.
+                `, '_blank');
+                // var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
 
-                window.location.href = whatsappLink;
+                // window.location.href = whatsappLink;
                 // win.focus();
             }
             this.viewCart = function(){
@@ -158,10 +159,10 @@ var MVVM = {
                 debugger;
                 var self = this;
 
-                var productName = self.productName(value.productName);
-                var price = self.price(value.price);
-                var description = self.Description(value.description);
-                var image = self.image(value.image);
+                var productName = self.productName();
+                var price = self.price();
+                var description = self.Description();
+                var image = self.image();
                 var quantity = 1;
                 var value = [productName,price,description,image, quantity]
 
