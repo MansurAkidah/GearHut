@@ -364,6 +364,9 @@ pre {
   overflow: auto;
   font-size: 0.875em;
 }
+favbadge {
+font-size: 24px;
+}
 pre code {
   font-size: inherit;
   color: inherit;

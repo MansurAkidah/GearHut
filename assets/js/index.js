@@ -11,6 +11,7 @@ var MVVM = {
             this.image = ko.observable();
             this.instock = ko.observable();
             this.count = ko.observable(0);
+            this.savecount = ko.observable(0);
             this.totalSum = ko.observable(0);
             this.names = ko.observable();
             this.phoneNumber = ko.observable();
@@ -76,7 +77,34 @@ var MVVM = {
                 // ... (more cables)
             ]);
             this.cartProducts = ko.observableArray([]);
+            this.savedProducts = ko.observableArray([]);
             var prods = [];
+            var saved = [];
+            function checkCount (){
+                debugger;
+                var self = this;
+                
+                //localStorage.removeItem('prods');
+                if (localStorage.getItem('prods')){
+                    // Retrieve the existing prods array from localStorage
+                    // prods = JSON.parse(localStorage.getItem('prods'));
+                    //prods = JSON.parse(sessionStorage.getItem('prods'));
+                    // Update the count based on the length of the retrieved 
+                    
+                    prods = JSON.parse(localStorage.getItem('prods'));
+                    self.count(prods.length);
+                    
+                    return;
+                }
+                //prods = [];
+                localStorage.setItem('prods', JSON.stringify(prods));
+            }
+            this.clearCart = function(){
+                debugger;
+                localStorage.removeItem('prods');
+                checkCount.call(this);
+            }
+            
             this.sendMessageModal = function(){
                 // $("#messageModal").modal('show');
             }
@@ -123,6 +151,8 @@ var MVVM = {
                 `, '_blank');
                 // var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
 
+                //delete from the local storage 
+                localStorage.removeItem('prods');
                 // window.location.href = whatsappLink;
                 // win.focus();
             }
@@ -130,17 +160,23 @@ var MVVM = {
                 debugger;
                 var self = this;
                 var totalPrice = 0;
+                var cartprods = JSON.parse(localStorage.getItem('prods'));
                 $('#myModal').modal('show');
-                if(prods.length == 0){
+                if(cartprods.length == 0){
                     self.totalSum(totalPrice);
                 }
                 // self.AvailableList().forEach(function(item) {
-                prods.forEach(function(item) {
+                cartprods.forEach(function(item) {
                     totalPrice += item.price * item.quantity;
                 });
                 self.totalSum(totalPrice);
                 
-                self.cartProducts(prods);
+                self.cartProducts(cartprods);
+            }
+            this.viewSaved = function(){
+                //var savedProds = JSON.parse(localStorage.getItem('saved'));
+                debugger;
+                $('#myModal').modal('show');
             }
             this.closeCart  = function (){
                 debugger;
@@ -150,25 +186,24 @@ var MVVM = {
                 // alert('Added to cart');
                 debugger;
                 var self = this;
-                this.count(this.count() + 1);
+                //this.count(this.count() + 1);
                 //self.cartProducts().push(value);
                 prods.push(value);
+                localStorage.setItem('prods', JSON.stringify(prods));
+                //viewModel.checkCount();
+                //self.checkCount();
+                checkCount.call(this);
             }.bind(this);
-            this.addToCart = function (value){
-                // alert('Added to cart');
+            this.addSaved = function (value){
                 debugger;
                 var self = this;
-
-                var productName = self.productName();
-                var price = self.price();
-                var description = self.Description();
-                var image = self.image();
-                var quantity = 1;
-                var value = [productName,price,description,image, quantity]
-
-                this.count(this.count() + 1);
-                //self.cartProducts().push(value);
-                prods.push(value);
+                this.savecount(this.savecount() + 1);
+                saved.push(value);
+                self.savedProducts(saved);
+            }.bind(this);
+            this.makeRequest = function (value){
+                // alert('Added to cart');
+                debugger;
             }.bind(this);
             this.removeCart = function (value){
                 // alert('Added to cart');
@@ -178,6 +213,7 @@ var MVVM = {
                 //self.cartProducts().push(value);
                 //prods.pop(value);
                 //prods.pop()
+                prods = JSON.parse(localStorage.getItem('prods'));
                 self.cartProducts(prods);
                 // self.cartProducts.remove(value);
                 // Find the first occurrence of the item in the array
@@ -241,6 +277,7 @@ var MVVM = {
                 twoDaysFromNow.setDate(twoDaysFromNow.getDate() + 3);
                 return twoDaysFromNow.toDateString();
             });
+            checkCount.call(this);
 
         }
         var myModel = new viewModel();
