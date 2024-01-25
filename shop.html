@@ -28,18 +28,16 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#menu">Menu</a></li>
-          <li><a href="index.html#events">Products</a></li>
-          <li><a href="index.html#chefs">Chefs</a></li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <!-- <li><a href="index.html#about">About</a></li> -->
+          <!-- <li><a href="#menu">Menu</a></li> -->
+          <!-- <li><a href="#">Products</a></li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <li class="dropdown"><a href="#"><span>Our Products</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a data-bs-toggle="tab" data-bs-target="#menu-airpods">Airpods</a></li>
+                  <li class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-cables"><a>Cables</a></li>
                   <li><a href="#">Deep Drop Down 3</a></li>
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
@@ -49,8 +47,8 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          </li> -->
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
         <form class="d-flex">
@@ -107,16 +105,16 @@
         <!--Product list Section-->
 
           <!-- ======= Menu Section ======= -->
-    <section class="menu">
+    <section id="menu" class="menu">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>    </h2>
-          <p>Welcome to our <span>Shop</span></p>
+          <!-- <p>Welcome to our <span>Shop</span></p> -->
         </div>
         <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
           <li class="nav-item">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-airpods">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-airpods">
               <h4>AirPods</h4>
             </a>
           </li><!-- End tab nav item -->
@@ -137,13 +135,17 @@
             </a>
           </li><!-- End tab nav item -->
 
-          
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-comrades">
+              <h4>Comrades</h4>
+            </a>
+          </li><!-- End tab nav item -->
 
         </ul>
 
         <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
           <!--Airpods section-->
-          <div class="tab-pane fade active show" id="menu-airpods">
+          <div class="tab-pane fade" id="menu-airpods">
 
             <div class="tab-header text-center">
               <p>Products</p>
@@ -151,6 +153,51 @@
             </div>
 
             <div class="row gy-5" data-bind="foreach:AirPodsList">
+              
+              <!--<div class="col-lg-4 menu-item" data-bind="click:$root.viewProduct">
+                <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="AirPods"></a>
+                <h4 data-bind="text:productName">AirPods Pro</h4>
+                <p class="ingredients" data-bind="text:description">
+                  With MagSafeCharging Case
+                </p>
+                <p class="price">Ksh.<span data-bind="text:price"> </span></p>
+              </div> Menu Item -->
+              <div class="col-lg-2 menu-item" >
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                  <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">out of stock</div>
+                  <!-- Product image-->
+                  <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                    <!-- Product details-->
+                  <div class="card-body p-4">
+                      <div class="text-center">
+                          <!-- Product name-->
+                          <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                          <!-- Product price $40.00 - $80.00-->
+                          <p>Ksh.<span data-bind="text:price"></span></p>
+                      </div>
+                  </div>
+                    <!-- Product actions-->
+                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                  </div>
+                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                  </div>
+              </div>
+            </div>
+
+            </div>
+          </div><!-- End Airpods section -->
+          <!--Comrades-->
+          <div class="tab-pane fade active show" id="menu-comrades">
+
+            <div class="tab-header text-center">
+              <p>Welcome My G</p>
+              <h3>Comrades Corner</h3>
+            </div>
+
+            <div class="row gy-5" data-bind="foreach:AvailableList">
               
               <!--<div class="col-lg-4 menu-item" data-bind="click:$root.viewProduct">
                 <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="AirPods"></a>
@@ -281,7 +328,7 @@
           <div class="tab-pane fade" id="menu-phones">
 
             <div class="tab-header text-center">
-              <p>Menu</p>
+              <p>Products</p>
               <h3>Phones</h3>
             </div>
 
@@ -321,7 +368,7 @@
             </div>
 
             </div>
-          </div><!-- End Dinner Menu Content -->
+          </div><!-- End Phones Menu Content -->
 
         </div>
 
@@ -334,229 +381,238 @@
         <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Title</h5>
-                    <button type="button" class="btn-close" data-bind="click:$root.closeCart"></button>
-                </div>
-                <div class="modal-body"  >
-                    <section class="h-60 gradient-custom">
-                        <div class="container py-5">
-                          <div class="row d-flex justify-content-center my-4">
-                            <div class="col-md-8">
-                              <div class="card mb-4">
-                                <div class="card-header py-3">
-                                  <h5 class="mb-0">Cart - <span data-bind="text:count"></span> items</h5>
-                                </div>
-                                <div class="card-body" data-bind="foreach:cartProducts">
-                                  <!-- Single item -->
-                                  <div class="row" data-bind="visible:$root.count">
-                                    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                                      <!-- Image -->
-                                      <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                                        <img  class="w-100" data-bind="attr: { src: image }" alt="product name" />
-                                        <a href="#!">
-                                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                                        </a>
-                                      </div>
-                                      <!-- Image -->
-                                    </div>
-                      
-                                    <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                                      <!-- Data -->
-                                      <p><strong data-bind="text:productName">Blue denim shirt</strong></p>
-                                      <p>Description: <span data-bind="text:description"></span></p>
-                                      <!-- Data -->
-                                    </div>
-                      
-                                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                      <!-- Quantity -->
-                                      <div class="mb-4" style="max-width: 300px">
-                                        
-                                        
-                                        <div class="form-outline">
-                                          <input id="form1" min="0" name="quantity" type="number" class="form-control" data-bind="value:quantity"/>
-                                          <label class="form-label" for="form1">Quantity</label>
-                                        </div>
-                                        <div class="form-outline">
-                                            <button class="btn btn-danger px-3 me-2" data-bind="click:$root.removeCart" >
-                                                Remove
-                                            </button>
-                                        </div>
-                                        <!-- <button class="btn btn-primary px-3 ms-2" data-bind="click:$root.addCart" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                          <i class="fas fa-plus"></i>
-                                        </button> -->
-                                      </div>
-                                      <!-- Quantity -->
-                      
-                                      <!-- Price -->
-                                      <p class="text-start text-md-center">
-                                        <strong>Ksh.<span data-bind="text:price"></span></strong>
-                                      </p>
-                                      <!-- Price -->
-                                    </div>
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">My Cart</h5>
+                      <button type="button" class="btn-close" data-bind="click:$root.closeCart"></button>
+                  </div>
+                  <div class="modal-body"  >
+                      <section class="h-60 gradient-custom">
+                          <div class="container py-5">
+                            <div class="row d-flex justify-content-center my-4">
+                              <div class="col-md-8">
+                                <div class="card mb-4" data-bind="visible:count">
+                                  <div class="card-header py-3">
+                                    <h5 class="mb-0">Cart - <span data-bind="text:count"></span> items</h5>
                                   </div>
-                                  <div class="row" data-bind="visible:!$root.count">
-                                    <strong>No products in the cart yet</strong>
-                                  </div>
-                                  <!-- End of Single item -->
-                                  <hr class="my-4" />
-                                </div>
-                              </div>
-                              <div class="card mb-4">
-                                <div class="card-body">
-                                  <p><strong>Expected shipping delivery</strong></p>
-                                  <p class="mb-0"><span data-bind="text:dateTwoDaysFromNow"></span> - <span data-bind="text:dateThreeDaysFromNow"></span></p>
-                                </div>
-                              </div>
-                              <div class="card mb-4 mb-lg-0">
-                                <div class="card-body">
-                                  <p><strong>We accept</strong></p>
-                                  <img class="me-2" width="45px"
-                                    src="https://media.licdn.com/dms/image/D4D22AQHxtbvgGXhZpQ/feedshare-shrink_800/0/1697614571309?e=2147483647&v=beta&t=x4eeg2HyHGPjP2DJpr788fepI4HuelVEsYw2aXjXq3Y"
-                                    alt="Mpesa" />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="card mb-4" data-bind="visible:count">
-                                <div class="card-header py-3">
-                                  <h5 class="mb-0">Summary</h5>
-                                </div>
-                                <div class="card-body">
-                                  <ul class="list-group list-group-flush">
-                                    <li
-                                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                      Products
-                                      <span>Ksh.<span data-bind="text:totalSum"></span></span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                      Shipping
-                                      <span>0.0</span>
-                                    </li>
-                                    <li
-                                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                      <div>
-                                        <strong>Total amount</strong>
-                                        <strong>
-                                          <p class="mb-0">(including VAT)</p>
-                                        </strong>
-                                      </div>
-                                      <span>Ksh.<strong data-bind="text:totalSum">$53.98</strong></span>
-                                    </li>
-                                </ul>
-                                <!-- <button type="button" class="btn btn-primary btn-lg btn-block">
-                                Order products
-                                </button> -->
-                                <input data-bind="checked:checkout" name="favorite-checkbox" id="favorite" type="checkbox"/>
-                                    <label class="tainer" for="favorite">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
-                                            <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0"/>
-                                            <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708"/>
-                                        </svg>
-                                        <div class="action">
-                                            <span class="option-1">Proceed</span>
-                                            <span class="option-2">Please fill in the form</span>
+                                  <div class="card-body" data-bind="foreach:cartProducts">
+                                    <!-- Single item -->
+                                    <div class="row" data-bind="visible:$root.count">
+                                      <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                        <!-- Image -->
+                                        <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                                          <img  class="w-100" data-bind="attr: { src: image }" alt="product name" />
+                                          <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                          </a>
                                         </div>
-                                    </label>
-                                    <form data-bind="visible: checkout">
-                                      <ul class="list-group list-group-flush">
-                                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                              <label for="name">Name:&nbsp;&nbsp;&nbsp;</label>
-                                              <input id="name" type="text" class="form-control" placeholder="John Doe" data-bind="value: names" required/>
-                                          </li>
-                                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                              <label for="location">Location:</label>
-                                              <input id="location" type="text" class="form-control" placeholder="Nairobi" data-bind="value: location" required/>
-                                          </li>
-                                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                              <button type="submit" class="btn btn-success btn-lg btn-block" data-bind="click: sendMessage"><i class="bi bi-whatsapp"></i>  Order products</button>
-                                          </li>
-                                      </ul>
-                                  </form>
+                                        <!-- Image -->
+                                      </div>
+                        
+                                      <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                        <!-- Data -->
+                                        <p><strong data-bind="text:productName">Blue denim shirt</strong></p>
+                                        <p>Description: <span data-bind="text:description"></span></p>
+                                        <!-- Data -->
+                                      </div>
+                        
+                                      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                        <!-- Quantity -->
+                                        <div class="mb-4" style="max-width: 300px">
+                                          
+                                          
+                                          <div class="form-outline">
+                                            <input id="form1" min="0" name="quantity" type="number" class="form-control" data-bind="value:quantity"/>
+                                            <label class="form-label" for="form1">Quantity</label>
+                                          </div>
+                                          <div class="form-outline">
+                                              <button class="btn btn-danger px-3 me-2" data-bind="click:$root.removeCart" >
+                                                  Remove
+                                              </button>
+                                          </div>
+                                          <!-- <button class="btn btn-primary px-3 ms-2" data-bind="click:$root.addCart" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                          </button> -->
+                                        </div>
+                                        <!-- Quantity -->
+                        
+                                        <!-- Price -->
+                                        <p class="text-start text-md-center">
+                                          <strong>Ksh.<span data-bind="text:price"></span></strong>
+                                        </p>
+                                        <!-- Price -->
+                                      </div>
+                                    </div>
+                                    <div class="row" data-bind="visible:!$root.count">
+                                      <strong>No products in the cart yet</strong>
+                                    </div>
+                                    <!-- End of Single item -->
+                                    <hr class="my-4" />
+                                  </div>
+                                </div>
+                                <div class="card mb-4" data-bind="visible:count">
+                                  <div class="card-body">
+                                    <p><strong>Expected shipping delivery</strong></p>
+                                    <p class="mb-0"><span data-bind="text:dateTwoDaysFromNow"></span> - <span data-bind="text:dateThreeDaysFromNow"></span></p>
+                                  </div>
+                                </div>
+                                <div class="card mb-4 mb-lg-0" data-bind="visible:count">
+                                  <div class="card-body">
+                                    <p><strong>We accept</strong></p>
+                                    <img class="me-2" width="45px"
+                                      src="https://media.licdn.com/dms/image/D4D22AQHxtbvgGXhZpQ/feedshare-shrink_800/0/1697614571309?e=2147483647&v=beta&t=x4eeg2HyHGPjP2DJpr788fepI4HuelVEsYw2aXjXq3Y"
+                                      alt="Mpesa" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="card mb-4" data-bind="visible:count">
+                                  <div class="card-header py-3">
+                                    <h5 class="mb-0">Summary</h5>
+                                  </div>
+                                  <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                      <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                        Products
+                                        <span>Ksh.<span data-bind="text:totalSum"></span></span>
+                                      </li>
+                                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                        Shipping
+                                        <span>0.0</span>
+                                      </li>
+                                      <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                        <div>
+                                          <strong>Total amount</strong>
+                                          <strong>
+                                            <p class="mb-0">(including VAT)</p>
+                                          </strong>
+                                        </div>
+                                        <span>Ksh.<strong data-bind="text:totalSum">$53.98</strong></span>
+                                      </li>
+                                  </ul>
+                                  <!-- <button type="button" class="btn btn-primary btn-lg btn-block">
+                                  Order products
+                                  </button> -->
+                                  <input data-bind="checked:checkout" name="favorite-checkbox" id="favorite" type="checkbox"/>
+                                      <label class="tainer" for="favorite">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
+                                              <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0"/>
+                                              <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708"/>
+                                          </svg>
+                                          <div class="action">
+                                              <span class="option-1">Proceed</span>
+                                              <span class="option-2">Please fill in the form</span>
+                                          </div>
+                                      </label>
+                                      <form data-bind="visible: checkout">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                                <label for="name">Name:&nbsp;&nbsp;&nbsp;</label>
+                                                <input id="name" type="text" class="form-control" placeholder="John Doe" data-bind="value: names" required/>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                                <label for="location">Location:</label>
+                                                <input id="location" type="text" class="form-control" placeholder="Nairobi" data-bind="value: location" required/>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                                <button type="submit" class="btn btn-success btn-lg btn-block" data-bind="click: sendMessage"><i class="bi bi-whatsapp"></i>  Order products</button>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-mb-8" >
+                                <div class="card mb-4 mb-lg-0" data-bind="visible:!count">
+                                  <div class="card-body">
+                                    <p><strong>Sorry, you do not have anything in you cart</strong></p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </section>
-                    <!-- <div data-bind="foreach:cartProducts">
-                        <p data-bind="text:productName"></p>
-                    </div> -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bind="click:$root.closeCart">
-                    Close
-                    </button>
-                    <button type="button" class="btn btn-primary"data-bind="click:$root.sendMessage">Send Message</button>
-                </div>
+                        </section>
+                      <!-- <div data-bind="foreach:cartProducts">
+                          <p data-bind="text:productName"></p>
+                      </div> -->
+                  </div>
                 </div>
             </div>
         </div>
         <!-- end of Cart modal -->
         <!-- Product details Modal -->
         <div class="modal fade" id="ProductModal" tabindex="-1" aria-labelledby="productdetailsmodal" aria-hidden="true">
-            <div class="modal-dialog "><!-- modal-xl -->
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="productdetailsmodal">GearHut</h5>
-                    <button type="button" class="btn-close" data-bind="click:$root.closeProduct"></button>
-                </div>
-                <div class="modal-body"  >
+          <div class="modal-dialog "><!-- modal-xl -->
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="productdetailsmodal">GearHut</h5>
+                  <button type="button" class="btn-close" data-bind="click:$root.closeProduct"></button>
+              </div>
+              <div class="modal-body"  >
                 <!-- product details card -->
                 <section style="background-color: #eee;">
                     <div class="container ">
-                    <div class="row justify-content-center">
+                      <div class="row justify-content-center">
                         <div>
-                        <div class="card" style="border-radius: 15px;">
-                            <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
-                            data-mdb-ripple-color="light">
-                            <img data-bind="attr: { src: image }"
-                                style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
-                                alt="Laptop" />
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                            </div>
-                            <div class="card-body pb-0">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                <p data-bind="text: Description"><a data-bind="attr: { src: image }" class="text-dark">Dell Xtreme 270</a></p>
-                                <!-- <p class="small text-muted">Laptops</p> -->
+                          <div class="card" style="border-radius: 15px;">
+                              <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
+                              data-mdb-ripple-color="light">
+                              <img data-bind="attr: { src: image }"
+                                  style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+                                  alt="Laptop" />
+                              <a href="#!">
+                                  <div class="mask"></div>
+                              </a>
+                              </div>
+                              <div class="card-body pb-0">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                      <p data-bind="text: Description"><a data-bind="attr: { src: image }" class="text-dark">Dell Xtreme 270</a></p>
+                                      <!-- <p class="small text-muted">Laptops</p> -->
+                                    </div>
+                                    <div>
+                                      <!-- <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </div> -->
+                                      <p class="small text-muted">Rated 4.0/5</p>
+                                    </div>
                                 </div>
-                                <div>
-                                <!-- <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div> -->
-                                <p class="small text-muted">Rated 4.0/5</p>
+                              </div>
+                              <hr class="my-0" />
+                              <div class="card-body pb-0">
+                                <div class="d-flex justify-content-between">
+                                    <p >Price: Ksh <span class="text-dark" data-bind="text: price">$3,999</span></p>
+                                    <!-- <p class="text-dark">#### 8787</p> -->
                                 </div>
-                            </div>
-                            </div>
-                            <hr class="my-0" />
-                            <div class="card-body pb-0">
-                            <div class="d-flex justify-content-between">
-                                <p >Price: Ksh <span class="text-dark" data-bind="text: price">$3,999</span></p>
-                                <!-- <p class="text-dark">#### 8787</p> -->
-                            </div>
-                            <p class="small text-muted">VISA Platinum</p>
-                            </div>
-                            <hr class="my-0" />
-                            <!-- <div class="card-body" data-bind="visible:instock">
-                            <div class="d-flex justify-content-between align-items-center pb-2 mb-1" >
-                                <a href="#!" class="text-dark fw-bold" data-bind="click:$root.closeProduct">Cancel</a>
-                                <button type="button" class="btn btn-primary" data-bind="click:$root.addToCart">Add To Cart</button>
-                            </div>
-                            </div> -->
+                                <p class="small text-muted">VISA Platinum</p>
+                              </div>
+                              <hr class="my-0" />
+                              <!-- <div class="card-body" data-bind="visible:instock">
+                              <div class="d-flex justify-content-between align-items-center pb-2 mb-1" >
+                                  <a href="#!" class="text-dark fw-bold" data-bind="click:$root.closeProduct">Cancel</a>
+                                  <button type="button" class="btn btn-primary" data-bind="click:$root.addToCart">Add To Cart</button>
+                              </div>
+                              </div> -->
+                          </div>
                         </div>
-                        </div>
-                    </div>
+                      </div>
                     </div>
                 </section>
+              </div>
             </div>
+          </div>
         </div>
         <!-- end of product details modal -->
+        <button class="custombutton tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+          </svg>
+          <span class="tooltiptext">go up</span>
+        </button>
         <!-- Footer-->
         <footer class="py-2 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; GearHut 2023</p></div>
