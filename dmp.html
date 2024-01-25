@@ -537,3 +537,33 @@
     <span class="option-2">Added to Favorites</span>
   </div>
 </label>
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:AvailableList">
+          <div class="col mb-5" >
+              <div class="card h-100">
+                  <!-- Sale badge-->
+                <div data-bind="visible:inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">in stock</div>
+                <!-- Product image-->
+                <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                  <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                        <!-- Product price $40.00 - $80.00-->
+                        <p>Ksh.<span data-bind="text:price"></span></p>
+                    </div>
+                </div>
+                  <!-- Product actions-->
+                <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                </div>
+                <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
