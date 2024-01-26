@@ -17,6 +17,8 @@ var MVVM = {
             this.location = ko.observable();
             this.inquiryMessage = ko.observable();
             this.subject = ko.observable();
+            this.ordered = ko.observable(false);
+            this.empty = ko.observable(false);
             this.AirPodsList = ko.observable([
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1 },
@@ -47,7 +49,6 @@ var MVVM = {
                 { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'supports Thunderbolt 3, Thunderbolt 4 and USB 4 data transfer up to 40Gb/s', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png', inStock: 1, quantity: 1 },
                 // Add more cables or other products as needed
             ]);
-                
             this.laptopList = ko.observable([
                 { productName: 'Dell XPS 13', price: 24000, description: 'Experience perfection with the Dell XPS 13 - A slim and powerful laptop that redefines elegance and performance.', image: 'https://m.media-amazon.com/images/I/61hSHC1ClAL._AC_UF894,1000_QL80_.jpg', inStock: 1, quantity: 1 },
                 { productName: 'MacBook Air M2', price: 254999, description: 'Elevate your productivity with the MacBook Air M2 - A sleek and lightweight powerhouse designed for creativity and efficiency.', image: 'https://istore.ph/cdn/shop/products/MacBook_Air_M2_Space_Gray_PDP_Image_Position-3__ROSA.jpg?v=1657016049&width=4000', inStock: 1, quantity: 1 },
@@ -86,7 +87,6 @@ var MVVM = {
                 { productName: 'iPhone 12', price: 77000, description: 'Elevate your mobile experience with the iPhone 12 - A smartphone that delivers stunning visuals and performance.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/08/Apple-iPhone-12-mini-b-1.jpg', inStock: 1, quantity: 1 },
                 { productName: 'Samsung Galaxy A52', price: 40000, description: 'Discover the perfect balance with the Samsung Galaxy A52 - A mid-range smartphone that excels in camera and performance.', image: 'https://www.queensmobile.co.ke/img/products/56/Samsung-Galaxy-A52-w-1.jpg', inStock: 1, quantity: 1 },
             ]);            
-            
             this.AvailableList = ko.observable([
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1 },
@@ -106,7 +106,19 @@ var MVVM = {
             
             this.cartProducts = ko.observableArray([]);
             var prods = [];
-
+            this.isProductInList = function(productName) {
+                var availableProducts = this.AvailableList();
+                
+                for (var i = 0; i < availableProducts.length; i++) {
+                    if (availableProducts[i].productName === productName) {
+                        debugger;
+                        return true; // Product found in the list
+                    }
+                }
+                debugger;
+                return false; // Product not found in the list
+            }
+            
             function checkCount (){
                 debugger;
                 var self = this;
@@ -116,12 +128,16 @@ var MVVM = {
                     //prods = JSON.parse(sessionStorage.getItem('prods'));
                     // Update the count based on the length of the retrieved array
                     self.count(prods.length);
+                    if(self.count() === 0 && !self.ordered()){
+                        self.empty(true);
+                    }else{
+                        self.empty(false);
+                    }
                     localStorage.setItem('prods', JSON.stringify(prods));
                     return;
                 }
                 localStorage.setItem('prods', JSON.stringify(prods));
             }
-            
             checkCount.call(this);
             this.sendMessageModal = function(){
                 // $("#messageModal").modal('show');
@@ -156,24 +172,29 @@ var MVVM = {
                 let num = 254745655524;
                 let msg = ""
                 this.cartProducts().forEach(function(item) {
-                    msg += "%0A" +item.productName + " for Ksh" + item.price ;
+                    msg += "%0A" + item.quantity + " - " +item.productName + " @ Ksh." + item.price ;
                 });//+ "( " + item.image +" )"
                 let name = self.names();
                 let location = self.location();
+                let total = self.totalSum();
                 debugger;
                 if(name === undefined || location === undefined || name === " " || location === " "){
                     alert("Please provide your name and location");
                     return;
                 }
-                var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.
-                `, '_blank');
+                var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20*${location}*.%20I%20would%20like%20to%20order%20these:%20${msg}.%0ATotal%20=%20*${total}*`, '_blank');
                 // var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
 
                 //delete from the local storage 
                 localStorage.removeItem('prods');
+                self.cartProducts([]);
+                self.ordered(true);
+                prods = [];
+                checkCount.call(this);
+                checkCount.call(this);
                 // window.location.href = whatsappLink;
                 // win.focus();
-            }
+            }.bind(this);
             this.viewCart = function(){
                 debugger;
                 var self = this;
@@ -187,7 +208,7 @@ var MVVM = {
                     totalPrice += item.price * item.quantity;
                 });
                 self.totalSum(totalPrice);
-                
+                checkCount.call(this);
                 self.cartProducts(prods);
             }
             this.closeCart  = function (){
@@ -198,6 +219,7 @@ var MVVM = {
                 // alert('Added to cart');
                 debugger;
                 var self = this;
+                self.ordered(false);
                 //this.count(this.count() + 1);
                 //self.cartProducts().push(value);
                 prods.push(value);
@@ -244,8 +266,8 @@ var MVVM = {
                     totalPrice += item.price * item.quantity;
                 });
                 self.totalSum(totalPrice);
+                checkCount.call(this);
             }.bind(this);
-            
             this.viewProduct = function(value){
                 debugger;
                 var self = this;
@@ -266,6 +288,9 @@ var MVVM = {
                 self.image('');
                 $('#ProductModal').modal('hide');
             }.bind(this);
+            this.requestProduct = function(){
+                
+            };
             this.totalCalc = function() {
                 var self = this;
                 var totalPrice = 0;
@@ -279,7 +304,7 @@ var MVVM = {
                     totalPrice += item.price * item.quantity;
                 });
                 self.totalSum(totalPrice);
-            };
+            }.bind(this);
             this.dateTwoDaysFromNow = ko.computed(function () {
                 var self = this;
                 var twoDaysFromNow = new Date();
@@ -292,7 +317,6 @@ var MVVM = {
                 twoDaysFromNow.setDate(twoDaysFromNow.getDate() + 3);
                 return twoDaysFromNow.toDateString();
             });
-
         }
         var myModel = new viewModel();
         ko.applyBindings(myModel);
