@@ -2,7 +2,7 @@ var MVVM = {
     
     init: function () {
         var viewModel = function () {
-            debugger;
+            ////debugger;
 
             this.checkout = ko.observable(false);
             this.productName = ko.observable();
@@ -17,6 +17,7 @@ var MVVM = {
             this.location = ko.observable();
             this.inquiryMessage = ko.observable();
             this.subject = ko.observable();
+            this.selectedLocation = ko.observable();
             this.ordered = ko.observable(false);
             this.empty = ko.observable(false);
             this.AirPodsList = ko.observable([
@@ -91,7 +92,7 @@ var MVVM = {
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1 },
                 { productName: 'Pro 3', price: 1000, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1 },
-                { productName: 'pro 5s', price: 1500, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1 },
+                { productName: 'pro 5s', price: 1500, description: 'True Wireless Communication : Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1 },
                 { productName: 'Air R02', price: 1200, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1 },
                 { productName: 'Air R03s', price: 1300, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428', inStock: 1, quantity: 1 },
                 { productName: 'JBL TWS 4 Earbuds', price: 1100, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://images.africasokoni.co.ke/electronics/20211027/DLFT-1099a.jpg', inStock: 1, quantity: 1 },
@@ -103,7 +104,7 @@ var MVVM = {
                 { productName: 'Belkin USB-C TO LTG, BRAID SIL, 2M', price: 550, description: 'Step into the future with Belkin USB-C TO LTG, BRAID SIL, 2M - your key to seamless connectivity.', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/b/8/b892c0a1_e574acb7_SW-OS-SW-TAP2-027.jpg', inStock: 1, quantity: 1 },
                 { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'Unleash the power of Thunderbolt with the Apple Thunderbolt 4 (USB‑C) Pro Cable (1m).', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png', inStock: 1, quantity: 1 },
             ]);
-            
+            this.locations = ko.observableArray(['South C', 'Kilimani','Juja', 'Thika'])
             this.cartProducts = ko.observableArray([]);
             var prods = [];
             this.isProductInList = function(productName) {
@@ -111,16 +112,16 @@ var MVVM = {
                 
                 for (var i = 0; i < availableProducts.length; i++) {
                     if (availableProducts[i].productName === productName) {
-                        debugger;
+                        ////debugger;
                         return true; // Product found in the list
                     }
                 }
-                debugger;
+                //debugger;
                 return false; // Product not found in the list
             }
             
             function checkCount (){
-                debugger;
+                //debugger;
                 var self = this;
                 if (localStorage.getItem('prods')){
                     // Retrieve the existing prods array from localStorage
@@ -143,7 +144,7 @@ var MVVM = {
                 // $("#messageModal").modal('show');
             }
             this.sendInquiry = function(){
-                debugger;
+                //debugger;
                 var self = this;
                 let num = 254745655524;
                 let msg = "inquire"
@@ -152,7 +153,7 @@ var MVVM = {
                 // });
                 let name = self.names();
                 let location = self.location();
-                debugger;
+                //debugger;
                 // var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20${msg}.
                 // `, '_blank');
                 let email = 'akidahmansur@gmail.com';
@@ -167,7 +168,7 @@ var MVVM = {
                 var win = window.open(mailtoLink, '_blank');
             }
             this.sendMessage = function (value) {
-                debugger;
+                //debugger;
                 var self = this;
                 let num = 254745655524;
                 let msg = ""
@@ -177,14 +178,14 @@ var MVVM = {
                 let name = self.names();
                 let location = self.location();
                 let total = self.totalSum();
-                debugger;
+                //debugger;
                 if(name === undefined || location === undefined || name === " " || location === " "){
                     alert("Please provide your name and location");
                     return;
                 }
                 var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20*${location}*.%20I%20would%20like%20to%20order%20these:%20${msg}.%0ATotal%20=%20*${total}*`, '_blank');
                 // var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
-
+                //debugger;
                 //delete from the local storage 
                 localStorage.removeItem('prods');
                 self.cartProducts([]);
@@ -196,7 +197,7 @@ var MVVM = {
                 // win.focus();
             }.bind(this);
             this.viewCart = function(){
-                debugger;
+                //debugger;
                 var self = this;
                 var totalPrice = 0;
                 $('#myModal').modal('show');
@@ -212,12 +213,12 @@ var MVVM = {
                 self.cartProducts(prods);
             }
             this.closeCart  = function (){
-                debugger;
+                //debugger;
                 $('#myModal').modal('hide');
             }
             this.addCart = function (value){
                 // alert('Added to cart');
-                debugger;
+                //debugger;
                 var self = this;
                 self.ordered(false);
                 //this.count(this.count() + 1);
@@ -229,7 +230,7 @@ var MVVM = {
             }.bind(this);
             this.addToCart = function (value){
                 // alert('Added to cart');
-                debugger;
+                //debugger;
                 var self = this;
 
                 var productName = self.productName();
@@ -245,7 +246,7 @@ var MVVM = {
             }.bind(this);
             this.removeCart = function (value){
                 // alert('Added to cart');
-                debugger;
+                //debugger;
                 var self = this;
                 this.count(this.count() - 1);
                 //self.cartProducts().push(value);
@@ -269,7 +270,7 @@ var MVVM = {
                 checkCount.call(this);
             }.bind(this);
             this.viewProduct = function(value){
-                debugger;
+                //debugger;
                 var self = this;
                 self.productName(value.productName);
                 self.price(value.price);
@@ -280,7 +281,7 @@ var MVVM = {
                 //self.cartProducts(prods);
             }.bind(this);
             this.closeProduct  = function (){
-                debugger;
+                //debugger;
                 var self = this;
                 self.productName('');
                 self.price('');
@@ -294,7 +295,7 @@ var MVVM = {
             this.totalCalc = function() {
                 var self = this;
                 var totalPrice = 0;
-                debugger;
+                //debugger;
                 // Loop through each item in the array and add its price to the total
                 if(prods.length == 0){
                     self.totalSum(totalPrice);
@@ -327,6 +328,6 @@ var MVVM = {
 
 
 $(document).ready(function () {
-    debugger;
+    //debugger;
     MVVM.init();
 });
