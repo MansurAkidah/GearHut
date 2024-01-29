@@ -24,6 +24,7 @@ var MVVM = {
             this.cnt = ko.observable();
             this.shipping = ko.observable(false);
             this.shippingFee = ko.observable(110);
+            //this.termsAgreed = ko.observable(false);
             this.AirPodsList = ko.observable([
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
                     "Wireless TWS Earbuds",
@@ -531,6 +532,20 @@ var MVVM = {
             this.locations = ko.observableArray(['South C', 'Kilimani','Juja', 'Thika'])
             this.cartProducts = ko.observableArray([]);
             var prods = [];
+            this.termsAgreed = ko.observable(false);
+            this.termsAgreed.subscribe(function(newValue) {
+              // debugger;
+              var orderButton = document.getElementById('orderButton');
+              if (newValue) {
+                  // orderButton.disabled = false;
+                  orderButton.classList.remove('disabled');
+              }
+              else{
+                orderButton.classList.add('disabled');
+              }
+                /* Do something when ShowOpened changes.
+                  newValue variable holds the new value, obviously. :) */
+            });
             this.isProductInList = function(productName) {
                 var availableProducts = this.AvailableList();
                 
@@ -653,6 +668,12 @@ var MVVM = {
                 //debugger;
                 $('#myModal').modal('hide');
             }
+            this.enableOrderButton = function() {
+              var orderButton = document.getElementById('orderButton');
+              if (orderButton) {
+                  orderButton.disabled = false;
+              }
+          }
             this.addCart = function (value){
                 // alert('Added to cart');
                 //debugger;
@@ -689,6 +710,7 @@ var MVVM = {
                 // alert('Added to cart');
                 //debugger;
                 var self = this;
+                var cnt = 0;
                 this.count(this.count() - 1);
                 //self.cartProducts().push(value);
                 //prods.pop(value);
@@ -706,8 +728,10 @@ var MVVM = {
                 // self.AvailableList().forEach(function(item) {
                 self.cartProducts().forEach(function(item) {
                     totalPrice += item.price * item.quantity;
+                    cnt++;
                 });
                 self.totalSum(totalPrice);
+                self.cnt(cnt);
                 checkCount.call(this);
             }.bind(this);
             this.addShipment = function (){
