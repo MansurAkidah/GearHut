@@ -119,10 +119,10 @@
             </a>
           </li><!-- End tab nav item -->
 
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-cables">
               <h4>Cables</h4>
-            </a><!-- End tab nav item -->
+            </a> End tab nav item -->
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-phones">
@@ -193,7 +193,7 @@
           <div class="tab-pane fade active show" id="menu-comrades">
 
             <div class="tab-header text-center">
-              <p>Welcome My G</p>
+              <p>Welcome</p>
               <h3>Comrades Corner</h3>
             </div>
 
@@ -551,6 +551,7 @@
             </div>
         </div>
         <!-- end of Cart modal -->
+
         <!-- Product details Modal -->
         <div class="modal fade" id="ProductModal" tabindex="-1" aria-labelledby="productdetailsmodal" aria-hidden="true">
           <div class="modal-dialog "><!-- modal-xl -->
@@ -581,24 +582,30 @@
                                       <p data-bind="text: Description"><a data-bind="attr: { src: image }" class="text-dark">Dell Xtreme 270</a></p>
                                       <!-- <p class="small text-muted">Laptops</p> -->
                                     </div>
-                                    <div>
-                                      <!-- <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
-                                          <i class="fas fa-star"></i>
-                                          <i class="fas fa-star"></i>
-                                          <i class="fas fa-star"></i>
-                                          <i class="fas fa-star"></i>
-                                      </div> -->
+                                    <div class="m-2">
+                                      <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                      </div>
                                       <p class="small text-muted">Rated 4.0/5</p>
                                     </div>
                                 </div>
                               </div>
                               <hr class="my-0" />
                               <div class="card-body pb-0">
+                                <p >Specs :</p>
+                                <div data-bind="foreach:specs">
+                                  <p class="small text-muted" data-bind="text: $data">VISA Platinum</p>
+                                </div>
+                              <hr class="my-1" />
                                 <div class="d-flex justify-content-between">
                                     <p >Price: Ksh <span class="text-dark" data-bind="text: price">$3,999</span></p>
                                     <!-- <p class="text-dark">#### 8787</p> -->
                                 </div>
-                                <p class="small text-muted">VISA Platinum</p>
+                                
                               </div>
                               <hr class="my-0" />
                               <!-- <div class="card-body" data-bind="visible:instock">
