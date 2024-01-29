@@ -21,6 +21,9 @@ var MVVM = {
             this.specs = ko.observable([]);
             this.ordered = ko.observable(false);
             this.empty = ko.observable(false);
+            this.cnt = ko.observable();
+            this.shipping = ko.observable(false);
+            this.shippingFee = ko.observable(110);
             this.AirPodsList = ko.observable([
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
                     "Wireless TWS Earbuds",
@@ -53,7 +56,7 @@ var MVVM = {
                     "Charging case included",
                     "Compatible with Android and iOS devices"
                   ]
-                   },
+                  },
                 { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 ,specs: [
                     "Industry-leading Noise Cancellation",
                     "High-resolution audio with LDAC",
@@ -184,14 +187,100 @@ var MVVM = {
                   ]
                   },
                 ]);
-            this.CablesList = ko.observable([
-                { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Fast charging for Apple devices', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/1/c162a9b6_ea221940_MQKJ3.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Apple Lightning to USB Cable (1 m)', price: 700, description: 'Durable and high-speed charging', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg', inStock: 1, quantity: 1 },
-                { productName: 'Apple Thunderbolt 3 (USB‑C) Cable (0.8 m)', price: 450, description: 'Supports Thunderbolt 3 data transfer up to 40 Gbps', image: 'assets/img/cables/Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).jpg', inStock: 0, quantity: 1 },
-                { productName: 'Otterbox Lightning - USB C (Fast Charge) | 1meter - Cloud Sky', price: 350, description: 'OtterBox Fast Charge Premium Lightning to USB-C Cable', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/5/9/59d2e8f5_3825924a_SW-OS-SW-TAP2-001.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Apple Watch Magnetic Charging Cable (1 m)', price: 200, description: 'MagSafe technology with inductive charging', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1./preview/e/f/ef535460_64c2a777-Apple-Watch-Magnetic-Charging-Cable-1m.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Belkin USB-C TO LTG, BRAID SIL, 2M', price: 550, description: 'SKU: Belkin USB-C TO LTG, BRAID SIL, 2M', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/b/8/b892c0a1_e574acb7_SW-OS-SW-TAP2-027.jpg', inStock: 1, quantity: 1 },
-                { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'supports Thunderbolt 3, Thunderbolt 4 and USB 4 data transfer up to 40Gb/s', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png', inStock: 1, quantity: 1 },
+            this.speakerList = ko.observable([
+                { productName: 'Jbl Charge 5 ', price: 22000, description: 'JBL CHARGE 5 - Bold JBL Original Pro Sound', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/20/223269/1.jpg?7704', inStock: 1, quantity: 1, specs: [
+                  "Powerful portable Bluetooth speaker",
+                  "JBL Pro Sound with deep bass",
+                  "Built-in rechargeable battery with up to 20 hours of playtime",
+                  "IP67 waterproof and dustproof design",
+                  "USB-C charging port and powerbank feature",
+                  "Wireless Bluetooth streaming with multi-device connectivity",
+                  "JBL PartyBoost for syncing multiple compatible speakers",
+                  "Durable fabric material and rugged rubber housing",
+                  "Integrated noise- and echo-canceling speakerphone"
+                ]
+                },
+                { productName: 'Jbl Xtreme 3 ', price: 34000, description: '4 drivers and 2 JBL Bass Radiators', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/20/3055651/1.jpg?8563', inStock: 1, quantity: 1 , specs: [
+                  "Powerful portable Bluetooth speaker",
+                  "JBL Pro Sound with immersive stereo sound",
+                  "Built-in rechargeable battery with up to 15 hours of playtime",
+                  "IP67 waterproof and dustproof design",
+                  "USB-C charging port and powerbank feature",
+                  "Wireless Bluetooth streaming with multi-device connectivity",
+                  "JBL PartyBoost for connecting multiple compatible speakers",
+                  "Durable fabric material and rugged rubber housing",
+                  "Integrated noise- and echo-canceling speakerphone"
+                ]
+                },
+                { productName: 'JBL Flip 6 ', price: 16000, description: 'Louder, more powerful sound', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/94/2465651/1.jpg?5506', inStock: 1, quantity: 1 , specs: [
+                  "Compact and portable Bluetooth speaker",
+                  "JBL Signature Sound with clear and powerful audio",
+                  "Built-in rechargeable battery with extended playtime",
+                  "Waterproof and durable design for outdoor use",
+                  "USB-C charging port",
+                  "Wireless Bluetooth streaming with easy device pairing",
+                  "Integrated speakerphone for hands-free calling",
+                  "JBL Connect feature for linking multiple compatible speakers"
+                ]
+                },
+                { productName: 'Flip Essential', price: 13000, description: 'All purpose, all weather companion.', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw586de883/JBL_FlipEssential_Back_006_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "Compact and portable Bluetooth speaker",
+                  "JBL Signature Sound for clear and powerful audio",
+                  "Built-in rechargeable battery with extended playtime",
+                  "Waterproof and durable design for outdoor use",
+                  "USB-C charging port",
+                  "Wireless Bluetooth streaming with easy device pairing",
+                  "Integrated speakerphone for hands-free calling",
+                  "JBL Connect feature for linking multiple compatible speakers"
+                ]
+                },
+                { productName: 'JBL Clip 4', price: 8500, description: 'Clip and Play. Cool, portable, and waterproof. The vibrant fresh looking JBL Clip 4 delivers surprisingly rich JBL Original Pro Sound in a compact package. The unique oval shape fits easy in your hand. ', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw2e0d5a46/101664_JBL_CLIP4_HERO_PHONE_GREY_PINK_x2.png?sw=1605&sh=1605', inStock: 1, quantity: 1, specs: [
+                  "Ultra-portable Bluetooth speaker with carabiner clip",
+                  "JBL Pro Sound for clear and powerful audio",
+                  "Built-in rechargeable battery with up to 10 hours of playtime",
+                  "IP67 waterproof and dustproof design",
+                  "Clip it anywhere with the integrated carabiner",
+                  "Wireless Bluetooth streaming with easy device pairing",
+                  "Integrated speakerphone for hands-free calling",
+                  "Durable fabric material and rugged rubber housing",
+                  "USB-C charging port for quick and convenient charging"
+                ]
+                },
+                { productName: 'JBL Go3', price: 550, description: 'Grab & Go. JBL Go 3 features bold styling and rich JBL Pro Sound. With its new eye-catching edgy design, colorful fabrics and expressive details this a must-have accessory for your next outing', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1c56c775/JBL_GO_3_DETAIL_1_BLUE_0008_1605x1605px.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "Ultra-portable Bluetooth speaker",
+                  "JBL Pro Sound for clear and punchy audio",
+                  "Built-in rechargeable battery with up to 5 hours of playtime",
+                  "IP67 waterproof and dustproof design",
+                  "Compact and stylish design with integrated loop",
+                  "Wireless Bluetooth streaming with easy device pairing",
+                  "Speakerphone feature for hands-free calling",
+                  "Durable fabric material and rugged rubber housing",
+                  "USB-C charging port for quick and convenient charging"
+                ]
+                },
+                { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "Output power: 3.1W",
+                  "Frequency response: 180Hz - 20kHz",
+                  "Dimensions: 3.4 x 2.8 x 1.2 inches",
+                  "Weight: 0.18 kg",
+                  "Bluetooth version: 4.2",
+                  "Bluetooth profiles: A2DP V1.2, AVRCP V1.5",
+                  "Bluetooth frequency: 2400 MHz - 2483.5 MHz",
+                  "Bluetooth modulation: GFSK, π/4 DQPSK, 8DPSK",
+                  "Bluetooth transmitter power: ≤ 6 dBm (EIRP)",
+                  "Charging time: 2.5 hours",
+                  "Maximum music playing time: 5 hours",
+                  "Features: Charging cable, Waterproof, Wireless, Rechargeable battery, Bluetooth"
+                ]
+                 },
+                // { productName: 'JBL Boombox3', price: 62000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
                 // Add more cables or other products as needed
             ]);
             this.laptopList = ko.observable([
@@ -544,6 +633,7 @@ var MVVM = {
                 //debugger;
                 var self = this;
                 var totalPrice = 0;
+                var cnt = 0;
                 $('#myModal').modal('show');
                 if(prods.length == 0){
                     self.totalSum(totalPrice);
@@ -551,8 +641,11 @@ var MVVM = {
                 // self.AvailableList().forEach(function(item) {
                 prods.forEach(function(item) {
                     totalPrice += item.price * item.quantity;
+                    cnt++;
                 });
+                
                 self.totalSum(totalPrice);
+                self.cnt(cnt);
                 checkCount.call(this);
                 self.cartProducts(prods);
             }
@@ -617,6 +710,16 @@ var MVVM = {
                 self.totalSum(totalPrice);
                 checkCount.call(this);
             }.bind(this);
+            this.addShipment = function (){
+              debugger;
+              var self = this;
+              self.totalSum(self.totalSum() + self.shippingFee());
+            }.bind(this);
+            this.removeShipment = function (){
+              debugger;
+              var self = this;
+              self.totalSum(self.totalSum() - self.shippingFee());
+            }.bind(this);
             this.viewProduct = function(value){
                 debugger;
                 var self = this;
@@ -644,6 +747,7 @@ var MVVM = {
             this.totalCalc = function() {
                 var self = this;
                 var totalPrice = 0;
+                var cnt = 0;
                 //debugger;
                 // Loop through each item in the array and add its price to the total
                 if(prods.length == 0){
@@ -652,8 +756,10 @@ var MVVM = {
                 // self.AvailableList().forEach(function(item) {
                 prods.forEach(function(item) {
                     totalPrice += item.price * item.quantity;
+                    cnt+= 1;
                 });
                 self.totalSum(totalPrice);
+                self.cnt(cnt);
             }.bind(this);
             this.dateTwoDaysFromNow = ko.computed(function () {
                 var self = this;

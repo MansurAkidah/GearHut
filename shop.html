@@ -119,10 +119,10 @@
             </a>
           </li><!-- End tab nav item -->
 
-          <!--<li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-cables">
-              <h4>Cables</h4>
-            </a> End tab nav item -->
+              <h4>Speakers</h4>
+            </a><!-- End tab nav item -->
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-phones">
@@ -239,10 +239,10 @@
 
             <div class="tab-header text-center">
               <p>Products</p>
-              <h3>Cables</h3>
+              <h3>Speakers</h3>
             </div>
 
-            <div class="row gy-5" data-bind="foreach:CablesList">
+            <div class="row gy-5" data-bind="foreach:speakerList">
               
               <!--<div class="col-lg-4 menu-item">
                 <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="Cable"></a>
@@ -474,12 +474,33 @@
                                       <li
                                         class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                                         Products
-                                        <span>Ksh.<span data-bind="text:totalSum"></span></span>
+                                        <span><span data-bind="text:cnt"></span></span>
                                       </li>
-                                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                        Shipping
+                                      <li class="list-group-item row d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                        &nbsp;&nbsp;&nbsp;Shipping
                                         <span>0.0</span>
+                                        <!-- <div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="False" data-bind="checked: removeShipment">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                              PickUp in Nairobi - <span>free</span>
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="True" data-bind="checked: addShipment" id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                              Delivery outside Nairobi -  <span>Ksh.110</span>
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" disabled>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                              Delivery outside Kenya -  <span></span>
+                                            </label>
+                                          </div>
+                                        </div> -->
                                       </li>
+                                      <hr>
                                       <li
                                         class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                         <div>
