@@ -25,14 +25,23 @@ var MVVM = {
             this.shippingFee = ko.observable(110);
             //this.termsAgreed = ko.observable(false);
             this.AirPodsList = ko.observable([
-                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
-                    "Wireless TWS Earbuds",
-                    "Bluetooth v5.0",
-                    "Up to X hours of listening time",
-                    "Charging case with XmAh capacity",
-                    "Compatible with Android and iOS devices"
-                  ]
-                  },
+              { productName: 'Oraimo Freepods 4', price: 4000, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', image: 'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png', inStock: 1, quantity: 1 ,specs: [
+                  "Bluetooth version: 5.2",
+                  "Wireless range: Up to 10 meters",
+                  "Battery capacity (earbuds): 37mAh each",
+                  "Battery capacity (charging case): 500mAh",
+                  "Charging time (earbuds): Approximately 1.5 hours",
+                  "Charging time (charging case): Approximately 2 hours",
+                  "Playback time: Up to 4 hours on a single charge",
+                  "Total playback time with charging case: Up to 24 hours",
+                  "Touch controls for music and calls",
+                  "Voice assistant support",
+                  "Comfortable in-ear design",
+                  "Input: Type-C",
+                  "LED indicators for battery status",
+                  "Compact and portable charging case"
+                ]
+                },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
                     "Active Noise Cancellation (ANC)",
                     "Transparency mode",
@@ -40,7 +49,7 @@ var MVVM = {
                     "Sweat and water resistance (IPX4)",
                     "Wireless charging case included"
                   ]
-                  },
+                },
                 { productName: 'JBL Live Pro 2', price: 4500, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 , specs: [
                     "True Wireless In-Ear Earbuds",
                     "Active Noise Cancellation (ANC)",
@@ -49,14 +58,22 @@ var MVVM = {
                     "Voice assistant support (e.g., Google Assistant, Siri)"
                   ]
                   },
-                { productName: 'Air R02', price: 1200, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
-                    "True Wireless Earbuds",
-                    "Bluetooth vX.X",
-                    "Up to X hours of listening time",
-                    "Charging case included",
-                    "Compatible with Android and iOS devices"
+                { productName: 'Air R02', price: 1100, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
+                  "True Wireless Earbuds",
+                  "Bluetooth v5.0",
+                  "Up to 3 hours of listening time",
+                  "Charging case included",
+                  "Compatible with Android and iOS devices"
                   ]
-                  },
+                },
+                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644485923900130.webp', inStock: 1, quantity: 1 , specs: [
+                  "Wireless TWS Earbuds",
+                  "Bluetooth v5.0",
+                  "Up to X hours of listening time",
+                  "Charging case with XmAh capacity",
+                  "Compatible with Android and iOS devices"
+                ]
+                },
                 { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 ,specs: [
                     "Industry-leading Noise Cancellation",
                     "High-resolution audio with LDAC",
@@ -246,7 +263,7 @@ var MVVM = {
                   "USB-C charging port for quick and convenient charging"
                 ]
                 },
-                { productName: 'JBL Go3', price: 550, description: 'Grab & Go. JBL Go 3 features bold styling and rich JBL Pro Sound. With its new eye-catching edgy design, colorful fabrics and expressive details this a must-have accessory for your next outing', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1c56c775/JBL_GO_3_DETAIL_1_BLUE_0008_1605x1605px.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                { productName: 'JBL Go3', price: 6500, description: 'Grab & Go. JBL Go 3 features bold styling and rich JBL Pro Sound. With its new eye-catching edgy design, colorful fabrics and expressive details this a must-have accessory for your next outing', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1c56c775/JBL_GO_3_DETAIL_1_BLUE_0008_1605x1605px.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
                   "Ultra-portable Bluetooth speaker",
                   "JBL Pro Sound for clear and punchy audio",
                   "Built-in rechargeable battery with up to 5 hours of playtime",
@@ -272,16 +289,96 @@ var MVVM = {
                   "Maximum music playing time: 5 hours",
                   "Features: Charging cable, Waterproof, Wireless, Rechargeable battery, Bluetooth"
                 ]
+                },
+                { productName: 'JBL Boombox3', price: 62000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "Portable Bluetooth speaker",
+                  "JBL Pro Sound for powerful audio",
+                  "Massive battery capacity for extended playtime",
+                  "IPX7 waterproof and durable design",
+                  "Bluetooth connectivity with multi-device support",
+                  "JBL PartyBoost for connecting multiple compatible speakers",
+                  "Built-in powerbank feature for charging devices",
+                  "Integrated carrying handle for easy portability",
+                  "Durable fabric material and rugged construction",
+                  // Add more specific features if available
+                ]
+                },
+                { productName: 'JBL Boombox2', price: 54000, description: 'Massive Sound. All Day Long. Own the party. From backyard barbecues to weekend road trips, JBL Boombox 2 brings it with monstrous bass, bold design and up to 24 hours of play time', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw38da412a/JBL_BOOMBOX_2_HERO_020_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "Portable Bluetooth speaker",
+                  "JBL Pro Sound for powerful audio",
+                  "Massive battery capacity for extended playtime",
+                  "IPX7 waterproof and durable design",
+                  "Bluetooth connectivity with multi-device support",
+                  "JBL PartyBoost for connecting multiple compatible speakers",
+                  "Built-in powerbank feature for charging devices",
+                  "Integrated carrying handle for easy portability",
+                  "Durable fabric material and rugged construction",
+                  // Add more specific features if available
+                ]
                  },
-                // { productName: 'JBL Boombox3', price: 62000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // { productName: 'JBL GO Essentia', price: 5000, description: 'Grab and go. The JBL Go Essential is an ultra-compact portable Bluetooth speaker. Stream music via Bluetooth for up to 5 hours of JBL Original Pro Sound', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c30e385/JBL_GO_ESSENTIAL_DETAIL_BLACK_31543_x1.png?sw=535&sh=535', inStock: 1, quantity: 1 , },
-                // Add more cables or other products as needed
+                { productName: 'JBL Partybox310', price: 79000, description: 'Incredible JBL Sound with a Dazzling Light Show. Huge sound, dazzling lights and unbelievable power set this speaker apart from the crowd', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw91f4edd0/JBL_PartyBox_310_Hero_0176_x3.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "High-power portable Bluetooth party speaker",
+                  "JBL Pro Sound for immersive audio",
+                  "Dynamic light show with customizable patterns",
+                  "Rechargeable battery for hours of playtime",
+                  "IPX4 splashproof design for outdoor use",
+                  "Wireless Bluetooth streaming with multi-device support",
+                  "USB playback and DJ pad for music control",
+                  "Microphone and guitar inputs for karaoke or live performances",
+                  "JBL PartyBoost for linking multiple compatible speakers",
+                  // Add more specific features if available
+                ]
+                },
+                { productName: 'JBL Partybox710', price: 108000, description: 'The life of every party. The splashproof PartyBox 710 transforms your next event into a real party, concert or nightclub', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1b0c500b/JBL_PARTYBOX_710_TABLET_0056_x5.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "High-power portable Bluetooth party speaker",
+                  "JBL Pro Sound for immersive audio",
+                  "Dynamic light show with customizable patterns",
+                  "Rechargeable battery for extended playtime",
+                  "IPX4 splashproof design for outdoor use",
+                  "Wireless Bluetooth streaming with multi-device support",
+                  "USB playback and DJ pad for music control",
+                  "Microphone and guitar inputs for karaoke or live performances",
+                  "JBL PartyBoost for connecting multiple compatible speakers",
+                  // Add more specific features if available
+                ]
+                },
+                { productName: 'JBL Partybox1000', price: 148000, description: 'The Ultimate Party Machine! The JBL PartyBox 1000 is a powerful party speaker with JBL sound quality and exciting full panel light show', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw356c45cb/JBL_PartyBox_1000_Hero_344_fire_x2.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "High-power portable Bluetooth party speaker",
+                  "JBL Pro Sound for powerful and immersive audio",
+                  "Dynamic light show with customizable patterns",
+                  "Rechargeable battery for extended playtime",
+                  "IPX4 splashproof design for outdoor use",
+                  "Wireless Bluetooth streaming with multi-device support",
+                  "USB playback and DJ pad for music control",
+                  "Microphone and guitar inputs for karaoke or live performances",
+                  "JBL PartyBoost for connecting multiple compatible speakers",
+                  "Air Gesture wristband for interactive light control",
+                  // Add more specific features if available
+                ]
+                 },
+                { productName: 'JBL Partybox Encore Essential ', price: 41000, description: 'The portable JBL PartyBox Encore Essential speaker gives you up to 6 hours of non-stop fun. With an easy grab-and-go handle and splash proof design, you can always take the party with you.', image: 'https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwa43c2101/JBL_PARTYBOX_ENCORE_ESSENTIAL_HERO_1605x1605px.png?sw=535&sh=535', inStock: 1, quantity: 1 , specs: [
+                  "Output power: 100W",
+                  "Frequency response: 50Hz - 20kHz @ -6dB",
+                  "Dimensions: 10.87 x 12.87 x 11.54 inches",
+                  "Weight: 5.9 kg",
+                  "Bluetooth version: 5.1",
+                  "Bluetooth profiles: A2DP 1.3, AVRCP 1.6",
+                  "Bluetooth frequency: 2.4 GHz - 2.4835 GHz",
+                  "Bluetooth modulation: GFSK, π/4 DQPSK, 8DPSK",
+                  "Bluetooth transmitter power: ≤ 15 dBm (EIRP)",
+                  "Charging time: 3.5 hours",
+                  "Maximum music playing time: 6 hours",
+                  "Lightshow: Yes",
+                  "Splashproof: Yes (IPx4)",
+                  "Charging cable: Yes",
+                  "Wireless: Yes",
+                  "Rechargeable battery: Yes",
+                  "Bluetooth: Yes"
+                ]
+                },
+                // { productName: 'JBL ', price: 0, description: '', image: '', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL ', price: 0, description: '', image: '', inStock: 1, quantity: 1 , },
+                // { productName: 'JBL ', price: 0, description: '', image: '', inStock: 1, quantity: 1 , },
             ]);
             this.laptopList = ko.observable([
                 { productName: 'Dell XPS 13', price: 24000, description: 'Experience perfection with the Dell XPS 13 - A slim and powerful laptop that redefines elegance and performance.', image: 'https://m.media-amazon.com/images/I/61hSHC1ClAL._AC_UF894,1000_QL80_.jpg', inStock: 1, quantity: 1, specs: [
@@ -484,14 +581,7 @@ var MVVM = {
                 { productName: 'Samsung Galaxy A52', price: 40000, description: 'Discover the perfect balance with the Samsung Galaxy A52 - A mid-range smartphone that excels in camera and performance.', image: 'https://www.queensmobile.co.ke/img/products/56/Samsung-Galaxy-A52-w-1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
             ]);            
             this.AvailableList = ko.observable([
-                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
-                    "Wireless TWS Earbuds",
-                    "Bluetooth v5.0",
-                    "Up to 3 hours of listening time",
-                    "Charging case with 360mAh capacity",
-                    "Compatible with Android and iOS devices"
-                  ]
-                  },
+                
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
                     "Active Noise Cancellation (ANC)",
                     "Transparency mode",
@@ -508,7 +598,7 @@ var MVVM = {
                     "Voice assistant support (e.g., Google Assistant, Siri)"
                   ]
                   },
-                { productName: 'Air R02', price: 1200, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
+                { productName: 'Air R02', price: 1000, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
                     "True Wireless Earbuds",
                     "Bluetooth v5.0",
                     "Up to 3 hours of listening time",
@@ -516,6 +606,14 @@ var MVVM = {
                     "Compatible with Android and iOS devices"
                   ]
                 },
+                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
+                    "Wireless TWS Earbuds",
+                    "Bluetooth v5.0",
+                    "Up to 3 hours of listening time",
+                    "Charging case with 360mAh capacity",
+                    "Compatible with Android and iOS devices"
+                  ]
+                  },
                 { productName: 'Pro 3', price: 1000, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'pro 5s', price: 1500, description: 'True Wireless Communication : Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'Air R03s', price: 1300, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
@@ -733,17 +831,17 @@ var MVVM = {
                 checkCount.call(this);
             }.bind(this);
             this.addShipment = function (){
-              debugger;
+              //debugger;
               var self = this;
               self.totalSum(self.totalSum() + self.shippingFee());
             }.bind(this);
             this.removeShipment = function (){
-              debugger;
+              //debugger;
               var self = this;
               self.totalSum(self.totalSum() - self.shippingFee());
             }.bind(this);
             this.viewProduct = function(value){
-                debugger;
+                //debugger;
                 var self = this;
                 self.productName(value.productName);
                 self.price(value.price);
