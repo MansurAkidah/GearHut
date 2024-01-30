@@ -1,9 +1,8 @@
 var MVVM = {
     
     init: function () {
-        var viewModel = function () {
-            ////debugger;
-
+        var Akida = function () {
+            //debugger;
             this.checkout = ko.observable(false);
             this.productName = ko.observable();
             this.price = ko.observable();
@@ -97,7 +96,7 @@ var MVVM = {
                     "Quick Charge: 15 minutes for up to 3 hours of listening",
                     "Hands-free Google Assistant integration"
                   ]
-                   },
+                  },
                 { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 4300, description: 'Immerse yourself in a world of sound with Anker Soundcore Liberty Air 2 Pro - Hybrid Active Noise Cancellation.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/918569/1.jpg?3445', inStock: 1, quantity: 1 , specs: [
                     "Hybrid Active Noise Cancellation for immersive sound",
                     "Up to 7 hours of playtime on a single charge",
@@ -164,7 +163,7 @@ var MVVM = {
                     "Awareness mode for environmental sound awareness",
                     "Bluetooth 5.2 for stable and efficient wireless connectivity"
                   ]
-                   },
+                  },
                 { productName: 'Beats Studio Buds', price: 3800, description: 'Unleash the power of sound with Beats Studio Buds - True Wireless Noise Cancelling Earbuds.', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg', inStock: 0, quantity: 1 ,specs: [
                     "Powerful and balanced sound profile",
                     "Active Noise Cancellation for immersive audio",
@@ -187,7 +186,7 @@ var MVVM = {
                     "Smart charging case with LED indicators"
                   ]
                   },
-                ]);
+            ]);
             this.speakerList = ko.observable([
                 { productName: 'Jbl Charge 5 ', price: 22000, description: 'JBL CHARGE 5 - Bold JBL Original Pro Sound', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/20/223269/1.jpg?7704', inStock: 1, quantity: 1, specs: [
                   "Powerful portable Bluetooth speaker",
@@ -516,7 +515,7 @@ var MVVM = {
                     "Charging case included",
                     "Compatible with Android and iOS devices"
                   ]
-                   },
+                },
                 { productName: 'Pro 3', price: 1000, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'pro 5s', price: 1500, description: 'True Wireless Communication : Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'Air R03s', price: 1300, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
@@ -528,7 +527,7 @@ var MVVM = {
             //     { productName: 'Apple Watch Magnetic Charging Cable (1 m)', price: 200, description: 'Experience MagSafe technology with inductive charging using the Apple Watch Magnetic Charging Cable (1 m).', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1./preview/e/f/ef535460_64c2a777-Apple-Watch-Magnetic-Charging-Cable-1m.jpg', inStock: 1, quantity: 1 },
             //     { productName: 'Belkin USB-C TO LTG, BRAID SIL, 2M', price: 550, description: 'Step into the future with Belkin USB-C TO LTG, BRAID SIL, 2M - your key to seamless connectivity.', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/b/8/b892c0a1_e574acb7_SW-OS-SW-TAP2-027.jpg', inStock: 1, quantity: 1 },
             //     { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'Unleash the power of Thunderbolt with the Apple Thunderbolt 4 (USB‑C) Pro Cable (1m).', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png', inStock: 1, quantity: 1 },
-             ]);
+            ]);
             this.locations = ko.observableArray(['South C', 'Kilimani','Juja', 'Thika'])
             this.cartProducts = ko.observableArray([]);
             var prods = [];
@@ -558,7 +557,6 @@ var MVVM = {
                 //debugger;
                 return false; // Product not found in the list
             }
-            
             function checkCount (){
                 //debugger;
                 var self = this;
@@ -673,7 +671,7 @@ var MVVM = {
               if (orderButton) {
                   orderButton.disabled = false;
               }
-          }
+            }
             this.addCart = function (value){
                 // alert('Added to cart');
                 //debugger;
@@ -682,7 +680,7 @@ var MVVM = {
                 //this.count(this.count() + 1);
                 //self.cartProducts().push(value);
                 prods.push(value);
-                //viewModel.checkCount();
+                //Akida.checkCount();
                 //self.checkCount();
                 checkCount.call(this);
             }.bind(this);
@@ -798,10 +796,10 @@ var MVVM = {
                 return twoDaysFromNow.toDateString();
             });
         }
-        var myModel = new viewModel();
-        ko.applyBindings(myModel);
-        // Assuming your ViewModel is named viewModel and the modal is in an element with the id "myModal"
-        // ko.applyBindings(viewModel, document.getElementById('myModal'));
+        var mansur = new Akida();
+        ko.applyBindings(mansur);
+        // Assuming your Akida is named Akida and the modal is in an element with the id "myModal"
+        // ko.applyBindings(Akida, document.getElementById('myModal'));
     }
 };
 
