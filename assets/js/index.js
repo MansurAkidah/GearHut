@@ -25,7 +25,7 @@ var MVVM = {
             this.shippingFee = ko.observable(110);
             //this.termsAgreed = ko.observable(false);
             this.AirPodsList = ko.observable([
-              { productName: 'Oraimo Freepods 4', price: 4000, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', image: 'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png', inStock: 1, quantity: 1 ,specs: [
+              { productName: 'Oraimo Freepods 4', price: 3999, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', image: 'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png', inStock: 1, quantity: 1 ,specs: [
                   "Bluetooth version: 5.2",
                   "Wireless range: Up to 10 meters",
                   "Battery capacity (earbuds): 37mAh each",
@@ -50,7 +50,7 @@ var MVVM = {
                     "Wireless charging case included"
                   ]
                 },
-                { productName: 'JBL Live Pro 2', price: 4500, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 , specs: [
+                { productName: 'JBL Live Pro 2', price: 19999, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 , specs: [
                     "True Wireless In-Ear Earbuds",
                     "Active Noise Cancellation (ANC)",
                     "Up to X hours of battery life (varies with ANC)",
@@ -554,8 +554,8 @@ var MVVM = {
                     "Weight: Approximately 5.5 pounds (2.5 kg)"
                 ]
                 },
-                { productName: 'Surface Book 4', price: 53599, description: 'Unleash your creativity with the Surface Book 4 - A versatile 2-in-1 laptop that adapts to your every need.', image: 'https://www.yankodesign.com/images/design_news/2020/06/auto-draft/organami_1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Razer Blade 15', price: 1799, description: 'Experience gaming excellence with the Razer Blade 15 - A gaming laptop that combines power, performance, and stunning visuals.', image: 'https://www.techspot.com/images/products/2022/laptops/org/2022-04-01-product-3.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
+                { productName: 'Surface Book 4', price: 270000, description: 'Unleash your creativity with the Surface Book 4 - A versatile 2-in-1 laptop that adapts to your every need.', image: 'https://www.yankodesign.com/images/design_news/2020/06/auto-draft/organami_1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
+                { productName: 'Razer Blade 15', price: 320000, description: 'Experience gaming excellence with the Razer Blade 15 - A gaming laptop that combines power, performance, and stunning visuals.', image: 'https://www.techspot.com/images/products/2022/laptops/org/2022-04-01-product-3.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
                 { productName: 'LG Gram 17', price: 139900, description: 'Elevate your productivity with the LG Gram 17 - An ultra-lightweight laptop that delivers power and endurance.', image: 'https://cdn.mos.cms.futurecdn.net/GggajARVjXZEc2qeHamATV.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
                 { productName: 'Dell G3 15', price: 99900, description: 'Dominate the gaming arena with the Dell G3 15 - A budget-friendly gaming laptop that doesn\'t compromise on performance.', image: 'https://divinetechcomputerske.co.ke/wp-content/uploads/2022/12/DELL.png', inStock: 0, quantity: 1 , specs: ["NaN","NaN","NaN"]},
                 { productName: 'Acer Swift 5', price: 109900, description: 'Experience portability with the Acer Swift 5 - An ultrathin and lightweight laptop that combines power with elegance.', image: 'https://cdn.uc.assets.prezly.com/c55bb2f8-4599-49bc-b301-ce585d597302/Acer-Swift-5-SF514-55-Standard_01.png', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
@@ -589,15 +589,7 @@ var MVVM = {
                     "Sweat and water resistance (IPX4)",
                     "Wireless charging case included"
                   ]
-                  },
-                { productName: 'JBL Live Pro 2', price: 4500, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 , specs: [
-                    "True Wireless In-Ear Earbuds",
-                    "Active Noise Cancellation (ANC)",
-                    "Up to 5 hours of battery life (varies with ANC)",
-                    "Touch controls for music and calls",
-                    "Voice assistant support (e.g., Google Assistant, Siri)"
-                  ]
-                  },
+                },
                 { productName: 'Air R02', price: 1000, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
                     "True Wireless Earbuds",
                     "Bluetooth v5.0",
