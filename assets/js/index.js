@@ -16,7 +16,9 @@ var MVVM = {
             this.location = ko.observable();
             this.inquiryMessage = ko.observable();
             this.subject = ko.observable();
+            this.locationText = ko.observable();
             this.selectedLocation = ko.observable();
+            this.locationInput = ko.observable(false);
             this.specs = ko.observable([]);
             this.ordered = ko.observable(false);
             this.empty = ko.observable(false);
@@ -581,32 +583,39 @@ var MVVM = {
                 { productName: 'Samsung Galaxy A52', price: 40000, description: 'Discover the perfect balance with the Samsung Galaxy A52 - A mid-range smartphone that excels in camera and performance.', image: 'https://www.queensmobile.co.ke/img/products/56/Samsung-Galaxy-A52-w-1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
             ]);            
             this.AvailableList = ko.observable([
-                
-                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
-                    "Active Noise Cancellation (ANC)",
-                    "Transparency mode",
-                    "Adaptive EQ for audio optimization",
-                    "Sweat and water resistance (IPX4)",
-                    "Wireless charging case included"
-                  ]
+              { productName: 'Pro 3', price: 1000, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: [
+                "Listening time: 3 hours",
+                "360mAh charging case",
+                "Lightning charging cable",
+                "Sweat and water resistance (IPX4)",
+                "Wireless charging case included",
+                "Compatible with Android and iOS devices"
+                ]
                 },
                 { productName: 'Air R02', price: 1000, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
-                    "True Wireless Earbuds",
-                    "Bluetooth v5.0",
-                    "Up to 3 hours of listening time",
-                    "Charging case included",
-                    "Compatible with Android and iOS devices"
-                  ]
+                  "True Wireless Earbuds",
+                  "Bluetooth v5.0",
+                  "Up to 3 hours of listening time",
+                  "Charging case included",
+                  "Compatible with Android and iOS devices"
+                ]
                 },
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
-                    "Wireless TWS Earbuds",
-                    "Bluetooth v5.0",
-                    "Up to 3 hours of listening time",
-                    "Charging case with 360mAh capacity",
-                    "Compatible with Android and iOS devices"
-                  ]
-                  },
-                { productName: 'Pro 3', price: 1000, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
+                  "Wireless TWS Earbuds",
+                  "Bluetooth v5.0",
+                  "Up to 3 hours of listening time",
+                  "Charging case with 360mAh capacity",
+                  "Compatible with Android and iOS devices"
+                ]
+                },
+                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
+                  "Active Noise Cancellation (ANC)",
+                  "Transparency mode",
+                  "Adaptive EQ for audio optimization",
+                  "Sweat and water resistance (IPX4)",
+                  "Wireless charging case included"
+                ]
+                },
                 { productName: 'pro 5s', price: 1500, description: 'True Wireless Communication : Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'Air R03s', price: 1300, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'JBL TWS 4 Earbuds', price: 1100, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://images.africasokoni.co.ke/electronics/20211027/DLFT-1099a.jpg', inStock: 1, quantity: 1, specs: ["Sweat proof","Compatible with all mobile phone (android or ios) and music players","Touch sensitive controls"] },
@@ -618,13 +627,13 @@ var MVVM = {
             //     { productName: 'Belkin USB-C TO LTG, BRAID SIL, 2M', price: 550, description: 'Step into the future with Belkin USB-C TO LTG, BRAID SIL, 2M - your key to seamless connectivity.', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/b/8/b892c0a1_e574acb7_SW-OS-SW-TAP2-027.jpg', inStock: 1, quantity: 1 },
             //     { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'Unleash the power of Thunderbolt with the Apple Thunderbolt 4 (USB‑C) Pro Cable (1m).', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png', inStock: 1, quantity: 1 },
             ]);
-            this.locations = ko.observableArray(['South C', 'Kilimani','Juja', 'Thika'])
+            this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja', 'Along Thika road', "Other"])
             this.cartProducts = ko.observableArray([]);
             var prods = [];
             this.termsAgreed = ko.observable(false);
             this.termsAgreed.subscribe(function(newValue) {
               // debugger;
-              var orderButton = document.getElementById('orderButton');
+              var orderButton = document.getElementById('location');
               if (newValue) {
                   // orderButton.disabled = false;
                   orderButton.classList.remove('disabled');
@@ -635,6 +644,23 @@ var MVVM = {
                 /* Do something when ShowOpened changes.
                   newValue variable holds the new value, obviously. :) */
             });
+            this.location.subscribe(function(newValue){
+              debugger;
+              // var self = this;
+              //var n = self.locationText();
+              var inp = document.getElementById('locationInput');
+              if ( newValue =='Other') {
+                this.locationInput(true);
+                inp.classList.remove('disabled');
+                debugger;
+              }
+              else{
+                //this.locationInput(false);
+                inp.classList.add('disabled');
+                debugger;
+              }
+              debugger;
+            }.bind(this));
             this.isProductInList = function(productName) {
                 var availableProducts = this.AvailableList();
                 
