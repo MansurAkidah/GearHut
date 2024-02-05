@@ -583,7 +583,7 @@ var MVVM = {
                 { productName: 'Samsung Galaxy A52', price: 40000, description: 'Discover the perfect balance with the Samsung Galaxy A52 - A mid-range smartphone that excels in camera and performance.', image: 'https://www.queensmobile.co.ke/img/products/56/Samsung-Galaxy-A52-w-1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
             ]);            
             this.AvailableList = ko.observable([
-              { productName: 'Pro 3', price: 1000, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: [
+              { productName: 'Pro 3', price: 900, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: [
                 "Listening time: 3 hours",
                 "360mAh charging case",
                 "Lightning charging cable",
@@ -608,6 +608,14 @@ var MVVM = {
                   "Compatible with Android and iOS devices"
                 ]
                 },
+                { productName: 'In-Ear Earphone Stereo', price: 800, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/576237/6.jpg?1179', inStock: 1, quantity: 1, specs: [
+                  "Bluetooth Version: 5.2",
+                  "Wearing Mode: Neckband",
+                  "Charging Time: 2-3 Hours",
+                  "Playing Time: About 6 Hours",
+                  "Compatible Models: for Android/for iPhone"
+                ]
+                },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
                   "Active Noise Cancellation (ANC)",
                   "Transparency mode",
@@ -619,7 +627,47 @@ var MVVM = {
                 { productName: 'pro 5s', price: 1500, description: 'True Wireless Communication : Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'Air R03s', price: 1300, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
                 { productName: 'JBL TWS 4 Earbuds', price: 1100, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://images.africasokoni.co.ke/electronics/20211027/DLFT-1099a.jpg', inStock: 1, quantity: 1, specs: ["Sweat proof","Compatible with all mobile phone (android or ios) and music players","Touch sensitive controls"] },
-            //     { productName: 'Apple USB-C Woven Charge Cable', price: 500, description: 'Charge your Apple devices in style with the fast and reliable Apple USB-C Woven Charge Cable.', image: 'assets/img/cables/Apple USB-C Woven Charge Cable.jpg', inStock: 0, quantity: 1 },
+                { productName: 'Stereo F9 Bluetooth Earphone', price: 900, description: 'Stereo F9 Bluetooth Earphone', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/75/812253/1.jpg?0315', inStock: 0, quantity: 1, specs: [
+                  "About 5 hours music time/talk time for the 1 time fully charged earphone by 70& volume,  15 times for the charging box to charge the earphone.",
+                  "Easy touch control by touching earphone for volume up/down, Play/Pause Song, Next/Previous Song, activate/deactivate Voice Assistant(Siri and Android Voice assistant), power on/off, Answer/Reject call",
+                  "Power Level Display for the charging box and earphone",
+                  "Bluetooth 5.0",
+                  "Effective Distance: > 10m",
+                  "Sweat/rainy waterproofing"
+                ] 
+                },
+                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/948983/1.jpg?7829', inStock: 0, quantity: 1, specs: [
+                  "Portable and lightweight, easy to carry and use",
+                  "Application: For AirPods Pro",
+                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                ] },
+                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/948983/1.jpg?7828', inStock: 0, quantity: 1, specs: [
+                  "Portable and lightweight, easy to carry and use",
+                  "Application: For AirPods Pro",
+                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                ] },
+                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/446983/1.jpg?2121', inStock: 0, quantity: 1, specs: [
+                  "Portable and lightweight, easy to carry and use",
+                  "Application: For AirPods Pro",
+                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                ] },
+                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/646983/1.jpg?2174', inStock: 0, quantity: 1, specs: [
+                  "Portable and lightweight, easy to carry and use",
+                  "Application: For AirPods Pro",
+                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                ] },
+                { productName: 'Protective TPU Cover Case For AirPods Pro', price: 1000, description: 'Protective TPU Cover Case For AirPods Pro', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/693295/3.jpg?4138', inStock: 0, quantity: 1, specs: [
+                  "Portable and lightweight, easy to carry and use",
+                  "Application: For AirPods Pro",
+                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                ] },
+                { productName: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', price: 250, description: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/948983/1.jpg?7828', inStock: 0, quantity: 1, specs: [
+                  "Made of soft silicone material, it is comfortable to use",
+                  "Application: For AirPods Pro",
+                  "Portable, Anti-scratch, Dust-proof, Anti-fall",
+                  "You can send it to friends as a gif"
+                ] },
+                
             //     { productName: 'Apple Lightning to USB Cable (1 m)', price: 700, description: 'Experience durable and high-speed charging with the Apple Lightning to USB Cable (1 m).', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg', inStock: 1, quantity: 1 },
             //     { productName: 'Apple Thunderbolt 3 (USB‑C) Cable (0.8 m)', price: 450, description: 'Unleash the power of Thunderbolt with the Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).', image: 'assets/img/cables/Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).jpg', inStock: 0, quantity: 1 },
             //     { productName: 'Otterbox Lightning - USB C (Fast Charge) | 1meter - Cloud Sky', price: 350, description: 'Charge with style using the OtterBox Fast Charge Premium Lightning to USB-C Cable in Cloud Sky.', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/5/9/59d2e8f5_3825924a_SW-OS-SW-TAP2-001.jpg', inStock: 1, quantity: 1 },
