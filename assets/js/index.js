@@ -44,6 +44,21 @@ var MVVM = {
                   "Compact and portable charging case"
                 ]
                 },
+                { productName: 'Oraimo Freepods 4 Tuned by Burna Boy', price: 5999, description: 'Oraimo X Burna Boy SpacePods True Wireless Earbuds', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/49/6941651/1.jpg?2845', inStock: 1, quantity: 1 ,specs: [
+                  "Burna Boy Exclusive Voice Prompt, t feels like he's talking to you! 'Noise cancellation','Game Mode','Transparency' ",
+                  "Burna Boy Specially Tuned After almost a year of collaboration between Grammy Award winner Burna Boy and the oraimo audio team",
+                  "Wireless range: Up to 10 meters",
+                  "Battery capacity (earbuds): 37mAh each",
+                  "Battery capacity (charging case): 500mAh",
+                  "Charging time (earbuds): Approximately 1.5 hours",
+                  "Charging time (charging case): Approximately 2 hours",
+                  "Playback time: Up to 4 hours on a single charge",
+                  "Total playback time with charging case: Up to 24 hours",
+                  "Touch controls for music and calls",
+                  "Input: Type-C",
+                  "Compact and portable charging case"
+                ]
+                },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
                     "Active Noise Cancellation (ANC)",
                     "Transparency mode",
