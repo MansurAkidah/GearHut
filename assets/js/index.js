@@ -798,7 +798,10 @@ var MVVM = {
                 let num = 254745655524;
                 let msg = ""
                 this.cartProducts().forEach(function(item) {
+                  if(item.quantity != 0)
                     msg += "%0A" + item.quantity + " - " +item.productName + " @ Ksh." + item.price ;
+                  else
+                    msg += "%0A" + "(REQUEST) - " + item.productName + " @ Ksh." + item.price;
                 });//+ "( " + item.image +" )"
                 let name = self.names();
                 let location = self.location();
@@ -863,10 +866,18 @@ var MVVM = {
                 //self.checkCount();
                 checkCount.call(this);
             }.bind(this);
-            this.addRequest = function(){
+            this.addRequest = function(value){
                 var self = this;
-                //debugger;
-            };
+                debugger;
+                self.ordered(false);
+                value.quantity = 0;
+                //this.count(this.count() + 1);
+                //self.cartProducts().push(value);
+                prods.push(value);
+                //Akida.checkCount();
+                //self.checkCount();
+                checkCount.call(this);
+            }.bind(this);
             this.addToCart = function (value){
                 // alert('Added to cart');
                 //debugger;

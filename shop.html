@@ -182,7 +182,7 @@
                       <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
                   </div>
                   <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                   </div>
               </div>
             </div>
@@ -227,7 +227,7 @@
                       <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
                   </div>
                   <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                   </div>
               </div>
             </div>
@@ -272,7 +272,7 @@
                       <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
                   </div>
                   <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                   </div>
               </div>
             </div>
@@ -317,7 +317,7 @@
                       <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
                   </div>
                   <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                   </div>
               </div>
             </div>
@@ -362,7 +362,7 @@
                       <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
                   </div>
                   <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Request</a></div>
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                   </div>
               </div>
             </div>
@@ -420,9 +420,14 @@
                                         <div class="mb-4" style="max-width: 300px">
                                           
                                           
-                                          <div class="form-outline">
+                                          <div class="form-outline" data-bind="visible:quantity">
                                             <input id="form1" min="1" name="quantity" type="number" class="form-control" data-bind="value:quantity, event: {change:$root.totalCalc}"/>
                                             <label class="form-label" for="form1">Quantity</label>
+                                          </div>
+                                          <div class="form-outline" data-bind="visible:!quantity">
+                                            <!-- <input id="form1" min="1" name="quantity" type="number" class="form-control" data-bind="value:quantity"/> -->
+                                            <span class="form-label">Proceed to checkout to complete your request...</span>
+                                            <!-- <label class="form-label" for="form1">Quantity</label> -->
                                           </div>
                                           <div class="form-outline">
                                               <button class="btn btn-danger px-3 me-2" data-bind="click:$root.removeCart" >
