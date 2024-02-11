@@ -933,7 +933,7 @@ var MVVM = {
               self.totalSum(self.totalSum() - self.shippingFee());
             }.bind(this);
             this.viewProduct = function(value){
-                //debugger;
+                debugger;
                 var self = this;
                 self.productName(value.productName);
                 self.price(value.price);
