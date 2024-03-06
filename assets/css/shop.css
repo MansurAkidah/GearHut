@@ -1459,6 +1459,12 @@ progress {
   }
 }
 @media (min-width: 992px) {
+  #menu-airpods .row .menu-item {
+    flex: 0 0 calc(50% - 15px); /* Set each item to occupy 50% of the width with some space between them */
+    max-width: calc(50% - 15px); /* Set max-width to ensure items don't exceed 50% */
+  }
+}
+@media (min-width: 992px) {
   .col-lg {
     flex: 1 0 0%;
   }

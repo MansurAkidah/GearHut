@@ -74,7 +74,7 @@ var MVVM = {
                     "Touch controls for music and calls",
                     "Voice assistant support (e.g., Google Assistant, Siri)"
                   ]
-                  },
+                },
                 { productName: 'Air R02', price: 1100, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
                   "True Wireless Earbuds",
                   "Bluetooth v5.0",
@@ -82,7 +82,7 @@ var MVVM = {
                   "Charging case included",
                   "Compatible with Android and iOS devices"
                   ]
-                },
+                  },
                 { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644485923900130.webp', inStock: 1, quantity: 1 , specs: [
                   "Wireless TWS Earbuds",
                   "Bluetooth v5.0",
@@ -90,7 +90,7 @@ var MVVM = {
                   "Charging case with XmAh capacity",
                   "Compatible with Android and iOS devices"
                 ]
-                },
+                  },
                 { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 ,specs: [
                     "Industry-leading Noise Cancellation",
                     "High-resolution audio with LDAC",
@@ -398,50 +398,49 @@ var MVVM = {
                 // { productName: 'JBL ', price: 0, description: '', image: '', inStock: 1, quantity: 1 , },
             ]);
             this.laptopList = ko.observable([
-                { productName: 'Dell XPS 13', price: 24000, description: 'Experience perfection with the Dell XPS 13 - A slim and powerful laptop that redefines elegance and performance.', image: 'https://m.media-amazon.com/images/I/61hSHC1ClAL._AC_UF894,1000_QL80_.jpg', inStock: 1, quantity: 1, specs: [
-                    "Intel Core i5 or i7 (10th, 11th, or later generation)",
-                    "8GB or 16GB LPDDR4x",
-                    "256GB or 512GB PCIe NVMe SSD",
-                    "13.4-inch InfinityEdge display with FHD+ (1920 x 1200) or 4K UHD+ (3840 x 2400) resolution",
-                    "Intel UHD Graphics (integrated) or Intel Iris Xe Graphics",
-                    "Windows 10 or later, or Ubuntu-based Developer Edition",
-                    "USB-C with Thunderbolt 3, USB-C 3.1, microSD card slot, 3.5mm headphone/microphone combo jack",
-                    "Wi-Fi 6 (802.11ax), Bluetooth 5.0",
-                    "HD webcam with IR for Windows Hello facial recognition",
-                    "High-capacity battery for extended usage",
-                    "Premium build materials, aluminum chassis, and carbon fiber or glass fiber palm rest",
-                    "Varies based on the specific configuration but often lightweight"
+                { productName: 'HP EliteBook 830 G5', price: 45000, description: 'refurbished Intel Core i5 8th Gen 8GB RAM 256GB SSD 13.3 Inches FHD Display', image: 'https://laptopparts.co.ke/wp-content/uploads/2022/08/830-g5.jpg', inStock: 1, quantity: 1, specs: [
+                  "Keyboard: HP Premium Collaboration Keyboard (optional backlit)",
+                  "Pointing Device: Clickpad with multi-touch gesture support",
+                  "Battery: 3-cell Li-ion, 50 Whr, 14 hours and 15 minutes life",
+                  "AC Adapter: Output: 65 W USB Type-C™ adapter",
+                  "Ports: Thunderbolt™ (USB Type-C™), USB 3.1 Gen 1, HDMI 1.4b, RJ-45, docking connector, headphone/microphone combo, AC power",
+                  "Wireless: Intel® Dual Band Wireless-AC 8265 802.11a/b/g/n/ac (2×2) Wi-Fi, Bluetooth 4.2 Combo, vPro",
+                  "Wired Protocol: Intel® I219-LM 10/100/1000 GbE, vPro",
+                  "Security: HP BIOSphere Gen4, HP DriveLock, Power-on authentication, HP Secure Erase, HP Fingerprint Sensor, TPM 2.0 embedded security chip",
+                  "Management: HP Driver Packs, HP System Software Manager, HP BIOS Config Utility, HP Client Catalog, HP Manageability Integration Kit Gen2",
+                  "Available Software: Native Miracast support, HP LAN Protection, HP Connection Optimizer, HP 3D DriveGuard, HP ePrint Driver + JetAdvantage, HP Hotkey Support, HP Recovery Manager, HP JumpStart, HP Support Assistant, HP Noise Cancellation Software, HP PhoneWise, HP Client Security Gen4, Buy Office",
+                  "Product Type: HP EliteBook 830 G5 Notebook PC",
+                  "Product Colour: Silver"]
+                  },
+                { productName: 'HP Renewed Elitebook 840 G3', price: 30999, description: '6th Gen , Core I5, 8GB RAM- SSD 256 -14", Sliver', image: 'https://bitratedigital.co.ke/wp-content/uploads/2022/07/1167430-e3a7141c47a242c1a3e0fafe7132f4f7-1.jpg', inStock: 1, quantity: 1 , specs: [
+                  "CPU: 2.5GHz Intel Core i5",
+                  "Operating System: Windows Trial",
+                  "RAM: 8GB",
+                  "Hard Drive Size: 256GB SSD",
+                  "Display Size: 14\"",
+                  "Graphics Card: Intel HD Graphics 6000"
                   ]
                   },
-                { productName: 'MacBook Air M2', price: 254999, description: 'Elevate your productivity with the MacBook Air M2 - A sleek and lightweight powerhouse designed for creativity and efficiency.', image: 'https://istore.ph/cdn/shop/products/MacBook_Air_M2_Space_Gray_PDP_Image_Position-3__ROSA.jpg?v=1657016049&width=4000', inStock: 1, quantity: 1 , specs: [
-                    "Apple M2 chip",
-                    "8GB or 16GB unified memory",
-                    "256GB, 512GB, 1TB, or 2TB SSD storage options",
-                    "13.3-inch Retina display with True Tone",
-                    "Apple M1 GPU",
-                    "macOS Monterey",
-                    "Two Thunderbolt/USB 4 ports",
-                    "Wi-Fi 6 (802.11ax), Bluetooth 5.0",
-                    "720p FaceTime HD camera",
-                    "Up to 15 hours of web browsing battery life",
-                    "Aluminum chassis with a fanless design",
-                    "Weight: Approximately 2.8 pounds (1.29 kg)"
-                  ]
-                  },
-                { productName: 'HP Spectre x360', price: 190500, description: 'Immerse yourself in innovation with the HP Spectre x360 - A versatile 2-in-1 laptop that combines style and performance.', image: 'https://yellowappletechnologies.co.ke/wp-content/uploads/2021/03/3R494PAABG_006.jpg', inStock: 1, quantity: 1 , specs: [
-                    "Intel Core i5 or i7 processor",
-                    "8GB or 16GB RAM",
-                    "256GB, 512GB, or 1TB SSD storage options",
-                    "13.3-inch or 15.6-inch display with FHD or 4K resolution",
-                    "Intel Iris Xe Graphics",
-                    "Windows 10",
-                    "Multiple USB-C/Thunderbolt ports",
-                    "Wi-Fi 6 (802.11ax), Bluetooth",
-                    "HP TrueVision HD IR Camera with integrated digital microphone",
-                    "Up to 22 hours of battery life (varies by configuration and usage)",
-                    "Aluminum chassis with gem-cut design",
-                    "Weight: Varies by model and screen size"
-                  ]
+                { productName: 'Apple Refurbished MacBook Pro', price: 35500, description: '13" Core I5 16GB RAM, 1TB HDD ( 2012) 2.5GHz- Silver', image: 'https://www.patabay.co.ke/wp-content/uploads/2023/03/m1-500x500.jpg.webp', inStock: 1, quantity: 1 , specs: ["Brand: Apple",
+                "Processor: Intel Core i5-3000M Processor (2.5GHz, Dual-Core)",
+                "Memory: 16GB RAM",
+                "Storage: 1TB HDD",
+                "Storage Interface: Serial-ATA, 5400RPM",
+                "Optical Drive: 8x Dual-Layer SuperDrive",
+                "Display: 13-inch LED-Backlit TFT Display Screen",
+                "Display Resolution: 1280 X 800 Resolution",
+                "Graphics Card: Intel HD Graphics 4000",
+                "Graphics Card Type: Integrated Memory",
+                "Networking: Ethernet [LAN], 10/100/1000Base-T",
+                "Wi-Fi: [WLAN], 802.11a/b/g/n",
+                "Bluetooth: 2.1+EDR",
+                "Audio: Built-in Stereo Speakers, Headphone Jack, Microphone Jack",
+                "Input Devices: Trackpad, Numeric Keyboard",
+                "Expansion: 2 X USB 2.0 Ports, 1 X Firewire Ports, 1 X SD Card Slot",
+                "Dimensions: 32.5 x 22.7 x 2.41 cm",
+                "Weight: 2.04KG",
+                "Year: 2012",
+                "Condition: Refurbished"]
                   },
                 { productName: 'Asus ROG Zephyrus G14', price: 115000, description: 'Unleash gaming excellence with the Asus ROG Zephyrus G14 - A high-performance gaming laptop that delivers power and portability.', image: 'https://www.phone-x.co.ke/wp-content/uploads/2022/07/2-11.jpg', inStock: 1, quantity: 1 , specs: [
                     "AMD Ryzen 9 5900HS or Ryzen 7 5800HS processor",
@@ -582,20 +581,20 @@ var MVVM = {
                 { productName: 'Microsoft Surface Laptop Go', price: 69900, description: 'Simplify your life with the Microsoft Surface Laptop Go - A compact and lightweight laptop that doesn\'t compromise on performance.', image: 'https://vividgold.co.ke/wp-content/uploads/2021/04/microsoft-laptop.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
             ]);
             this.phoneList = ko.observable([
-                { productName: 'iPhone 13 Pro', price: 150000, description: 'Unleash the power of innovation with the iPhone 13 Pro - A smartphone that pushes the boundaries of technology and style.', image: 'https://le.co.ke/wp-content/uploads/2022/04/iphone-13-pro-silver-select.png', inStock: 0, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Samsung Galaxy S21 Ultra', price: 133500, description: 'Experience excellence with the Samsung Galaxy S21 Ultra - A smartphone that redefines photography and performance.', image: 'https://i.ebayimg.com/images/g/ThgAAOSwq4Nh9Dv2/s-l1200.webp', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Google Pixel 6 Pro', price: 75000, description: 'Step into the future with the Google Pixel 6 Pro - A smartphone that combines cutting-edge technology with unparalleled camera capabilities.', image: 'https://api.priceinkenya.com/media/124832/conversions/google-pixel-6-8gb128gb-y1F0suvRFY-original.webp', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'OnePlus 9 Pro', price: 85000, description: 'Elevate your mobile experience with the OnePlus 9 Pro - A flagship killer that delivers top-notch performance and stunning visuals.', image: 'https://www.bovic.co.ke/wp-content/uploads/2021/08/Oneplus-9-256.jpg', inStock: 0, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'iPhone SE (2nd generation)', price: 56000, description: 'Experience power in a compact form with the iPhone SE (2nd generation) - A budget-friendly smartphone that doesn\'t compromise on performance.', image: 'https://applecenter.co.ke/wp-content/uploads/2021/12/3rd-Generation-iPhone-Se-2022-in-Nairobi-kenya.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Samsung Galaxy Z Fold 3', price: 160000.00, description: 'Unfold new possibilities with the Samsung Galaxy Z Fold 3 - A foldable smartphone that combines versatility with cutting-edge technology.', image: 'https://brix.co.ke/wp-content/uploads/2023/08/Samsung-Galaxy-Z-Fold-5-1.webp', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Google Pixel 5a', price: 59500, description: 'Capture the moment with the Google Pixel 5a - A reliable and affordable smartphone that excels in camera performance.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2021/02/Google-Pixel-5a.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'OnePlus Nord 2', price: 46000, description: 'Step into the future with the OnePlus Nord 2 - A mid-range marvel that delivers flagship-like performance and design.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2021/09/OnePlus-Nord-2-5G-b.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'iPhone 13', price: 115000, description: 'Embrace the future with the iPhone 13 - A sleek and powerful smartphone that sets new standards in performance and design.', image: 'https://gadgetsleo.com/storage/2021/09/iPhone-13-Color-Options.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Samsung Galaxy S21', price: 70500, description: 'Immerse yourself in innovation with the Samsung Galaxy S21 - A smartphone that combines style with advanced features.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2021/01/Samsung-Galaxy-S21-5G-c.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Google Pixel 6', price: 64500, description: 'Experience the future of mobile technology with the Google Pixel 6 - A smartphone that pushes the boundaries of photography and AI.', image: 'https://www.androidheadlines.com/wp-content/uploads/2021/05/Google-Pixel-6-CAD-render-3-1420x799.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'OnePlus 9', price: 56500, description: 'Dominate the mobile arena with the OnePlus 9 - A flagship smartphone that combines style with top-tier performance.', image: 'https://www.phoneshopkenya.co.ke/wp-content/uploads/2021/10/Oneplus-9-RT-1.jpg', inStock: 0, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'iPhone 12', price: 77000, description: 'Elevate your mobile experience with the iPhone 12 - A smartphone that delivers stunning visuals and performance.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/08/Apple-iPhone-12-mini-b-1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
-                { productName: 'Samsung Galaxy A52', price: 40000, description: 'Discover the perfect balance with the Samsung Galaxy A52 - A mid-range smartphone that excels in camera and performance.', image: 'https://www.queensmobile.co.ke/img/products/56/Samsung-Galaxy-A52-w-1.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
+                { productName: 'Techno Spark 10', price: 19000, description: '128GB ROM+8GB RAM, 5000mAh,Blue 6.6"', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/4291641/1.jpg?8317', inStock: 1, quantity: 1 , specs: ["Height: 163.89mm","Width:75.39mm","Thickness:8.40mm","6.6''","HD+90Hz Refresh Rate","720*1612 Resolution","Octa-core","128GB ROM","5000mAh(typ)+18W","Android 13"]},
+                { productName: 'Infinix Smart 7 HD', price: 13000, description: '2GB RAM, 64GB, 5000mAh, 4G(DUAL SIM) - Ink Black.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/90/2338621/1.jpg?8497', inStock: 1, quantity: 1 , specs: ["Display: 6.6 inches", "Memory: 64GB + 2GB RAM", "Main Camera: 8MP+AI LENS DUAL FLASH LIGHT", "Selfie Camera: 5MP FF WITH FLASH LIGHT", "SIM Card Slot: DUAL NANO SIM+MICRO SD", "OS: Android™ 12", "Battery: 5000mAh"]},
+                { productName: 'Infinix Note 30 4G', price: 25000, description: '256GB + 8GB RAM (Dual SIM), 5000mAh, Obsidian Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/6625831/1.jpg?4662', inStock: 1, quantity: 1 , specs: ["Display: 6.66\"", "Memory: 256GB + 8GB RAM", "Rear Camera: 64MP", "Front Camera: 16MP", "OS: Android 13", "CPU: MediaTek Helio G85", "Battery: 5000mAh"]},
+                { productName: 'XIAOMI Redmi A2+', price: 14000, description: '3GB+64GB, 8.0MP, 5000mAh, 4G , Dual SIM - Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/1909161/1.jpg?9623', inStock: 1, quantity: 1 , specs: ["Operating System: Android 12 (Go edition), MIUI", "Chipset: Mediatek Helio G36 (12 nm)", "Display: 6.52\" HD+", "Memory: 3GB RAM + 64GB Internal storage", "Camera: 8MP Rear Camera, 5MP Front Camera", "Battery: 5000mAh(Typ), Support 10W Charge, In-box 10W charger", "WIFI, Bluetooth 5.0", "Dual SIM + Micro-SD Card Slot", "2G: GSM: 850 900 1800 1900 MHz"]},
+                { productName: 'Blackview A80Plus', price: 14000, description: 'Android 10.0, HD Camera, 4/64G Memory,4680Mah Battery-Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/182654/1.jpg?6559', inStock: 1, quantity: 1 , specs: ["Powered to Enjoy More", "4GB RAM + 64GB ROM", "4680mAh Big Battery", "5V/2A, Type-C Port", "HD+ 6.49’’ In-Cell Waterdrop Screen", "89% Screen-to-Body Ratio"]},
+                { productName: 'Samsung Galaxy A04e', price: 15000, description: '32GB ROM 3GB RAM 6.5" 5000mAh Battery - Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/4609161/1.jpg?4264', inStock: 1, quantity: 1 , specs: ["6.5'' display", "Android 12", "Octa-core processor", "13MP Rear camera and 2MP front camera", "32GB ROM 3GB RAM", "5000mAh Battery"]},
+                { productName: 'Itel S23-6.6"HD', price: 15000, description: '128 GB/4GB RAM (UP TO 8GB)-50MP-5000MAH-4G LTE-WATCH & PODS', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3801651/1.jpg?0043', inStock: 1, quantity: 1 , specs: ["ITEL S23", "6.6\" HD+ 90HZ WATERDROP FULLSCREEN", "128GB ROM/4GB RAM(UP TO 8GB RAM)", "50MP AI REAR CAMERA", "HIGH-SPEED 4G LTE NETWORK", "5000MAH BATTERY/10W FAST CHARGE", "FINGERPRINT"]},
+                { productName: 'Nokia C1 2nd Edition', price: 10000, description: '5.45" - 16GB + 1 GB - Dual Sim - 2500 MAh, + FREE GITS', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/89/559235/1.jpg?7574', inStock: 1, quantity: 1 , specs: ["5.45\" toughened Glass Display", "5MP Rear Camera with Flash", "5MP Front Camera with Flash", "Android 11", "1GB RAM, 16GB Storage", "Dual Sim, 3G", "2500 mAh Battery", "Quad Core 1.3GHz processor", "Google Assistant Button", "Micro SD card slot Supports up to 64 GB"]},
+                { productName: 'Infinix Hot 30i', price: 18500, description: '4GB RAM, 128GB, 5000mAh, Dual SIM Cards', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5477051/1.jpg?1651', inStock: 1, quantity: 1 , specs: ["SIZE 6.56-INCH", "SCREEN-TO-BODY RATIO 90%", "RESOLUTION 720*1612", "Android™ 12", "nternal Storage: 128GB", "RAM 4GB(UP TO 8GB)", "BATTERY CAPACITY 5000mAh"]},
+                { productName: 'Oppo A17K', price: 17500, description: '6.56" INCHES DISPLAY (3GB+ 64GB )Android 12 (Dual SIM), 5000 MAh', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/24/1701001/1.jpg?3904', inStock: 1, quantity: 1 , specs: ["RAM: 3GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 8MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]},
+                { productName: 'Realme C33', price: 21000, description: '6.5" Display, 4GB RAM + 128GB, Dual Sim, 5000mAh', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/3388031/2.jpg?8471', inStock: 1, quantity: 1 , specs: ["4GB RAM +128 GB internal storage", "5000mAh battery", "Dual-Sim", "Unisoc T612,1.8GHz processor", "50MP + 5MP front camera", "Memory Card, up to 1TB"]},
+                { productName: 'Oppo A17', price: 22500, description: '4GB + 64GB, 50MP, (Dual SIM), Blue + Airpods', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/4880161/2.jpg?7654', inStock: 1, quantity: 1 , specs: ["RAM: 4GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 50MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]},
+                { productName: 'Realme C30s', price: 13500, description: '6.5", 64GB ROM + 3GB RAM, 8MP (Dual SIM) 5000mAh - Blue', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/3484921/2.jpg?0896', inStock: 1, quantity: 1 , specs: ["6.5 inches, 102.0 cm2 (~82.1% screen-to-body ratio)", "4GB RAM", "64GB expandable storage, Card slot", "8-megapixel main rear camera", "5-megapixel front camera", "5,000mAh battery", "Android 12 (Go Edition)"]},
+                { productName: 'Samsung Galaxy A14', price: 21500, description: '6.6", 64GB + 4GB, 50MP, Dual SIM, 5000mAh, Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/2270321/1.jpg?0408', inStock: 1, quantity: 1 , specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]},
             ]);            
             this.AvailableList = ko.observable([
               { productName: 'Pro 3', price: 900, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: [
@@ -880,19 +879,19 @@ var MVVM = {
             }.bind(this);
             this.addToCart = function (value){
                 // alert('Added to cart');
-                //debugger;
-                var self = this;
+                debugger;
+                // var self = this;
 
-                var productName = self.productName();
-                var price = self.price();
-                var description = self.Description();
-                var image = self.image();
-                var quantity = 1;
-                var value = [productName,price,description,image, quantity]
+                // var productName = self.productName();
+                // var price = self.price();
+                // var description = self.Description();
+                // var image = self.image();
+                // var quantity = 1;
+                // var value = [productName,price,description,image, quantity]
 
-                this.count(this.count() + 1);
-                //self.cartProducts().push(value);
-                prods.push(value);
+                // this.count(this.count() + 1);
+                // //self.cartProducts().push(value);
+                // prods.push(value);
             }.bind(this);
             this.removeCart = function (value){
                 // alert('Added to cart');
