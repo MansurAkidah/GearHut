@@ -155,41 +155,31 @@
               <h3>AirPods</h3>
             </div>
 
-            <div class="row gy-5" data-bind="foreach:AirPodsList">
-              
-              <!--<div class="col-lg-4 menu-item" data-bind="click:$root.viewProduct">
-                <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="AirPods"></a>
-                <h4 data-bind="text:productName">AirPods Pro</h4>
-                <p class="ingredients" data-bind="text:description">
-                  With MagSafeCharging Case
-                </p>
-                <p class="price">Ksh.<span data-bind="text:price"> </span></p>
-              </div> Menu Item -->
-              <div class="col-lg-2 menu-item" >
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                  <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">out of stock</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
-                    <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
-                          <!-- Product price $40.00 - $80.00-->
-                          <p>Ksh.<span data-bind="text:price"></span></p>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:AirPodsList">
+              <div class="col mb-5">
+                  <div class="card h-100">
+                      <!-- Sale badge-->
+                      <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                      <!-- Product image-->
+                      <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              <!-- Product name-->
+                              <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                              <!-- Product price-->
+                              <p>Ksh.<span data-bind="text:price"></span></p>
+                          </div>
+                      </div>
+                      <!-- Product actions-->
+                      <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                      </div>
+                      <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                       </div>
                   </div>
-                    <!-- Product actions-->
-                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
-                  </div>
-                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
-                  </div>
               </div>
-            </div>
-
             </div>
           </div><!-- End Airpods section -->
           <!--Comrades-->
@@ -200,41 +190,32 @@
               <h3>Comrades Corner</h3>
             </div>
 
-            <div class="row gy-5" data-bind="foreach:AvailableList">
-              
-              <!--<div class="col-lg-4 menu-item" data-bind="click:$root.viewProduct">
-                <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="AirPods"></a>
-                <h4 data-bind="text:productName">AirPods Pro</h4>
-                <p class="ingredients" data-bind="text:description">
-                  With MagSafeCharging Case
-                </p>
-                <p class="price">Ksh.<span data-bind="text:price"> </span></p>
-              </div> Menu Item -->
-              <div class="col-lg-2 menu-item" >
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                  <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">out of stock</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
-                    <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
-                          <!-- Product price $40.00 - $80.00-->
-                          <p>Ksh.<span data-bind="text:price"></span></p>
+            
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:AvailableList">
+              <div class="col mb-5">
+                  <div class="card h-100">
+                      <!-- Sale badge-->
+                      <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                      <!-- Product image-->
+                      <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              <!-- Product name-->
+                              <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                              <!-- Product price-->
+                              <p>Ksh.<span data-bind="text:price"></span></p>
+                          </div>
+                      </div>
+                      <!-- Product actions-->
+                      <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                      </div>
+                      <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
                       </div>
                   </div>
-                    <!-- Product actions-->
-                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
-                  </div>
-                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
-                  </div>
               </div>
-            </div>
-
             </div>
           </div><!-- End Airpods section -->
           <!--cables section-->
@@ -245,42 +226,33 @@
               <h3>Speakers</h3>
             </div>
 
-            <div class="row gy-5" data-bind="foreach:speakerList">
-              
-              <!--<div class="col-lg-4 menu-item">
-                <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="Cable"></a>
-                <h4 data-bind="text:productName">AirPods Pro</h4>
-                <p class="ingredients" data-bind="text:description">
-                  With MagSafeCharging Case
-                </p>
-                <p class="price" >Ksh.<span data-bind="text:price"></span></p>
-              </div> Menu Item -->
-              <div class="col-lg-2 menu-item" >
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                  <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">out of stock</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
-                    <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
-                          <!-- Product price $40.00 - $80.00-->
-                          <p>Ksh.<span data-bind="text:price"></span></p>
-                      </div>
-                  </div>
-                    Product actions
-                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
-                  </div>
-                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
-                  </div>
+            
+              <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:speakerList">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                                <!-- Product price-->
+                                <p>Ksh.<span data-bind="text:price"></span></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                        </div>
+                        <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
+                        </div>
+                    </div>
+                </div>
               </div>
-            </div>
-
-            </div>
           </div><!-- End cables section -->
           <!--Laptops section-->
           <div class="tab-pane fade" id="menu-laptops">
@@ -290,42 +262,32 @@
               <h3>Laptops</h3>
             </div>
 
-            <div class="row gy-5" data-bind="foreach:laptopList">
-              
-              <!--<div class="col-lg-4 menu-item" data-bind="click:$root.viewProduct">
-                <a data-bind="attr: { href: image , class:'glightbox'}" ><img data-bind="attr: { src: image }" class="menu-img img-fluid" alt="AirPods"></a>
-                <h4 data-bind="text:productName">AirPods Pro</h4>
-                <p class="ingredients" data-bind="text:description">
-                  With MagSafeCharging Case
-                </p>
-                <p class="price">Ksh.<span data-bind="text:price"> </span></p>
-              </div> Menu Item -->
-              <div class="col-lg-2 menu-item" >
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                  <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">out of stock</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
-                    <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
-                          <!-- Product price $40.00 - $80.00-->
-                          <p>Ksh.<span data-bind="text:price"></span></p>
-                      </div>
-                  </div>
-                    <!-- Product actions-->
-                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
-                  </div>
-                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
-                  </div>
+              <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:laptopList">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                                <!-- Product price-->
+                                <p>Ksh.<span data-bind="text:price"></span></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                        </div>
+                        <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
+                        </div>
+                    </div>
+                </div>
               </div>
-            </div>
-
-            </div>
           </div><!-- End Laptops section -->
 
           <div class="tab-pane fade" id="menu-phones">
@@ -335,32 +297,33 @@
               <h3>Phones</h3>
             </div>
 
-            <div class="row gy-5" data-bind="foreach:phoneList">
-              <div class="col-lg-2 menu-item" >
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                  <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">out of stock</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
-                    <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
-                          <!-- Product price $40.00 - $80.00-->
-                          <p>Ksh.<span data-bind="text:price"></span></p>
-                      </div>
-                  </div>
-                    <!-- Product actions-->
-                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
-                  </div>
-                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
-                  </div>
+            
+              <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:phoneList">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" data-bind="attr: { src: image }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                                <!-- Product price-->
+                                <p>Ksh.<span data-bind="text:price"></span></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                        </div>
+                        <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
+                        </div>
+                    </div>
+                </div>
               </div>
-            </div>
-            </div>
           </div><!-- End Phones Menu Content -->
 
         </div>
