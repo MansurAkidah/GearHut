@@ -586,6 +586,50 @@ progress {
 .blockquote > :last-child {
   margin-bottom: 0;
 }
+.tainer {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px 10px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: rgba(46, 46, 46, 0.2) 0px 8px 24px;
+  color: rgb(255, 255, 255);
+}
+#favorite + .tainer .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+#favorite + .tainer .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  transition: all 0.5s;
+}
+
+#favorite + .tainer .action span.option-1 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+
+#favorite:checked + .tainer .action span.option-1 {
+  transform: translate(0px, -100%);
+  opacity: 0;
+}
+
+#favorite + .tainer .action span.option-2 {
+  transform: translate(0px, 100%);
+  opacity: 0;
+}
+
+#favorite:checked + .tainer .action span.option-2 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
 
 .blockquote-footer {
   margin-top: -1rem;
