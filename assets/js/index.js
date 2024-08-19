@@ -8,6 +8,7 @@ var MVVM = {
             this.price = ko.observable();
             this.Description = ko.observable();
             this.image = ko.observable();
+            this.images = ko.observableArray([]);
             this.instock = ko.observable();
             this.count = ko.observable(0);
             this.totalSum = ko.observable(0);
@@ -597,7 +598,12 @@ var MVVM = {
                 { productName: 'Samsung Galaxy A14', price: 21500, description: '6.6", 64GB + 4GB, 50MP, Dual SIM, 5000mAh, Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/2270321/1.jpg?0408', inStock: 1, quantity: 1 , specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]},
             ]);            
             this.AvailableList = ko.observable([
-              { productName: 'Pro 3', price: 900, description: '+ FREE case.', image: 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg', inStock: 1, quantity: 1, specs: [
+              { productName: 'Pro 3', price: 900, description: '+ FREE case.', 
+                image: [
+                  'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
+                  'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg'
+                ], 
+                inStock: 1, quantity: 1, specs: [
                 "Listening time: 3 hours",
                 "360mAh charging case",
                 "Lightning charging cable",
@@ -606,7 +612,11 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
                 ]
                 },
-                { productName: 'Air R02', price: 1000, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
+                { productName: 'Air R02', price: 1000, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
+                  image: [
+                    'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
+                    'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ], inStock: 1, quantity: 1, specs: [
                   "True Wireless Earbuds",
                   "Bluetooth v5.0",
                   "Up to 3 hours of listening time",
@@ -614,7 +624,12 @@ var MVVM = {
                   "Compatible with Android and iOS devices"
                 ]
                 },
-                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp', inStock: 1, quantity: 1 , specs: [
+                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
+                  image: [
+                    'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp',
+                    'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ]
+                  , inStock: 1, quantity: 1 , specs: [
                   "Wireless TWS Earbuds",
                   "Bluetooth v5.0",
                   "Up to 3 hours of listening time",
@@ -622,7 +637,11 @@ var MVVM = {
                   "Compatible with Android and iOS devices"
                 ]
                 },
-                { productName: 'In-Ear Earphone Stereo', price: 800, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/576237/6.jpg?1179', inStock: 1, quantity: 1, specs: [
+                { productName: 'In-Ear Earphone Stereo', price: 800, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', 
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/576237/6.jpg?1179',
+                    'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ], inStock: 1, quantity: 1, specs: [
                   "Bluetooth Version: 5.2",
                   "Wearing Mode: Neckband",
                   "Charging Time: 2-3 Hours",
@@ -630,7 +649,12 @@ var MVVM = {
                   "Compatible Models: for Android/for iPhone"
                 ]
                 },
-                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
+                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
+                  image: [
+                    'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
+                    'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ], 
+                  inStock: 1, quantity: 1, specs: [
                   "Active Noise Cancellation (ANC)",
                   "Transparency mode",
                   "Adaptive EQ for audio optimization",
@@ -638,56 +662,158 @@ var MVVM = {
                   "Wireless charging case included"
                 ]
                 },
-                { productName: 'pro 5s', price: 1500, description: 'True Wireless Communication : Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', image: 'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
-                { productName: 'Air R03s', price: 1300, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428', inStock: 1, quantity: 1, specs: ["Listening time: 3 hours","360mAh charging case","Lightning charging cable"] },
-                { productName: 'JBL TWS 4 Earbuds', price: 1100, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', image: 'https://images.africasokoni.co.ke/electronics/20211027/DLFT-1099a.jpg', inStock: 1, quantity: 1, specs: ["Sweat proof","Compatible with all mobile phone (android or ios) and music players","Touch sensitive controls"] },
-                { productName: 'Stereo F9 Bluetooth Earphone', price: 900, description: 'Stereo F9 Bluetooth Earphone', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/75/812253/1.jpg?0315', inStock: 0, quantity: 1, specs: [
-                  "About 5 hours music time/talk time for the 1 time fully charged earphone by 70& volume,  15 times for the charging box to charge the earphone.",
-                  "Easy touch control by touching earphone for volume up/down, Play/Pause Song, Next/Previous Song, activate/deactivate Voice Assistant(Siri and Android Voice assistant), power on/off, Answer/Reject call",
-                  "Power Level Display for the charging box and earphone",
-                  "Bluetooth 5.0",
-                  "Effective Distance: > 10m",
-                  "Sweat/rainy waterproofing"
-                ] 
-                },
-                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/948983/1.jpg?7829', inStock: 0, quantity: 1, specs: [
-                  "Portable and lightweight, easy to carry and use",
-                  "Application: For AirPods Pro",
-                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
-                ] },
-                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/948983/1.jpg?7828', inStock: 0, quantity: 1, specs: [
-                  "Portable and lightweight, easy to carry and use",
-                  "Application: For AirPods Pro",
-                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
-                ] },
-                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/446983/1.jpg?2121', inStock: 0, quantity: 1, specs: [
-                  "Portable and lightweight, easy to carry and use",
-                  "Application: For AirPods Pro",
-                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
-                ] },
-                { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/646983/1.jpg?2174', inStock: 0, quantity: 1, specs: [
-                  "Portable and lightweight, easy to carry and use",
-                  "Application: For AirPods Pro",
-                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
-                ] },
-                { productName: 'Protective TPU Cover Case For AirPods Pro', price: 1000, description: 'Protective TPU Cover Case For AirPods Pro', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/693295/3.jpg?4138', inStock: 0, quantity: 1, specs: [
-                  "Portable and lightweight, easy to carry and use",
-                  "Application: For AirPods Pro",
-                  "Portable, Anti-scratch, Dust-proof, Anti-fall"
-                ] },
-                { productName: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', price: 250, description: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/948983/1.jpg?7828', inStock: 0, quantity: 1, specs: [
-                  "Made of soft silicone material, it is comfortable to use",
-                  "Application: For AirPods Pro",
-                  "Portable, Anti-scratch, Dust-proof, Anti-fall",
-                  "You can send it to friends as a gif"
-                ] },
-                
-            //     { productName: 'Apple Lightning to USB Cable (1 m)', price: 700, description: 'Experience durable and high-speed charging with the Apple Lightning to USB Cable (1 m).', image: 'assets/img/cables/Apple Lightning to USB Cable (1 m).jpg', inStock: 1, quantity: 1 },
-            //     { productName: 'Apple Thunderbolt 3 (USB‑C) Cable (0.8 m)', price: 450, description: 'Unleash the power of Thunderbolt with the Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).', image: 'assets/img/cables/Apple Thunderbolt 3 (USB‑C) Cable (0.8 m).jpg', inStock: 0, quantity: 1 },
-            //     { productName: 'Otterbox Lightning - USB C (Fast Charge) | 1meter - Cloud Sky', price: 350, description: 'Charge with style using the OtterBox Fast Charge Premium Lightning to USB-C Cable in Cloud Sky.', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/5/9/59d2e8f5_3825924a_SW-OS-SW-TAP2-001.jpg', inStock: 1, quantity: 1 },
-            //     { productName: 'Apple Watch Magnetic Charging Cable (1 m)', price: 200, description: 'Experience MagSafe technology with inductive charging using the Apple Watch Magnetic Charging Cable (1 m).', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1./preview/e/f/ef535460_64c2a777-Apple-Watch-Magnetic-Charging-Cable-1m.jpg', inStock: 1, quantity: 1 },
-            //     { productName: 'Belkin USB-C TO LTG, BRAID SIL, 2M', price: 550, description: 'Step into the future with Belkin USB-C TO LTG, BRAID SIL, 2M - your key to seamless connectivity.', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/b/8/b892c0a1_e574acb7_SW-OS-SW-TAP2-027.jpg', inStock: 1, quantity: 1 },
-            //     { productName: 'Apple Thunderbolt 4 (USB‑C) Pro Cable (1m)', price: 400, description: 'Unleash the power of Thunderbolt with the Apple Thunderbolt 4 (USB‑C) Pro Cable (1m).', image: 'https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/c/f/cf996451_7d842dd8_Thunderbolt-Pro.png', inStock: 1, quantity: 1 },
+                { 
+                  productName: 'pro 5s', 
+                  price: 1500, 
+                  description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
+                  image: [
+                      'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 1, 
+                  quantity: 1, 
+                  specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
+              },
+              { 
+                  productName: 'Air R03s', 
+                  price: 1300, 
+                  description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 1, 
+                  quantity: 1, 
+                  specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
+              },
+              { 
+                  productName: 'JBL TWS 4 Earbuds', 
+                  price: 1100, 
+                  description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+                  image: [
+                      'https://images.africasokoni.co.ke/electronics/20211027/DLFT-1099a.jpg',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 1, 
+                  quantity: 1, 
+                  specs: ["Sweat proof", "Compatible with all mobile phone (android or ios) and music players", "Touch sensitive controls"] 
+              },
+              { 
+                  productName: 'Stereo F9 Bluetooth Earphone', 
+                  price: 900, 
+                  description: 'Stereo F9 Bluetooth Earphone', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/75/812253/1.jpg?0315',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "About 5 hours music time/talk time for the 1 time fully charged earphone by 70& volume, 15 times for the charging box to charge the earphone.",
+                      "Easy touch control by touching earphone for volume up/down, Play/Pause Song, Next/Previous Song, activate/deactivate Voice Assistant(Siri and Android Voice assistant), power on/off, Answer/Reject call",
+                      "Power Level Display for the charging box and earphone",
+                      "Bluetooth 5.0",
+                      "Effective Distance: > 10m",
+                      "Sweat/rainy waterproofing"
+                  ] 
+              },
+              { 
+                  productName: 'Silicone Protective Case Cover', 
+                  price: 150, 
+                  description: 'Silicone material made, durable and wear-resistant', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/948983/1.jpg?7829',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "Portable and lightweight, easy to carry and use",
+                      "Application: For AirPods Pro",
+                      "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                  ] 
+              },
+              { 
+                  productName: 'Silicone Protective Case Cover', 
+                  price: 150, 
+                  description: 'Silicone material made, durable and wear-resistant', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/948983/1.jpg?7828',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "Portable and lightweight, easy to carry and use",
+                      "Application: For AirPods Pro",
+                      "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                  ] 
+              },
+              { 
+                  productName: 'Silicone Protective Case Cover', 
+                  price: 150, 
+                  description: 'Silicone material made, durable and wear-resistant', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/446983/1.jpg?2121',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "Portable and lightweight, easy to carry and use",
+                      "Application: For AirPods Pro",
+                      "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                  ] 
+              },
+              { 
+                  productName: 'Silicone Protective Case Cover', 
+                  price: 150, 
+                  description: 'Silicone material made, durable and wear-resistant', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/646983/1.jpg?2174',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "Portable and lightweight, easy to carry and use",
+                      "Application: For AirPods Pro",
+                      "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                  ] 
+              },
+              { 
+                  productName: 'Protective TPU Cover Case For AirPods Pro', 
+                  price: 1000, 
+                  description: 'Protective TPU Cover Case For AirPods Pro', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/693295/3.jpg?4138',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "Portable and lightweight, easy to carry and use",
+                      "Application: For AirPods Pro",
+                      "Portable, Anti-scratch, Dust-proof, Anti-fall"
+                  ] 
+              },
+              { 
+                  productName: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', 
+                  price: 250, 
+                  description: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', 
+                  image: [
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/948983/1.jpg?7828',
+                      'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
+                  ],
+                  inStock: 0, 
+                  quantity: 1, 
+                  specs: [
+                      "Made of soft silicone material, it is comfortable to use",
+                      "Application: For AirPods Pro",
+                      "Portable, Anti-scratch, Dust-proof, Anti-fall",
+                      "You can send it to friends as a gift"
+                  ] 
+              }
             ]);
             this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja', 'Along Thika road', "Other"])
             this.cartProducts = ko.observableArray([]);
@@ -934,12 +1060,17 @@ var MVVM = {
             this.viewProduct = function(value){
                 debugger;
                 var self = this;
+                var prodImages = []
                 self.productName(value.productName);
                 self.price(value.price);
                 self.Description(value.description);
                 self.image(value.image);
                 self.instock(value.instock);
                 self.specs(value.specs);
+                for (let i = 0; i < value.image.length; i++) {
+                  prodImages.push(value.image[i]);
+                }
+                self.images(prodImages);
                 $('#ProductModal').modal('show');
                 //self.cartProducts(prods);
             }.bind(this);
