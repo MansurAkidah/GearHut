@@ -598,7 +598,7 @@ var MVVM = {
                 { productName: 'Samsung Galaxy A14', price: 21500, description: '6.6", 64GB + 4GB, 50MP, Dual SIM, 5000mAh, Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/2270321/1.jpg?0408', inStock: 1, quantity: 1 , specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]},
             ]);            
             this.AvailableList = ko.observable([
-              { productName: 'Pro 3', price: 900, description: '+ FREE case.', 
+              { productName: 'Pro 3', price: 600, description: '+ FREE case.', 
                 image: [
                   'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
                   'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg'
@@ -612,7 +612,7 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
                 ]
                 },
-                { productName: 'Air R02', price: 1000, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
+                { productName: 'Air R02', price: 750, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
                   image: [
                     'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
                     'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
@@ -624,7 +624,7 @@ var MVVM = {
                   "Compatible with Android and iOS devices"
                 ]
                 },
-                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
+                { productName: 'Air R03', price: 750, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
                   image: [
                     'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp',
                     'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
@@ -649,7 +649,7 @@ var MVVM = {
                   "Compatible Models: for Android/for iPhone"
                 ]
                 },
-                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
+                { productName: 'AirPods Pro', price: 1650, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
                   image: [
                     'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
                     'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
@@ -664,7 +664,7 @@ var MVVM = {
                 },
                 { 
                   productName: 'pro 5s', 
-                  price: 1500, 
+                  price: 950, 
                   description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
                   image: [
                       'https://static.jamboshop.com/0/img/product/PRO5SEARBUDS-7/He7eefa6d014042c2acdb9e39710c9124M.png',
@@ -676,7 +676,7 @@ var MVVM = {
               },
               { 
                   productName: 'Air R03s', 
-                  price: 1300, 
+                  price: 750, 
                   description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                   image: [
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
@@ -688,7 +688,7 @@ var MVVM = {
               },
               { 
                   productName: 'JBL TWS 4 Earbuds', 
-                  price: 1100, 
+                  price: 800, 
                   description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                   image: [
                       'https://images.africasokoni.co.ke/electronics/20211027/DLFT-1099a.jpg',
@@ -725,7 +725,7 @@ var MVVM = {
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/948983/1.jpg?7829',
                       'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
                   ],
-                  inStock: 0, 
+                  inStock: 1, 
                   quantity: 1, 
                   specs: [
                       "Portable and lightweight, easy to carry and use",
@@ -741,7 +741,7 @@ var MVVM = {
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/948983/1.jpg?7828',
                       'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
                   ],
-                  inStock: 0, 
+                  inStock: 1, 
                   quantity: 1, 
                   specs: [
                       "Portable and lightweight, easy to carry and use",
@@ -757,7 +757,7 @@ var MVVM = {
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/446983/1.jpg?2121',
                       'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
                   ],
-                  inStock: 0, 
+                  inStock: 1, 
                   quantity: 1, 
                   specs: [
                       "Portable and lightweight, easy to carry and use",
@@ -773,7 +773,7 @@ var MVVM = {
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/646983/1.jpg?2174',
                       'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
                   ],
-                  inStock: 0, 
+                  inStock: 1, 
                   quantity: 1, 
                   specs: [
                       "Portable and lightweight, easy to carry and use",
@@ -789,7 +789,7 @@ var MVVM = {
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/693295/3.jpg?4138',
                       'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
                   ],
-                  inStock: 0, 
+                  inStock: 1, 
                   quantity: 1, 
                   specs: [
                       "Portable and lightweight, easy to carry and use",
@@ -805,7 +805,7 @@ var MVVM = {
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/948983/1.jpg?7828',
                       'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
                   ],
-                  inStock: 0, 
+                  inStock: 1, 
                   quantity: 1, 
                   specs: [
                       "Made of soft silicone material, it is comfortable to use",
