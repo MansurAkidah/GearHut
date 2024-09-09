@@ -197,7 +197,8 @@
                       <!-- Sale badge-->
                       <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
                       <!-- Product image-->
-                      <img class="card-img-top" data-bind="attr: { src: image[0]  }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                      <!-- <img class="card-img-top" data-bind="attr: { src: image[0]  }, click:$root.viewProduct" alt="..." /> -->
+                      <img class="card-img-top" data-bind="attr: { src: image[0], 'data-images': JSON.stringify(image) }, click:$root.viewProduct" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
@@ -356,7 +357,7 @@
                                       <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                                         <!-- Image -->
                                         <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                                          <img  class="w-100" data-bind="attr: { src: image }" alt="product name" />
+                                          <img  class="w-100" data-bind="attr: { src: image[0], 'data-images': JSON.stringify(image) }" alt="product name" />
                                           <a href="#!">
                                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                                           </a>
@@ -552,75 +553,85 @@
         <!-- Product details Modal -->
         <div class="modal fade" id="ProductModal" tabindex="-1" aria-labelledby="productdetailsmodal" aria-hidden="true">
           <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="productdetailsmodal">GearHut</h5>
-                      <button type="button" class="btn-close" data-bind="click:$root.closeProduct"></button>
-                  </div>
-                  <div class="modal-body">
-                      <!-- product details card -->
-                      <section style="background-color: #eee;">
-                          <div class="container">
-                              <div class="row justify-content-center">
-                                  <div>
-                                      <div class="card" style="border-radius: 15px;">
-                                          <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-                                              <div class="carousel-inner" data-bind="foreach: images">
-                                                  <div class="carousel-item" data-bind="css: { 'active': $index() === 0 }">
-                                                      <img data-bind="attr: { src: $data }"
-                                                          style="border-top-left-radius: 15px; border-top-right-radius: 15px;"
-                                                          class="d-block w-100 img-fluid" alt="Product Image" />
-                                                  </div>
-                                              </div>
-                                              <button class="carousel-control-prev" type="button"
-                                                  data-bs-target="#productCarousel" data-bs-slide="prev">
-                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                  <span class="visually-hidden">Previous</span>
-                                              </button>
-                                              <button class="carousel-control-next" type="button"
-                                                  data-bs-target="#productCarousel" data-bs-slide="next">
-                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                  <span class="visually-hidden">Next</span>
-                                              </button>
-                                          </div>
-                                          <div class="card-body pb-0">
-                                              <div class="d-flex justify-content-between">
-                                                  <div>
-                                                      <p data-bind="text: Description"><a data-bind="attr: { src: image }"
-                                                              class="text-dark">Dell Xtreme 270</a></p>
-                                                  </div>
-                                                  <div class="m-2">
-                                                      <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
-                                                          <i class="bi bi-star-fill"></i>
-                                                          <i class="bi bi-star-fill"></i>
-                                                          <i class="bi bi-star-fill"></i>
-                                                          <i class="bi bi-star-fill"></i>
-                                                          <i class="bi bi-star-fill"></i>
-                                                      </div>
-                                                      <p class="small text-muted">Rated 4.0/5</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <hr class="my-0" />
-                                          <div class="card-body pb-0">
-                                              <p>Specs :</p>
-                                              <div data-bind="foreach:specs">
-                                                  <p class="small text-muted" data-bind="text: $data">VISA Platinum</p>
-                                              </div>
-                                              <hr class="my-1" />
-                                              <div class="d-flex justify-content-between">
-                                                  <p>Price: Ksh <span class="text-dark"
-                                                          data-bind="text: price">$3,999</span></p>
-                                              </div>
-                                          </div>
-                                          <hr class="my-0" />
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </section>
-                  </div>
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="productdetailsmodal">GearHut</h5>
+                <button type="button" class="btn-close" data-bind="click:$root.closeProduct"></button>
               </div>
+              <div class="modal-body">
+                <!-- product details card -->
+                <section style="background-color: #6ca7b5;">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div>
+                        <div class="card" style="border-radius: 15px;">
+                          <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                            <div class="carousel-inner" data-bind="foreach: images">
+                              <div class="carousel-item" data-bind="css: { 'active': $index() === 0 }">
+                                <img data-bind="attr: { src: $data }"
+                                  style="border-top-left-radius: 15px; border-top-right-radius: 15px;"
+                                  class="d-block w-100 img-fluid" alt="Product Image" />
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                              data-bs-target="#productCarousel" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                              data-bs-target="#productCarousel" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                          
+                          <!-- New thumbnail gallery -->
+                          <div class="d-flex justify-content-center mt-3">
+                            <div data-bind="foreach: images" class="d-flex">
+                              <img data-bind="attr: { src: $data }, click: function() { $('#productCarousel').carousel($index()) }"
+                                class="img-thumbnail mx-1" style="width: 60px; height: 60px; cursor: pointer;"
+                                alt="Thumbnail" />
+                            </div>
+                          </div>
+                          
+                          <div class="card-body pb-0">
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <p data-bind="text: Description"><a data-bind="attr: { src: image }"
+                                  class="text-dark">Dell Xtreme 270</a></p>
+                              </div>
+                              <div class="m-2">
+                                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="small text-muted">Rated 4.0/5</p>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="my-0" />
+                          <div class="card-body pb-0">
+                            <p>Specs :</p>
+                            <div data-bind="foreach:specs">
+                              <p class="small text-muted" data-bind="text: $data">VISA Platinum</p>
+                            </div>
+                            <hr class="my-1" />
+                            <div class="d-flex justify-content-between">
+                              <p>Price: Ksh <span class="text-dark"
+                                data-bind="text: price">$3,999</span></p>
+                            </div>
+                          </div>
+                          <hr class="my-0" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
           </div>
         </div>
 
