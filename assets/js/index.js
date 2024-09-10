@@ -618,7 +618,8 @@ var MVVM = {
               },
               { productName: 'Air R02', price: 800, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
                 image: [
-                  'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
+                  'https://ph-test-11.slatic.net/p/f4e9c47904cd540e9e0fd08faa635f35.jpg',
+                  //'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
                   'https://img1.ibay.com.mv/is1/full/2024/07/item_5588110_598.jpg'
                 ], inStock: 1, quantity: 1, specs: [
                 "True Wireless Earbuds",
