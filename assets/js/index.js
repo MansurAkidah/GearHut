@@ -30,7 +30,12 @@ var MVVM = {
             
 
             this.AirPodsList = ko.observable([
-              { productName: 'Oraimo Freepods 4', price: 3999, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', image: 'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png', inStock: 1, quantity: 1 ,specs: [
+                { productName: 'Oraimo Freepods 4', price: 3999, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', 
+                image: [
+                  'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png',
+                  'https://cdn-img.oraimo.com/fit-in/600x600/MA/product/2024/04/09/105D-nblue.png',
+                  'https://files.sophie.co.ke/2023/12/Oraimo_Cannon_2_Pro_18W_Fast_Charging_Charger_Kit_Main_Images16_7202.jpg'
+                ], inStock: 1, quantity: 1 ,specs: [
                   "Bluetooth version: 5.2",
                   "Wireless range: Up to 10 meters",
                   "Battery capacity (earbuds): 37mAh each",
@@ -47,7 +52,13 @@ var MVVM = {
                   "Compact and portable charging case"
                 ]
                 },
-                { productName: 'Oraimo Freepods 4 Tuned by Burna Boy', price: 5999, description: 'Oraimo X Burna Boy SpacePods True Wireless Earbuds', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/49/6941651/1.jpg?2845', inStock: 1, quantity: 1 ,specs: [
+                { productName: 'Oraimo Freepods 4 Tuned by Burna Boy', price: 5999, description: 'Oraimo X Burna Boy SpacePods True Wireless Earbuds', 
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/49/6941651/1.jpg?2845',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq6SrQZ8IlkgyP0rdxbOfoK77FKEE9iL_e9A&s',
+                    'https://cdn-img.oraimo.com/tinymce/images/d3d3c95158ba1df20b8a264215fc7cb766b213d1ad0c9.jpg',
+                    'https://le.co.ke/wp-content/uploads/2023/11/oeb-e105d-_-680-b2_1_1.jpg'
+                  ], inStock: 1, quantity: 1 ,specs: [
                   "Burna Boy Exclusive Voice Prompt, t feels like he's talking to you! 'Noise cancellation','Game Mode','Transparency' ",
                   "Burna Boy Specially Tuned After almost a year of collaboration between Grammy Award winner Burna Boy and the oraimo audio team",
                   "Wireless range: Up to 10 meters",
@@ -62,7 +73,12 @@ var MVVM = {
                   "Compact and portable charging case"
                 ]
                 },
-                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png', inStock: 1, quantity: 1, specs: [
+                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
+                  image: [
+                    'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
+                    'https://i.ebayimg.com/images/g/0fkAAOSwNINgZlag/s-l500.jpg',
+                    
+                  ], inStock: 1, quantity: 1, specs: [
                     "Active Noise Cancellation (ANC)",
                     "Transparency mode",
                     "Adaptive EQ for audio optimization",
@@ -70,7 +86,14 @@ var MVVM = {
                     "Wireless charging case included"
                   ]
                 },
-                { productName: 'JBL Live Pro 2', price: 19999, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', image: 'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png', inStock: 1, quantity: 1 , specs: [
+                { productName: 'JBL Live Pro 2', price: 19999, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', 
+                  image: [
+                    'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png',
+                    'https://avechi.co.ke/mogefov/2023/09/jbl-live-pro-e1687424160200.jpg',
+                    'https://www.phoneplacekenya.com/wp-content/uploads/2022/09/JBL-Live-Pro-2-c.jpg',
+                    'https://www.unboxify.in/cdn/shop/products/71zJjUcOXJL._SL1500_5752eb17-6a4c-4831-921f-11efdddaa24c.jpg?v=1694962972',
+                    'https://gagadget.com/media/post_big/JBL_Live_Pro_2_on_Amazon.jpg'
+                  ], inStock: 1, quantity: 1 , specs: [
                     "True Wireless In-Ear Earbuds",
                     "Active Noise Cancellation (ANC)",
                     "Up to X hours of battery life (varies with ANC)",
@@ -78,23 +101,11 @@ var MVVM = {
                     "Voice assistant support (e.g., Google Assistant, Siri)"
                   ]
                 },
-                { productName: 'Air R02', price: 1100, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', image: 'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg', inStock: 1, quantity: 1, specs: [
-                  "True Wireless Earbuds",
-                  "Bluetooth v5.0",
-                  "Up to 3 hours of listening time",
-                  "Charging case included",
-                  "Compatible with Android and iOS devices"
-                  ]
-                  },
-                { productName: 'Air R03', price: 1300, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', image: 'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644485923900130.webp', inStock: 1, quantity: 1 , specs: [
-                  "Wireless TWS Earbuds",
-                  "Bluetooth v5.0",
-                  "Up to X hours of listening time",
-                  "Charging case with XmAh capacity",
-                  "Compatible with Android and iOS devices"
-                ]
-                  },
-                { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', image: 'https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg', inStock: 0, quantity: 1 ,specs: [
+                { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', 
+                  image: ['https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg',
+                    'https://www.counterpointresearch.com/wp-content/uploads/2022/04/Counterpoint-Sony-WF-1000XM4-Review.jpg',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/88/6180761/1.jpg?7845'
+                  ], inStock: 1, quantity: 1 ,specs: [
                     "Industry-leading Noise Cancellation",
                     "High-resolution audio with LDAC",
                     "Up to 8 hours of battery life on a single charge",
@@ -102,7 +113,12 @@ var MVVM = {
                     "Speak-to-Chat feature for automatic pause/play"
                   ]
                   },
-                { productName: 'Samsung Galaxy Buds Pro', price: 4800, description: 'Unleash immersive sound with intelligent ANC - Samsung Galaxy Buds Pro is your gateway to audio brilliance.', image: 'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg', inStock: 1, quantity: 1 , specs: [
+                { productName: 'Samsung Galaxy Buds Pro', price: 4800, description: 'Unleash immersive sound with intelligent ANC - Samsung Galaxy Buds Pro is your gateway to audio brilliance.', 
+                  image: [
+                    'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg',
+                    'https://img.us.news.samsung.com/us/wp-content/uploads/2021/01/12135936/19_galaxybudspro_lifestyle_violetsilverblack_201230070154.jpg',
+                    'https://us03-imgcdn.ymcart.com/97025/2023/08/22/e/3/e3e0db4109e86e4c.jpg'
+                  ], inStock: 1, quantity: 1 , specs: [
                     "Intelligent Active Noise Cancellation (ANC)",
                     "360-degree surround sound with Dolby Atmos",
                     "Up to 8 hours of playback on a single charge",
@@ -110,7 +126,12 @@ var MVVM = {
                     "IPX7 water resistance for durability"
                   ]
                   },
-                { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', image: 'https://help.apple.com/assets/61AFEC45FA5233173908347B/61B0509E1BF38548362237B5/en_US/b9f519195f84950573eea5088a49b964.png', inStock: 1, quantity: 1 , specs: [
+                { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
+                  image: [
+                    'https://futureaudiophile.com/wp-content/uploads/2022/09/2-Apple-AirPodsMax-ManyColors-1024x683.jpg',
+                    'https://smartbuy.myimaginestore.com/media/mf_webp/jpg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/airpods-max-colors_2.webp',
+                    'https://www.sbsmobile.com/ned/227030-thickbox_default/skinpods-for-airpods-max.jpg'
+                  ], inStock: 1, quantity: 1 , specs: [
                     "Active Noise Cancellation (ANC)",
                     "Spatial audio with dynamic head tracking",
                     "Up to 20 hours of battery life with ANC",
@@ -118,7 +139,11 @@ var MVVM = {
                     "Premium over-ear design with adaptive EQ"
                   ]
                   },
-                { productName: 'Bose QuietComfort Earbuds', price: 4900, description: 'Indulge in pure serenity with Bose QuietComfort Earbuds - Noise-Canceling True Wireless Earbuds.', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg', inStock: 1, quantity: 1 , specs: [
+                { productName: 'Bose QuietComfort Earbuds', price: 4900, description: 'Indulge in pure serenity with Bose QuietComfort Earbuds - Noise-Canceling True Wireless Earbuds.', image: [
+                  'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg',
+                  'https://cdn.vox-cdn.com/thumbor/yHQexpmsIp24XKyBcwKC3EXTGos=/0x0:2040x1360/1400x1400/filters:focal(1058x772:1059x773)/cdn.vox-cdn.com/uploads/chorus_asset/file/21946559/IMG_0720-1.0.jpeg',
+                  
+                ], inStock: 1, quantity: 1 , specs: [
                     "World-class noise cancellation technology",
                     "Up to 6 hours of battery life on a single charge",
                     "Additional 12 hours with the charging case",
@@ -126,7 +151,13 @@ var MVVM = {
                     "Customizable touch controls for music and calls"
                   ]
                   },
-                { productName: 'Google Pixel Buds A-Series', price: 4200, description: 'Embark on a journey of rich sound and clear calls with Google Pixel Buds A-Series.', image: 'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg', inStock: 1, quantity: 1, specs: [
+                { productName: 'Google Pixel Buds A-Series', price: 4200, description: 'Embark on a journey of rich sound and clear calls with Google Pixel Buds A-Series.', 
+                  image: [
+                    'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg',
+                    'https://lh3.googleusercontent.com/g6l5UAXSFGZ3oiE2N-hGj7TwcAxsq84Pk4H93umJUgJnQ0OyL3XfSyOP65Nt_KYw0t5688w2pYZDoz-Rfs1C9pngonPxAh0VWPU=s0',
+                    'https://images.fonearena.com/blog/wp-content/uploads/2021/09/Pixel-Buds-A-Series_FoneArena-2-1024x548.jpg',
+                    'https://i.etsystatic.com/21656020/r/il/b8bb82/2622239385/il_570xN.2622239385_cbob.jpg'
+                ], inStock: 1, quantity: 1, specs: [
                     "Rich sound and clear calls with Adaptive Sound",
                     "Up to 5 hours of listening time on a single charge",
                     "Additional 24 hours with the charging case",
@@ -134,7 +165,13 @@ var MVVM = {
                     "Hands-free Google Assistant integration"
                   ]
                   },
-                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 4300, description: 'Immerse yourself in a world of sound with Anker Soundcore Liberty Air 2 Pro - Hybrid Active Noise Cancellation.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/918569/1.jpg?3445', inStock: 1, quantity: 1 , specs: [
+                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 4300, description: 'Immerse yourself in a world of sound with Anker Soundcore Liberty Air 2 Pro - Hybrid Active Noise Cancellation.', 
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/918569/1.jpg?3445',
+                    'https://www.digitaltrends.com/wp-content/uploads/2021/01/anker-soundcore-liberty-air-2-pro-00012.jpg?fit=1200%2C9999&p=1',
+                    'https://anker.com.sg/cdn/shop/files/01_9fd3a704-7444-46d2-a8a9-ecef0824d645.jpg?v=1704879782',
+                    'https://images-na.ssl-images-amazon.com/images/I/51snKP8HWiL._AC_UL600_SR600,600_.jpg'
+                ], inStock: 1, quantity: 1 , specs: [
                     "Hybrid Active Noise Cancellation for immersive sound",
                     "Up to 7 hours of playtime on a single charge",
                     "Additional 26 hours with the charging case",
@@ -142,7 +179,13 @@ var MVVM = {
                     "4 built-in microphones for clear calls and voice assistant support"
                   ]
                   },
-                { productName: 'Jabra Elite 85t', price: 3750, description: 'Escape into tranquility with Jabra Elite 85t and its advanced Active Noise Cancellation.', image: 'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg', inStock: 0, quantity: 1 , specs: [
+                { productName: 'Jabra Elite 85t', price: 3750, description: 'Escape into tranquility with Jabra Elite 85t and its advanced Active Noise Cancellation.', 
+                  image: [
+                    'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg',
+                    'https://i.ebayimg.com/images/g/tdIAAOSwh-FjqeW6/s-l1200.jpg',
+                    'https://www.techielass.com/content/images/2021/12/20211221_081122.jpg',
+                    'https://cdn.pickr.com.au/wp-content/uploads/2021/02/85F17DC7-AC36-4FF6-9E14-A4A54B020324.jpeg'
+                  ], inStock: 0, quantity: 1 , specs: [
                     "Advanced Active Noise Cancellation (ANC)",
                     "Up to 5.5 hours of battery life on a single charge",
                     "Additional 25 hours with the charging case",
@@ -150,7 +193,12 @@ var MVVM = {
                     "Customizable equalizer for personalized sound"
                   ]
                   },
-                { productName: 'OnePlus Buds Pro', price: 3600, description: 'Elevate your audio experience with OnePlus Buds Pro - Smart Adaptive Noise Cancellation at its best.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png', inStock: 1, quantity: 1 , specs: [
+                { productName: 'OnePlus Buds Pro', price: 3600, description: 'Elevate your audio experience with OnePlus Buds Pro - Smart Adaptive Noise Cancellation at its best.', 
+                  image: ['https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png',
+                    'https://phonesstorekenya.com/wp-content/uploads/2024/05/OnePlus-Buds-Pro-2.jpg',
+                    'https://images.hothardware.com/contentimages/article/3134/content/small_OnePlus-Buds-Pro-13.jpg',
+                    'https://i.ytimg.com/vi/4A71COerYf8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCsDk9j6LwFh_npTCasAtr7cu5JMw'
+                  ], inStock: 1, quantity: 1 , specs: [
                     "Smart Adaptive Noise Cancellation for an immersive experience",
                     "Up to 5 hours of playback on a single charge",
                     "Additional 15 hours with the charging case",
@@ -158,7 +206,12 @@ var MVVM = {
                     "Wireless charging capability"
                   ]
                   },
-                { productName: 'Beats Powerbeats Pro', price: 3700, description: 'Experience high-performance audio with Beats Powerbeats Pro - your key to wireless earphone excellence.', image: 'https://www.phoneplacekenya.com/wp-content/uploads/2020/09/Powerbeats-Pro-b.jpg', inStock: 1, quantity: 1 , specs: [
+                { productName: 'Beats Powerbeats Pro', price: 3700, description: 'Experience high-performance audio with Beats Powerbeats Pro - your key to wireless earphone excellence.', image:[
+                   'https://www.phoneplacekenya.com/wp-content/uploads/2020/09/Powerbeats-Pro-b.jpg',
+                   'https://i5.walmartimages.com/seo/Open-Box-Beats-by-Dr-Dre-Powerbeats-Pro-Totally-Wireless-Earphones_7462a983-b00e-4c4f-9d77-999b53dc7073.d88e04886370f13ea994ea5515556f12.png',
+                   'https://photos5.appleinsider.com/gallery/30607-50329-unleashed-spot-beats-powerbeats-pro-xl.jpg',
+
+                  ], inStock: 1, quantity: 1 , specs: [
                     "High-performance audio with powerful bass",
                     "Up to 9 hours of listening time on a single charge",
                     "Additional 24 hours with the charging case",
@@ -166,7 +219,12 @@ var MVVM = {
                     "Secure-fit ear hooks for stability during workouts"
                   ]
                   },
-                { productName: 'Sennheiser Momentum True Wireless 2', price: 2100, description: 'Indulge in exceptional sound quality with Sennheiser Momentum True Wireless 2.', image: 'https://m.media-amazon.com/images/I/81NXYrn8JiL.jpg', inStock: 1, quantity: 1 , specs: [
+                { productName: 'Sennheiser Momentum True Wireless 2', price: 2100, description: 'Indulge in exceptional sound quality with Sennheiser Momentum True Wireless 2.', 
+                  image: [
+                    'https://m.media-amazon.com/images/I/81NXYrn8JiL.jpg',
+                    'https://www.theaudiostore.in/cdn/shop/files/Sennheiser_MOMENTUM_True_Wireless_4_Noise-Canceling_Earbuds_black_copper_09_1024x.jpg?v=1720723344',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQ2MVTwjpo9r6cPWkr3Ex1nBK2kw6-kafAQ&s'
+                  ], inStock: 1, quantity: 1 , specs: [
                     "Premium sound quality with deep bass and clear treble",
                     "Active Noise Cancellation for immersive audio experience",
                     "Up to 7 hours of playback on a single charge",
@@ -179,7 +237,13 @@ var MVVM = {
                     "Ergonomic design for a comfortable and secure fit"
                   ]
                   },
-                { productName: 'Skullcandy Indy Evo', price: 2100, description: 'Experience freedom with Skullcandy Indy Evo - True Wireless In-Ear Earbuds.', image: 'https://m.media-amazon.com/images/I/6119HR9g38L.jpg', inStock: 0, quantity: 1 , specs: [
+                { productName: 'Skullcandy Indy Evo', price: 2100, description: 'Experience freedom with Skullcandy Indy Evo - True Wireless In-Ear Earbuds.', 
+                  image: [
+                    'https://m.media-amazon.com/images/I/6119HR9g38L.jpg',
+                    'https://m.media-amazon.com/images/I/71gxk3w6NrL.jpg',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_RSYTvUXAF5fAI0bFOlGAhjot-gnbw-Ojw&s',
+                    'https://support.skullcandy.com/hc/article_attachments/25991292515479'
+                  ], inStock: 0, quantity: 1 , specs: [
                     "True Wireless In-Ear Earbuds",
                     "Up to 30 hours of total battery life with the charging case",
                     "Built-in Tile tracker for easy locating",
@@ -190,7 +254,13 @@ var MVVM = {
                     "Bluetooth connectivity for wireless convenience"
                   ]
                   },
-                { productName: 'Huawei FreeBuds 4i', price: 2250, description: 'Dive into pure audio bliss with Huawei FreeBuds 4i - Active Noise Cancellation Earbuds.', image: 'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg', inStock: 1, quantity: 1, specs: [
+                { productName: 'Huawei FreeBuds 4i', price: 2250, description: 'Dive into pure audio bliss with Huawei FreeBuds 4i - Active Noise Cancellation Earbuds.', 
+                  image: [
+                    'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg',
+                    'https://www.digitalstore.co.ke/cdn/shop/products/Freebuds4i3_1024x.jpg?v=1626959397',
+                    'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/audio/freebuds4i/specs-img/pc_2x-3.jpg',
+                    
+                ], inStock: 1, quantity: 1, specs: [
                     "Active Noise Cancellation for an immersive listening experience",
                     "Up to 10 hours of playback on a single charge",
                     "Additional 6.5 hours with the charging case",
@@ -201,7 +271,12 @@ var MVVM = {
                     "Bluetooth 5.2 for stable and efficient wireless connectivity"
                   ]
                   },
-                { productName: 'Beats Studio Buds', price: 3800, description: 'Unleash the power of sound with Beats Studio Buds - True Wireless Noise Cancelling Earbuds.', image: 'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg', inStock: 0, quantity: 1 ,specs: [
+                { productName: 'Beats Studio Buds', price: 3800, description: 'Unleash the power of sound with Beats Studio Buds - True Wireless Noise Cancelling Earbuds.', 
+                  image: [
+                    'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg',
+                    'https://betanews.com/wp-content/uploads/2023/05/Beats2k23-scaled.jpg',
+                    'https://d.newsweek.com/en/full/2017689/beats-studio-buds.jpg'
+                ], inStock: 0, quantity: 1 ,specs: [
                     "Powerful and balanced sound profile",
                     "Active Noise Cancellation for immersive audio",
                     "Up to 8 hours of listening time on a single charge",
@@ -212,7 +287,11 @@ var MVVM = {
                     "USB-C charging for quick and convenient power replenishment"
                   ]
                   },
-                { productName: 'JBL Free X', price: 2500, description: 'Immerse yourself in the music with JBL Free X - Truly Wireless In-Ear Headphones.', image: 'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png', inStock: 1, quantity: 1 , specs: [
+                { productName: 'JBL Free X', price: 2500, description: 'Immerse yourself in the music with JBL Free X - Truly Wireless In-Ear Headphones.', image: [
+                  'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png',
+                  'https://manuals.plus/wp-content/uploads/2020/12/JBL-FREE-X-with-Charging-Case_12-300x216.png?ezimgfmt=rs:368x265/rscb1/ng:webp/ngcb1',
+                  'https://tradezone.ac/cdn/shop/products/71Hwuk_88AL._AC_SL1500_800x.jpg?v=1574963714'
+                ], inStock: 1, quantity: 1 , specs: [
                     "Truly Wireless In-Ear Headphones",
                     "Up to 4 hours of playback on a single charge",
                     "Additional 20 hours with the charging case",
@@ -584,26 +663,217 @@ var MVVM = {
                 { productName: 'Microsoft Surface Laptop Go', price: 69900, description: 'Simplify your life with the Microsoft Surface Laptop Go - A compact and lightweight laptop that doesn\'t compromise on performance.', image: 'https://vividgold.co.ke/wp-content/uploads/2021/04/microsoft-laptop.jpg', inStock: 1, quantity: 1 , specs: ["NaN","NaN","NaN"]},
             ]);
             this.phoneList = ko.observable([
-              { productName: 'Techno Spark 10', price: 19000, description: '128GB ROM+8GB RAM, 5000mAh,Blue 6.6"', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/4291641/1.jpg?8317', inStock: 1, quantity: 1 , specs: ["Height: 163.89mm","Width:75.39mm","Thickness:8.40mm","6.6''","HD+90Hz Refresh Rate","720*1612 Resolution","Octa-core","128GB ROM","5000mAh(typ)+18W","Android 13"]},
-              { productName: 'Infinix Smart 7 HD', price: 13000, description: '2GB RAM, 64GB, 5000mAh, 4G(DUAL SIM) - Ink Black.', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/90/2338621/1.jpg?8497', inStock: 1, quantity: 1 , specs: ["Display: 6.6 inches", "Memory: 64GB + 2GB RAM", "Main Camera: 8MP+AI LENS DUAL FLASH LIGHT", "Selfie Camera: 5MP FF WITH FLASH LIGHT", "SIM Card Slot: DUAL NANO SIM+MICRO SD", "OS: Android™ 12", "Battery: 5000mAh"]},
-              { productName: 'Infinix Note 30 4G', price: 25000, description: '256GB + 8GB RAM (Dual SIM), 5000mAh, Obsidian Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/6625831/1.jpg?4662', inStock: 1, quantity: 1 , specs: ["Display: 6.66\"", "Memory: 256GB + 8GB RAM", "Rear Camera: 64MP", "Front Camera: 16MP", "OS: Android 13", "CPU: MediaTek Helio G85", "Battery: 5000mAh"]},
-              { productName: 'XIAOMI Redmi A2+', price: 14000, description: '3GB+64GB, 8.0MP, 5000mAh, 4G , Dual SIM - Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/1909161/1.jpg?9623', inStock: 1, quantity: 1 , specs: ["Operating System: Android 12 (Go edition), MIUI", "Chipset: Mediatek Helio G36 (12 nm)", "Display: 6.52\" HD+", "Memory: 3GB RAM + 64GB Internal storage", "Camera: 8MP Rear Camera, 5MP Front Camera", "Battery: 5000mAh(Typ), Support 10W Charge, In-box 10W charger", "WIFI, Bluetooth 5.0", "Dual SIM + Micro-SD Card Slot", "2G: GSM: 850 900 1800 1900 MHz"]},
-              { productName: 'Blackview A80Plus', price: 14000, description: 'Android 10.0, HD Camera, 4/64G Memory,4680Mah Battery-Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/182654/1.jpg?6559', inStock: 1, quantity: 1 , specs: ["Powered to Enjoy More", "4GB RAM + 64GB ROM", "4680mAh Big Battery", "5V/2A, Type-C Port", "HD+ 6.49’’ In-Cell Waterdrop Screen", "89% Screen-to-Body Ratio"]},
-              { productName: 'Samsung Galaxy A04e', price: 15000, description: '32GB ROM 3GB RAM 6.5" 5000mAh Battery - Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/4609161/1.jpg?4264', inStock: 1, quantity: 1 , specs: ["6.5'' display", "Android 12", "Octa-core processor", "13MP Rear camera and 2MP front camera", "32GB ROM 3GB RAM", "5000mAh Battery"]},
-              { productName: 'Itel S23-6.6"HD', price: 15000, description: '128 GB/4GB RAM (UP TO 8GB)-50MP-5000MAH-4G LTE-WATCH & PODS', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3801651/1.jpg?0043', inStock: 1, quantity: 1 , specs: ["ITEL S23", "6.6\" HD+ 90HZ WATERDROP FULLSCREEN", "128GB ROM/4GB RAM(UP TO 8GB RAM)", "50MP AI REAR CAMERA", "HIGH-SPEED 4G LTE NETWORK", "5000MAH BATTERY/10W FAST CHARGE", "FINGERPRINT"]},
-              { productName: 'Nokia C1 2nd Edition', price: 10000, description: '5.45" - 16GB + 1 GB - Dual Sim - 2500 MAh, + FREE GITS', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/89/559235/1.jpg?7574', inStock: 1, quantity: 1 , specs: ["5.45\" toughened Glass Display", "5MP Rear Camera with Flash", "5MP Front Camera with Flash", "Android 11", "1GB RAM, 16GB Storage", "Dual Sim, 3G", "2500 mAh Battery", "Quad Core 1.3GHz processor", "Google Assistant Button", "Micro SD card slot Supports up to 64 GB"]},
-              { productName: 'Infinix Hot 30i', price: 18500, description: '4GB RAM, 128GB, 5000mAh, Dual SIM Cards', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5477051/1.jpg?1651', inStock: 1, quantity: 1 , specs: ["SIZE 6.56-INCH", "SCREEN-TO-BODY RATIO 90%", "RESOLUTION 720*1612", "Android™ 12", "nternal Storage: 128GB", "RAM 4GB(UP TO 8GB)", "BATTERY CAPACITY 5000mAh"]},
-              { productName: 'Oppo A17K', price: 17500, description: '6.56" INCHES DISPLAY (3GB+ 64GB )Android 12 (Dual SIM), 5000 MAh', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/24/1701001/1.jpg?3904', inStock: 1, quantity: 1 , specs: ["RAM: 3GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 8MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]},
-              { productName: 'Realme C33', price: 21000, description: '6.5" Display, 4GB RAM + 128GB, Dual Sim, 5000mAh', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/3388031/2.jpg?8471', inStock: 1, quantity: 1 , specs: ["4GB RAM +128 GB internal storage", "5000mAh battery", "Dual-Sim", "Unisoc T612,1.8GHz processor", "50MP + 5MP front camera", "Memory Card, up to 1TB"]},
-              { productName: 'Oppo A17', price: 22500, description: '4GB + 64GB, 50MP, (Dual SIM), Blue + Airpods', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/4880161/2.jpg?7654', inStock: 1, quantity: 1 , specs: ["RAM: 4GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 50MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]},
-              { productName: 'Realme C30s', price: 13500, description: '6.5", 64GB ROM + 3GB RAM, 8MP (Dual SIM) 5000mAh - Blue', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/3484921/2.jpg?0896', inStock: 1, quantity: 1 , specs: ["6.5 inches, 102.0 cm2 (~82.1% screen-to-body ratio)", "4GB RAM", "64GB expandable storage, Card slot", "8-megapixel main rear camera", "5-megapixel front camera", "5,000mAh battery", "Android 12 (Go Edition)"]},
-              { productName: 'Samsung Galaxy A14', price: 21500, description: '6.6", 64GB + 4GB, 50MP, Dual SIM, 5000mAh, Black', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/2270321/1.jpg?0408', inStock: 1, quantity: 1 , specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]},
-            ]);            
+              { productName: 'XIAOMI Redmi A3', price: 12000, description: '128GB ROM+8GB RAM, 5000mAh,Blue 6.6"', 
+                image: [
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/4291641/1.jpg?8317',
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/77/2121452/1.jpg?7985',
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/77/2121452/5.jpg?7985'
+                ]
+                , inStock: 1, quantity: 1 , specs: ["4GB RAM +128GB Storage","Processor: MediaTek Helio G36 processor","Display: 6.71'' Dot Drop display","Rear Camera: 8MP main camera","Front Camera: 5MP front camera","7Battery & Charging: 5000mAh battery ","Security: Side fingerprint sensor; AI face unlock"]},
+                { productName: 'Itel S23',
+                  price: 10940,
+                  description: '6.6", 128GB + 4GB RAM, 50MP Camera, (Dual SIM), 4G, 5000mAh - Starry Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/18/8016942/1.jpg?1977',
+                    'https://ke.jumia.is/cms/external/pet/IT910MP3M9OGUNAFAMZ/1c61fcf7de33d97ac35c1f6a9e350c5a.jpg',
+                    'https://ke.jumia.is/cms/external/pet/IT910MP3M9OGUNAFAMZ/28ad1ff1837d7e2db0a6d5abb4040c4d.jpg'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: [
+                    "Size: 6.6 inches, 104.6 cm2 (~84.0% screen-to-body ratio)",
+                    "OS: Android 12",
+                    "Memory: Internal 128GB, 4GB RAM",
+                    "Main Camera: Single Camera 50 MP, f/1.6, (wide), AF, 0.08 MP (auxiliary lens)",
+                    "Selfie camera: Single 8 MP",
+                    "Sensors: Fingerprint (side-mounted), accelerometer",
+                    "Battery: 5000 mAh, non-removable"
+                  ]
+                },
+                { productName: 'Samsung Galaxy A15',
+                  price: 17940,
+                  description: '6.5", 128GB + 4GB RAM (Dual SIM), 5000mAh, Blue Black (1YR WRTY)',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/07/5691052/1.jpg?0511',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/07/5691052/4.jpg?0511',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/07/5691052/2.jpg?0511'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: [
+                    "Display: 6.5''",
+                    "Memory: 128GB + 4GB RAM",
+                    "OS: Android",
+                    "Rear Camera: 50MP + 5MP + 2MP",
+                    "Front Camera: 32MP",
+                    "Battery: 5000mAh"
+                  ]
+                },
+                { productName: 'Tecno POP 8',
+                  price: 12199,
+                  description: '6.6", 3GB RAM + 64GB, 13MP, 4G (Dual SIM) 5000MAh - Gravity Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/4088961/1.jpg?8425'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: [
+                    "Display: 6.6'' 90Hz Hole Screen",
+                    "Memory: 3GB RAM + 64GB",
+                    "Processor: Octa-core",
+                    "Dimension: 163.86x75.51x8.9mm",
+                    "Network: 2G/3G/4G",
+                    "Resolution: 720*1612",
+                    "Sensor: The ambient light and distance sensor, G-Sensor, Side-edge fingerprint",
+                    "Camera: 8MP Front Camera with Dual Flash, 13MP AI Rear Camera with Dual Flash",
+                    "Connectivity: GPS, Wifi, BT, FM, OTG",
+                    "Battery Capacity: Non Removable 5000mAh"
+                  ]
+                },
+                { productName: 'Techno Spark 10',
+                  price: 20000,
+                  description: '128GB ROM+8GB RAM, 5000mAh,Blue 6.6"',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/4291641/1.jpg?8317'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["Height: 163.89mm","Width:75.39mm","Thickness:8.40mm","6.6''","HD+90Hz Refresh Rate","720*1612 Resolution","Octa-core","128GB ROM","5000mAh(typ)+18W","Android 13"]
+                },
+                { productName: 'Infinix Smart 7 HD',
+                  price: 14000,
+                  description: '2GB RAM, 64GB, 5000mAh, 4G(DUAL SIM) - Ink Black.',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/90/2338621/1.jpg?8497'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["Display: 6.6 inches", "Memory: 64GB + 2GB RAM", "Main Camera: 8MP+AI LENS DUAL FLASH LIGHT", "Selfie Camera: 5MP FF WITH FLASH LIGHT", "SIM Card Slot: DUAL NANO SIM+MICRO SD", "OS: Android™ 12", "Battery: 5000mAh"]
+                },
+                { productName: 'Infinix Note 30 4G',
+                  price: 26000,
+                  description: '256GB + 8GB RAM (Dual SIM), 5000mAh, Obsidian Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/6625831/1.jpg?4662'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["Display: 6.66\"", "Memory: 256GB + 8GB RAM", "Rear Camera: 64MP", "Front Camera: 16MP", "OS: Android 13", "CPU: MediaTek Helio G85", "Battery: 5000mAh"]
+                },
+                { productName: 'XIAOMI Redmi A2+',
+                  price: 15000,
+                  description: '3GB+64GB, 8.0MP, 5000mAh, 4G , Dual SIM - Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/1909161/1.jpg?9623'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["Operating System: Android 12 (Go edition), MIUI", "Chipset: Mediatek Helio G36 (12 nm)", "Display: 6.52\" HD+", "Memory: 3GB RAM + 64GB Internal storage", "Camera: 8MP Rear Camera, 5MP Front Camera", "Battery: 5000mAh(Typ), Support 10W Charge, In-box 10W charger", "WIFI, Bluetooth 5.0", "Dual SIM + Micro-SD Card Slot", "2G: GSM: 850 900 1800 1900 MHz"]
+                },
+                { productName: 'Blackview A80Plus',
+                  price: 15000,
+                  description: 'Android 10.0, HD Camera, 4/64G Memory,4680Mah Battery-Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/182654/1.jpg?6559'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["Powered to Enjoy More", "4GB RAM + 64GB ROM", "4680mAh Big Battery", "5V/2A, Type-C Port", "HD+ 6.49'' In-Cell Waterdrop Screen", "89% Screen-to-Body Ratio"]
+                },
+                { productName: 'Samsung Galaxy A04e',
+                  price: 16000,
+                  description: '32GB ROM 3GB RAM 6.5" 5000mAh Battery - Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/4609161/1.jpg?4264'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["6.5'' display", "Android 12", "Octa-core processor", "13MP Rear camera and 2MP front camera", "32GB ROM 3GB RAM", "5000mAh Battery"]
+                },
+                { productName: 'Itel S23-6.6"HD',
+                  price: 16000,
+                  description: '128 GB/4GB RAM (UP TO 8GB)-50MP-5000MAH-4G LTE-WATCH & PODS',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3801651/1.jpg?0043'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["ITEL S23", "6.6\" HD+ 90HZ WATERDROP FULLSCREEN", "128GB ROM/4GB RAM(UP TO 8GB RAM)", "50MP AI REAR CAMERA", "HIGH-SPEED 4G LTE NETWORK", "5000MAH BATTERY/10W FAST CHARGE", "FINGERPRINT"]
+                },
+                { productName: 'Nokia C1 2nd Edition',
+                  price: 11000,
+                  description: '5.45" - 16GB + 1 GB - Dual Sim - 2500 MAh, + FREE GITS',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/89/559235/1.jpg?7574'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["5.45\" toughened Glass Display", "5MP Rear Camera with Flash", "5MP Front Camera with Flash", "Android 11", "1GB RAM, 16GB Storage", "Dual Sim, 3G", "2500 mAh Battery", "Quad Core 1.3GHz processor", "Google Assistant Button", "Micro SD card slot Supports up to 64 GB"]
+                },
+                { productName: 'Infinix Hot 30i',
+                  price: 19500,
+                  description: '4GB RAM, 128GB, 5000mAh, Dual SIM Cards',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5477051/1.jpg?1651'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["SIZE 6.56-INCH", "SCREEN-TO-BODY RATIO 90%", "RESOLUTION 720*1612", "Android™ 12", "nternal Storage: 128GB", "RAM 4GB(UP TO 8GB)", "BATTERY CAPACITY 5000mAh"]
+                },
+                { productName: 'Oppo A17K',
+                  price: 18500,
+                  description: '6.56" INCHES DISPLAY (3GB+ 64GB )Android 12 (Dual SIM), 5000 MAh',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/24/1701001/1.jpg?3904'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["RAM: 3GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 8MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]
+                },
+                { productName: 'Realme C33',
+                  price: 22000,
+                  description: '6.5" Display, 4GB RAM + 128GB, Dual Sim, 5000mAh',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/3388031/2.jpg?8471'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["4GB RAM +128 GB internal storage", "5000mAh battery", "Dual-Sim", "Unisoc T612,1.8GHz processor", "50MP + 5MP front camera", "Memory Card, up to 1TB"]
+                },
+                { productName: 'Oppo A17',
+                  price: 23500,
+                  description: '4GB + 64GB, 50MP, (Dual SIM), Blue + Airpods',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/4880161/2.jpg?7654'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["RAM: 4GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 50MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]
+                },
+                { productName: 'Realme C30s',
+                  price: 14500,
+                  description: '6.5", 64GB ROM + 3GB RAM, 8MP (Dual SIM) 5000mAh - Blue',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/3484921/2.jpg?0896'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["6.5 inches, 102.0 cm2 (~82.1% screen-to-body ratio)", "4GB RAM", "64GB expandable storage, Card slot", "8-megapixel main rear camera", "5-megapixel front camera", "5,000mAh battery", "Android 12 (Go Edition)"]
+                },
+                { productName: 'Samsung Galaxy A14',
+                  price: 22500,
+                  description: '6.6", 64GB + 4GB, 50MP, Dual SIM, 5000mAh, Black',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/2270321/1.jpg?0408'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]
+            }]);            
             this.AvailableList = ko.observable([
               { productName: 'Pro 3', price: 650, description: '+ FREE case.', 
               image: [
                 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
-                'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
                 'https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/56/8691551/1.jpg?4591'
               ], 
@@ -616,24 +886,33 @@ var MVVM = {
               "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'Air R02', price: 800, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
+              { productName: 'pro 5s', price: 950, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
                 image: [
-                  'https://ph-test-11.slatic.net/p/f4e9c47904cd540e9e0fd08faa635f35.jpg',
-                  //'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
-                  'https://img1.ibay.com.mv/is1/full/2024/07/item_5588110_598.jpg'
-                ], inStock: 1, quantity: 1, specs: [
-                "True Wireless Earbuds",
-                "Bluetooth v5.0",
-                "Up to 3 hours of listening time",
-                "Charging case included",
-                "Compatible with Android and iOS devices"
-              ]
+                    'https://static-01.daraz.com.np/p/aa109dc5ca5984584b79bd197af090a2.jpg',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/100417/3.jpg?2146',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP16XUr9eb5mG_pLH7pKYEP_bkdbHvnXHw2V_t2cfBiciQsVDW40FLZUtu2d0Cxz80aCw&usqp=CAU',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-bacrkIsqp0eoFkq9MY2NhEJyGjCh0PxToJnFockwR-vZ0sjbQRlJTDmNTEAeYnICLQ&usqp=CAU'
+
+                ],
+                inStock: 1, 
+                quantity: 1, 
+                specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
+              },
+              { productName: 'JBL TWS 4 Earbuds', price: 800, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+                image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/3732541/1.jpg?8352',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5507111/1.jpg?5858',
+                    'https://shoppingekart.com/images/product-images/1599817161869471089.jpg'
+                ],
+                inStock: 1, 
+                quantity: 1, 
+                specs: ["Sweat proof", "Compatible with all mobile phone (android or ios) and music players", "Touch sensitive controls"] 
               },
               { productName: 'Air R03', price: 800, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
                 image: [
-                  'https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images.zoodmall.com/web/product/picture/64/27671064/168519644491371200830.webp',
                   'https://meowpo.com/liveimages/meow_product_images/3580303014.jpg',
                   'https://meowpo.com/liveimages/meow_product_images/2709324513.jpg',
+                  'https://ph-test-11.slatic.net/p/f4e9c47904cd540e9e0fd08faa635f35.jpg',
                   'https://basket-14.wbcontent.net/vol2102/part210232/210232094/images/big/2.webp'
                 ]
                 , inStock: 1, quantity: 1 , specs: [
@@ -671,36 +950,29 @@ var MVVM = {
                 "Wireless charging case included"
               ]
               },
-              { productName: 'pro 5s', price: 950, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
+              { productName: 'Air R02', price: 800, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
                 image: [
-                    'https://static-01.daraz.com.np/p/aa109dc5ca5984584b79bd197af090a2.jpg',
-                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/100417/3.jpg?2146',
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP16XUr9eb5mG_pLH7pKYEP_bkdbHvnXHw2V_t2cfBiciQsVDW40FLZUtu2d0Cxz80aCw&usqp=CAU',
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-bacrkIsqp0eoFkq9MY2NhEJyGjCh0PxToJnFockwR-vZ0sjbQRlJTDmNTEAeYnICLQ&usqp=CAU'
-
-                ],
-                inStock: 1, 
-                quantity: 1, 
-                specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
+                  //'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
+                  'https://elbay.ge/wp-content/uploads/2023/09/jbl-air-r02-%E1%83%91%E1%83%9D%E1%83%AE-2.jpg',
+                  'https://img1.ibay.com.mv/is1/full/2024/07/item_5588110_598.jpg',
+                  'https://elbay.ge/wp-content/uploads/2023/09/jbl-air-r02-%E1%83%91%E1%83%9D%E1%83%AE-2.jpg'
+                ], inStock: 1, quantity: 1, specs: [
+                "True Wireless Earbuds",
+                "Bluetooth v5.0",
+                "Up to 3 hours of listening time",
+                "Charging case included",
+                "Compatible with Android and iOS devices"
+              ]
               },
               { productName: 'Air R03s', price: 800, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                   image: [
+                      'https://pictures-kenya.jijistatic.com/46195395_NjIwLTgyNy04MTljOTVmY2Fk.webp',
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
                       'https://pictures-kenya.jijistatic.com/34661399_NjIwLTgyNy1mZWFkYjllMjUy.webp'
                   ],
                   inStock: 1, 
                   quantity: 1, 
                   specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
-              },
-              { productName: 'JBL TWS 4 Earbuds', price: 800, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
-                image: [
-                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/3732541/1.jpg?8352',
-                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5507111/1.jpg?5858',
-                    'https://shoppingekart.com/images/product-images/1599817161869471089.jpg'
-                ],
-                inStock: 1, 
-                quantity: 1, 
-                specs: ["Sweat proof", "Compatible with all mobile phone (android or ios) and music players", "Touch sensitive controls"] 
               },
               { productName: 'Stereo F9 Bluetooth Earphone', price: 900, description: 'Stereo F9 Bluetooth Earphone', 
                 image: [
