@@ -26,7 +26,8 @@ var MVVM = {
             this.cnt = ko.observable();
             this.shipping = ko.observable(false);
             this.shippingFee = ko.observable(110);
-            //this.termsAgreed = ko.observable(false);
+            this.otherLocation = ko.observable('');
+            this.showOtherLocation = ko.observable(false);
             
 
             this.AirPodsList = ko.observable([
@@ -877,7 +878,7 @@ var MVVM = {
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
                 'https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/56/8691551/1.jpg?4591'
               ], 
-              inStock: 1, quantity: 1, specs: [
+              inStock: 0, quantity: 1, specs: [
               "Listening time: 3 hours",
               "360mAh charging case",
               "Lightning charging cable",
@@ -1072,6 +1073,9 @@ var MVVM = {
               }
             ]);
             this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja','Thika', 'Along Thika road', "Other"])
+            // this.showOtherLocation = ko.computed(() => {
+            //   return this.location() === 'Other';
+            // });
             this.cartProducts = ko.observableArray([]);
             var prods = [];
             this.termsAgreed = ko.observable(false);
@@ -1090,17 +1094,19 @@ var MVVM = {
             });
             this.location.subscribe(function(newValue){
               debugger;
-              // var self = this;
+               var self = this;
               //var n = self.locationText();
-              var inp = document.getElementById('locationInput');
+              //var inp = document.getElementById('locationInput');
               if ( newValue =='Other') {
-                this.locationInput(true);
-                inp.classList.remove('disabled');
+                // this.locationInput(true);
+                // inp.classList.remove('disabled');
                 debugger;
+                this.showOtherLocation(true);
               }
               else{
                 //this.locationInput(false);
-                inp.classList.add('disabled');
+                //inp.classList.add('disabled');
+                this.showOtherLocation(false);
                 debugger;
               }
               debugger;
@@ -1191,6 +1197,9 @@ var MVVM = {
                 if(name === undefined || location === undefined || name === " " || location === " "){
                     alert("Please provide your name and location");
                     return;
+                }
+                if(this.location() === 'Other'){
+                  location = self.otherLocation();
                 }
                 var win = window.open(`https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20*${location}*.%20I%20would%20like%20to%20order%20these:%20${msg}.%0ATotal%20=%20*${total}*`, '_blank');
                 // var whatsappLink = `https://wa.me/${num}?text=Hi,%20my%20name%20is%20${name}%20from%20${location}.%20I%20would%20like%20to%20order%20these:%20${msg}.`;
