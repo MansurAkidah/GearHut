@@ -31,6 +31,19 @@ var MVVM = {
             
 
             this.AirPodsList = ko.observable([
+              { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
+                image: [
+                  'https://futureaudiophile.com/wp-content/uploads/2022/09/2-Apple-AirPodsMax-ManyColors-1024x683.jpg',
+                  'https://smartbuy.myimaginestore.com/media/mf_webp/jpg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/airpods-max-colors_2.webp',
+                  'https://www.sbsmobile.com/ned/227030-thickbox_default/skinpods-for-airpods-max.jpg'
+                ], inStock: 1, quantity: 1 , specs: [
+                  "Active Noise Cancellation (ANC)",
+                  "Spatial audio with dynamic head tracking",
+                  "Up to 20 hours of battery life with ANC",
+                  "Apple-designed H1 chip for seamless connectivity",
+                  "Premium over-ear design with adaptive EQ"
+                ]
+                },
                 { productName: 'Oraimo Freepods 4', price: 3999, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', 
                 image: [
                   'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png',
@@ -127,19 +140,18 @@ var MVVM = {
                     "IPX7 water resistance for durability"
                   ]
                   },
-                { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
-                  image: [
-                    'https://futureaudiophile.com/wp-content/uploads/2022/09/2-Apple-AirPodsMax-ManyColors-1024x683.jpg',
-                    'https://smartbuy.myimaginestore.com/media/mf_webp/jpg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/airpods-max-colors_2.webp',
-                    'https://www.sbsmobile.com/ned/227030-thickbox_default/skinpods-for-airpods-max.jpg'
-                  ], inStock: 1, quantity: 1 , specs: [
-                    "Active Noise Cancellation (ANC)",
-                    "Spatial audio with dynamic head tracking",
-                    "Up to 20 hours of battery life with ANC",
-                    "Apple-designed H1 chip for seamless connectivity",
-                    "Premium over-ear design with adaptive EQ"
-                  ]
-                  },
+                  { productName: 'Mi True Wireless Earbuds Basic 2 in Kenya', price: 4000, description: 'The Wireless Earbuds Basic 2 is equipped with the latest Bluetooth 5.0 chip.', 
+                    image: [
+                      'https://www.mobilehub.co.ke/storage/2023/09/mi-true-wireless-earbuds-basic-2-650x650-1.jpg',
+                      'https://www.digitalstore.co.ke/cdn/shop/products/71XQ_EjG8QL._AC_SX679_458c68be-5199-4d49-9544-b872fa83ed80_600x.jpg?v=1647686609',
+                    ], inStock: 1, quantity: 1 , specs: [
+                      "Bluetooth Version :5.0",
+                      "Battery Life :(Single Charge ) 5H",
+                      "Additional 20 hours with the charging case",
+                      "Effective Distance: 10Metres ",
+                      "Microphone Yes"
+                    ]
+                    },
                 { productName: 'Bose QuietComfort Earbuds', price: 4900, description: 'Indulge in pure serenity with Bose QuietComfort Earbuds - Noise-Canceling True Wireless Earbuds.', image: [
                   'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg',
                   'https://cdn.vox-cdn.com/thumbor/yHQexpmsIp24XKyBcwKC3EXTGos=/0x0:2040x1360/1400x1400/filters:focal(1058x772:1059x773)/cdn.vox-cdn.com/uploads/chorus_asset/file/21946559/IMG_0720-1.0.jpeg',
@@ -220,7 +232,7 @@ var MVVM = {
                     "Secure-fit ear hooks for stability during workouts"
                   ]
                   },
-                { productName: 'Sennheiser Momentum True Wireless 2', price: 2100, description: 'Indulge in exceptional sound quality with Sennheiser Momentum True Wireless 2.', 
+                { productName: 'Sennheiser Momentum True Wireless 2', price: 4100, description: 'Indulge in exceptional sound quality with Sennheiser Momentum True Wireless 2.', 
                   image: [
                     'https://m.media-amazon.com/images/I/81NXYrn8JiL.jpg',
                     'https://www.theaudiostore.in/cdn/shop/files/Sennheiser_MOMENTUM_True_Wireless_4_Noise-Canceling_Earbuds_black_copper_09_1024x.jpg?v=1720723344',
@@ -238,7 +250,7 @@ var MVVM = {
                     "Ergonomic design for a comfortable and secure fit"
                   ]
                   },
-                { productName: 'Skullcandy Indy Evo', price: 2100, description: 'Experience freedom with Skullcandy Indy Evo - True Wireless In-Ear Earbuds.', 
+                { productName: 'Skullcandy Indy Evo', price: 13100, description: 'Experience freedom with Skullcandy Indy Evo - True Wireless In-Ear Earbuds.', 
                   image: [
                     'https://m.media-amazon.com/images/I/6119HR9g38L.jpg',
                     'https://m.media-amazon.com/images/I/71gxk3w6NrL.jpg',
@@ -255,7 +267,7 @@ var MVVM = {
                     "Bluetooth connectivity for wireless convenience"
                   ]
                   },
-                { productName: 'Huawei FreeBuds 4i', price: 2250, description: 'Dive into pure audio bliss with Huawei FreeBuds 4i - Active Noise Cancellation Earbuds.', 
+                { productName: 'Huawei FreeBuds 4i', price: 12000, description: 'Dive into pure audio bliss with Huawei FreeBuds 4i - Active Noise Cancellation Earbuds.', 
                   image: [
                     'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg',
                     'https://www.digitalstore.co.ke/cdn/shop/products/Freebuds4i3_1024x.jpg?v=1626959397',
@@ -288,7 +300,7 @@ var MVVM = {
                     "USB-C charging for quick and convenient power replenishment"
                   ]
                   },
-                { productName: 'JBL Free X', price: 2500, description: 'Immerse yourself in the music with JBL Free X - Truly Wireless In-Ear Headphones.', image: [
+                { productName: 'JBL Free X', price: 13000, description: 'Immerse yourself in the music with JBL Free X - Truly Wireless In-Ear Headphones.', image: [
                   'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png',
                   'https://manuals.plus/wp-content/uploads/2020/12/JBL-FREE-X-with-Charging-Case_12-300x216.png?ezimgfmt=rs:368x265/rscb1/ng:webp/ngcb1',
                   'https://tradezone.ac/cdn/shop/products/71Hwuk_88AL._AC_SL1500_800x.jpg?v=1574963714'
@@ -872,7 +884,7 @@ var MVVM = {
                   specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]
             }]);            
             this.AvailableList = ko.observable([
-              { productName: 'Pro 3', price: 650, description: '+ FREE case.', 
+              { productName: 'TWS Original Airpods Pro 3', price: 650, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
               image: [
                 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
@@ -887,7 +899,7 @@ var MVVM = {
               "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'pro 5s', price: 950, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
+              { productName: 'Pro 5s', price: 950, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
                 image: [
                     'https://static-01.daraz.com.np/p/aa109dc5ca5984584b79bd197af090a2.jpg',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/100417/3.jpg?2146',

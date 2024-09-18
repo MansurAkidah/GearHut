@@ -932,6 +932,7 @@ section {
 --------------------------------------------------------------*/
 .menu .nav-tabs {
   border: 0;
+  padding-top: 20px;
 }
 
 .menu .nav-link {
