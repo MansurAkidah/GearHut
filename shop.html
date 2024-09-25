@@ -339,8 +339,8 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                   <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">My Cart</h5>
-                      <button type="button" class="btn-close" data-bind="click:$root.closeCart"></button>
+                    <i class="bi bi-cart2"></i>
+                    <button type="button" class="btn-close" data-bind="click:$root.closeCart"></button>
                   </div>
                   <div class="modal-body"  >
                       <section class="h-60 gradient-custom">
@@ -349,7 +349,7 @@
                               <div class="col-md-8">
                                 <div class="card mb-4" data-bind="visible:count">
                                   <div class="card-header py-3">
-                                    <h5 class="mb-0">Cart - <span data-bind="text:count"></span> items</h5>
+                                    <h5 class="mb-0"><i class="bi bi-cart2"></i> - <span data-bind="text:count"></span> items</h5>
                                   </div>
                                   <div class="card-body" data-bind="foreach:cartProducts">
                                     <!-- Single item -->
@@ -405,7 +405,9 @@
                                       </div>
                                     </div>
                                     <div class="row" data-bind="visible:!$root.count">
-                                      <strong>No products in the cart yet</strong>
+                                      <div class="alert alert-danger" role="alert">
+                                        No products in the cart
+                                      </div>
                                     </div>
                                     <!-- End of Single item -->
                                     <hr class="my-4" />
@@ -518,8 +520,9 @@
                                 </div>
                                 <div class="card mb-4 mb-lg-0" data-bind="visible:empty ">
                                   <div class="card-body">
-                                    <p><h5 style="color: red;">Sorry, You do not have anything in your cart</h5>
-                                    </p>
+                                    <div class="alert alert-danger" role="alert">
+                                      Sorry, You do not have anything in your cart!
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -612,7 +615,7 @@
                           </div>
                           <div class="card-footer p-4 pt-4 border-top-0 bg-transparent">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.closeProduct">Close</a></div>
-                        </div>
+                          </div>
                         </div>
                       </div>
                     </div>
