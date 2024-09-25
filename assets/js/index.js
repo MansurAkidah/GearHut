@@ -890,7 +890,7 @@ var MVVM = {
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
                 'https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/56/8691551/1.jpg?4591'
               ], 
-              inStock: 0, quantity: 1, specs: [
+              inStock: 1, quantity: 1, specs: [
               "Listening time: 3 hours",
               "360mAh charging case",
               "Lightning charging cable",
