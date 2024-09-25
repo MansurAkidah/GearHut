@@ -31,7 +31,7 @@ var MVVM = {
             
 
             this.AirPodsList = ko.observable([
-              { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
+                { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
                 image: [
                   'https://futureaudiophile.com/wp-content/uploads/2022/09/2-Apple-AirPodsMax-ManyColors-1024x683.jpg',
                   'https://smartbuy.myimaginestore.com/media/mf_webp/jpg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/airpods-max-colors_2.webp',
@@ -43,7 +43,7 @@ var MVVM = {
                   "Apple-designed H1 chip for seamless connectivity",
                   "Premium over-ear design with adaptive EQ"
                 ]
-                },
+                  },
                 { productName: 'Oraimo Freepods 4', price: 3999, description: 'oraimo FreePods 4 ANC True Wireless Earbuds', 
                 image: [
                   'https://cdn-img.oraimo.com/NG/album/oeb-e105d/oeb-e105d.png',
@@ -65,7 +65,7 @@ var MVVM = {
                   "LED indicators for battery status",
                   "Compact and portable charging case"
                 ]
-                },
+                  },
                 { productName: 'Oraimo Freepods 4 Tuned by Burna Boy', price: 5999, description: 'Oraimo X Burna Boy SpacePods True Wireless Earbuds', 
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/49/6941651/1.jpg?2845',
@@ -86,7 +86,7 @@ var MVVM = {
                   "Input: Type-C",
                   "Compact and portable charging case"
                 ]
-                },
+                  },
                 { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
                   image: [
                     'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
@@ -99,7 +99,7 @@ var MVVM = {
                     "Sweat and water resistance (IPX4)",
                     "Wireless charging case included"
                   ]
-                },
+                  },
                 { productName: 'JBL Live Pro 2', price: 19999, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', 
                   image: [
                     'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png',
@@ -114,7 +114,7 @@ var MVVM = {
                     "Touch controls for music and calls",
                     "Voice assistant support (e.g., Google Assistant, Siri)"
                   ]
-                },
+                  },
                 { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', 
                   image: ['https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg',
                     'https://www.counterpointresearch.com/wp-content/uploads/2022/04/Counterpoint-Sony-WF-1000XM4-Review.jpg',
@@ -140,7 +140,7 @@ var MVVM = {
                     "IPX7 water resistance for durability"
                   ]
                   },
-                  { productName: 'Mi True Wireless Earbuds Basic 2 in Kenya', price: 4000, description: 'The Wireless Earbuds Basic 2 is equipped with the latest Bluetooth 5.0 chip.', 
+                { productName: 'Mi True Wireless Earbuds Basic 2 in Kenya', price: 4000, description: 'The Wireless Earbuds Basic 2 is equipped with the latest Bluetooth 5.0 chip.', 
                     image: [
                       'https://www.mobilehub.co.ke/storage/2023/09/mi-true-wireless-earbuds-basic-2-650x650-1.jpg',
                       'https://www.digitalstore.co.ke/cdn/shop/products/71XQ_EjG8QL._AC_SX679_458c68be-5199-4d49-9544-b872fa83ed80_600x.jpg?v=1647686609',
@@ -884,7 +884,7 @@ var MVVM = {
                   specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]
             }]);            
             this.AvailableList = ko.observable([
-              { productName: 'TWS Original Airpods Pro 3', price: 650, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
+              { productName: 'TWS Original Airpods Pro 3', price: 850, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
               image: [
                 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
@@ -899,7 +899,7 @@ var MVVM = {
               "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'Pro 5s', price: 950, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
+              { productName: 'Pro 5s', price: 1000, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
                 image: [
                     'https://static-01.daraz.com.np/p/aa109dc5ca5984584b79bd197af090a2.jpg',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/100417/3.jpg?2146',
@@ -911,7 +911,7 @@ var MVVM = {
                 quantity: 1, 
                 specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
               },
-              { productName: 'JBL TWS 4 Earbuds', price: 800, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+              { productName: 'JBL TWS 4 Earbuds', price: 1000, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/3732541/1.jpg?8352',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5507111/1.jpg?5858',
@@ -921,7 +921,7 @@ var MVVM = {
                 quantity: 1, 
                 specs: ["Sweat proof", "Compatible with all mobile phone (android or ios) and music players", "Touch sensitive controls"] 
               },
-              { productName: 'Air R03', price: 800, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
+              { productName: 'Air R03', price: 1000, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
                 image: [
                   'https://meowpo.com/liveimages/meow_product_images/3580303014.jpg',
                   'https://meowpo.com/liveimages/meow_product_images/2709324513.jpg',
@@ -936,7 +936,7 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'In-Ear Earphone Stereo', price: 850, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', 
+              { productName: 'In-Ear Earphone Stereo', price: 1000, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', 
                 image: [
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/576237/6.jpg?1179',
                   'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
@@ -948,22 +948,22 @@ var MVVM = {
                 "Compatible Models: for Android/for iPhone"
               ]
               },
-              { productName: 'AirPods Pro', price: 1650, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
-                image: [
-                  'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
-                  'https://stmobilesinternational.com/wp-content/uploads/2022/12/Apple-AirPods-Pro-2nd-Gen-with-MagSafe-Case-USB%E2%80%91C-Charging.jpeg',
-                  'https://helios-i.mashable.com/imagery/articles/06p5PGAjzDSZysaktotmIwr/hero-image.fill.size_1248x702.v1699805275.jpg',
-                  'https://cdn.mos.cms.futurecdn.net/8EH5WexwtVCryqxpWX8X8m.jpg'
-                ], 
-                inStock: 1, quantity: 1, specs: [
-                "Active Noise Cancellation (ANC)",
-                "Transparency mode",
-                "Adaptive EQ for audio optimization",
-                "Sweat and water resistance (IPX4)",
-                "Wireless charging case included"
-              ]
-              },
-              { productName: 'Air R02', price: 800, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
+              // { productName: 'AirPods Pro', price: 1850, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
+              //   image: [
+              //     'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
+              //     'https://stmobilesinternational.com/wp-content/uploads/2022/12/Apple-AirPods-Pro-2nd-Gen-with-MagSafe-Case-USB%E2%80%91C-Charging.jpeg',
+              //     'https://helios-i.mashable.com/imagery/articles/06p5PGAjzDSZysaktotmIwr/hero-image.fill.size_1248x702.v1699805275.jpg',
+              //     'https://cdn.mos.cms.futurecdn.net/8EH5WexwtVCryqxpWX8X8m.jpg'
+              //   ], 
+              //   inStock: 1, quantity: 1, specs: [
+              //   "Active Noise Cancellation (ANC)",
+              //   "Transparency mode",
+              //   "Adaptive EQ for audio optimization",
+              //   "Sweat and water resistance (IPX4)",
+              //   "Wireless charging case included"
+              // ]
+              // },
+              { productName: 'Air R02', price: 950, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
                 image: [
                   //'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
                   'https://elbay.ge/wp-content/uploads/2023/09/jbl-air-r02-%E1%83%91%E1%83%9D%E1%83%AE-2.jpg',
@@ -977,7 +977,7 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'Air R03s', price: 800, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+              { productName: 'Air R03s', price: 950, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                   image: [
                       'https://pictures-kenya.jijistatic.com/46195395_NjIwLTgyNy04MTljOTVmY2Fk.webp',
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
