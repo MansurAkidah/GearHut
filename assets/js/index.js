@@ -29,7 +29,126 @@ var MVVM = {
             this.otherLocation = ko.observable('');
             this.showOtherLocation = ko.observable(false);
             
-
+            document.onkeydown = (e) => { 
+              if(e.key == 123){
+                e.preventDefault();
+              }
+              if(e.ctrlKey && e.shiftKey && e.key == 'I'){
+                e.preventDefault();
+              }
+              if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+                e.preventDefault();
+              }
+              if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+                  e.preventDefault();
+              }
+              if (e.ctrlKey && e.key == 'U') {
+                  e.preventDefault();
+              }
+            }
+            this.SmartWatchList = ko.observable([  
+              { 
+                productName: 'Bluetooth Wireless Smart Watch', 
+                price: 1500, 
+                description: 'Factory-direct sales of affordable, high-quality products. Ships within 24 hours from a local warehouse. Features USB quick removal direct charge, smart life assistant functions like step tracking, heart rate monitoring, and smartphone connectivity for notifications.', 
+                image: [ 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+                ], 
+                inStock: 1, 
+                quantity: 1, 
+                specs: [ 
+                  "Battery capacity: 150 mAh", 
+                  "Screen size: 4.15*3.63cm/1.63* 1.43 inch", 
+                  "Packing Size: 12.2*8.1*3.2cm/4.79*3.18*1.26 inch", 
+                  "Net Weight: 45.0g/1.59oz", 
+                  "Brand: Generic" 
+                ] 
+              },
+              {
+                productName: 'Itel 1.83\'\' Sones Smart Watch', 
+                price: 2200, 
+                description: 'Features voice assistant and Bluetooth phone call functionality, allowing hands-free convenience without needing to use your phone. Boasts a sleek, narrow metal bezel design with four customizable menu styles.', 
+                image: [ 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+                ], 
+                inStock: 1, 
+                quantity: 1, 
+                specs: [ 
+                  "Model Name: ISW-011", 
+                  "Screen: 1.83\" IPS 240*284", 
+                  "Battery: 220mAh", 
+                  "BT version: V5.3", 
+                  "Input port: Magnetic attraction charging", 
+                  "Color: Black", 
+                  "Voice assistant", 
+                  "Message notification", 
+                  "Find phone", 
+                  "Remote camera", 
+                  "Muti-dial theme", 
+                  "Stopwatch", 
+                  "Female menstrual cycle reminder"
+                ] 
+            },
+            {
+              productName: 'Itel 1.43" True 60Hz Smart Watch Horizon- ISW-O11', 
+              price: 2000, 
+              description: 'Enjoy hands-free convenience with voice assistant and Bluetooth phone call features. Designed with a sleek, narrow metal bezel and four customizable menu styles for a premium experience.', 
+              image: [ 
+                'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+                'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+                'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+              ], 
+              inStock: 1, 
+              quantity: 1, 
+              specs: [ 
+                "Model Name: ISW-011", 
+                "Screen: 1.83\" IPS 240*284", 
+                "Battery: 220mAh", 
+                "BT version: V5.3", 
+                "Input port: Magnetic attraction charging", 
+                "Color: Black", 
+                "Voice assistant", 
+                "Message notification", 
+                "Find phone", 
+                "Remote camera", 
+                "Muti-dial theme", 
+                "Stopwatch", 
+                "Female menstrual cycle reminder"
+              ] 
+          },
+          {
+            productName: 'Itel Sones Smartwatch ISW-O11 Waterproof Native Storm Smart Watch Sones', 
+            price: 2700, 
+            description: 'Experience hands-free convenience with the voice assistant and Bluetooth phone call features. The watch features a narrow metal bezel design and offers four customizable menu styles.', 
+            image: [ 
+              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
+              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+            ], 
+            inStock: 1, 
+            quantity: 1, 
+            specs: [ 
+              "Model Name: ISW-011", 
+              "Screen: 1.83\" IPS 240*284", 
+              "Battery: 220mAh", 
+              "BT version: V5.3", 
+              "Input port: Magnetic attraction charging", 
+              "Color: Black", 
+              "Voice assistant", 
+              "Message notification", 
+              "Find phone", 
+              "Remote camera", 
+              "Muti-dial theme", 
+              "Stopwatch", 
+              "Female menstrual cycle reminder"
+            ] 
+        } 
+            ]);
+            
             this.AirPodsList = ko.observable([
                 { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
                 image: [
@@ -1084,7 +1203,7 @@ var MVVM = {
                 ] 
               }
             ]);
-            this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja','Thika', 'Along Thika road', "Other"])
+            this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja','KU', 'Along Thika road','Thika', "Other"])
             // this.showOtherLocation = ko.computed(() => {
             //   return this.location() === 'Other';
             // });
