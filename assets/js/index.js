@@ -28,39 +28,158 @@ var MVVM = {
             this.shippingFee = ko.observable(110);
             this.otherLocation = ko.observable('');
             this.showOtherLocation = ko.observable(false);
-            
-            document.onkeydown = (e) => { 
-              if(e.key == 123){
-                e.preventDefault();
-              }
-              if(e.ctrlKey && e.shiftKey && e.key == 'I'){
-                e.preventDefault();
-              }
-              if (e.ctrlKey && e.shiftKey && e.key == 'C') {
-                e.preventDefault();
-              }
-              if (e.ctrlKey && e.shiftKey && e.key == 'J') {
-                  e.preventDefault();
-              }
-              if (e.ctrlKey && e.key == 'U') {
-                  e.preventDefault();
-              }
+            // document.onkeydown = (e) => { 
+            //   if(e.key == 123){
+            //     e.preventDefault();
+            //   }
+            //   if(e.ctrlKey && e.shiftKey && e.key == 'I'){
+            //     e.preventDefault();
+            //   }
+            //   if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+            //     e.preventDefault();
+            //   }
+            //   if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+            //       e.preventDefault();
+            //   }
+            //   if (e.ctrlKey && e.key == 'U') {
+            //       e.preventDefault();
+            //   }
+            // }
+            //#region Search
+            function SearchSmart() {
+              // Get the search term
+              var searchTerm = document.getElementById('searchSmartWatch').value.toLowerCase();
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-smart .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var productPrice = product.querySelector('span').textContent;
+                
+                // Check if the product name or price includes the search term
+                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
             }
-            this.SmartWatchList = ko.observable([  
+            
+            // Add event listener for real-time search
+            document.getElementById('searchSmartWatch').addEventListener('input', SearchSmart);
+  
+            function SearchAvailable() {
+              // Get the search term
+              var searchTerm = document.getElementById('searchAvailable').value.toLowerCase();
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-comrades .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var productPrice = product.querySelector('span').textContent;
+                
+                // Check if the product name or price includes the search term
+                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+            
+            // Add event listener for real-time search
+            document.getElementById('searchAvailable').addEventListener('input', SearchAvailable);
+            
+            function SearchAirpods() {
+              // Get the search term
+              var searchTerm = document.getElementById('searchAirPods').value.toLowerCase();
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-airpods .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var productPrice = product.querySelector('span').textContent;
+                
+                // Check if the product name or price includes the search term
+                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+            
+            // Add event listener for real-time search
+            document.getElementById('searchAirPods').addEventListener('input', SearchAirpods);
+
+            function SearchPhones() {
+              // Get the search term
+              var searchTerm = document.getElementById('searchPhones').value.toLowerCase();
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-phones .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var productPrice = product.querySelector('span').textContent;
+                
+                // Check if the product name or price includes the search term
+                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+            
+            // Add event listener for real-time search
+            document.getElementById('searchPhones').addEventListener('input', SearchPhones);
+            //#endregion
+
+            this.SmartWatchList = ko.observableArray([  
               { 
-                productName: 'Bluetooth Wireless Smart Watch', 
-                price: 1500, 
-                description: 'Factory-direct sales of affordable, high-quality products. Ships within 24 hours from a local warehouse. Features USB quick removal direct charge, smart life assistant functions like step tracking, heart rate monitoring, and smartphone connectivity for notifications.', 
+                productName: 'Havit M9037', 
+                price: 3500, 
+                description: 'Havit M9037 Smart Life Series-Smart Watch - With Voice Assistants', 
                 image: [ 
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+                  'https://www.digitalstore.co.ke/cdn/shop/files/bb1_400x.webp?v=1712216730', 
+                  'https://www.digitalstore.co.ke/cdn/shop/files/bb2_400x.webp?v=1712216730',
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/3.jpg?1406', 
+                ], 
+                inStock: 1, 
+                quantity: 1, 
+                specs: [ 
+                  "Screen size: 1.91 inch TFT Screen", 
+                  "Resolution: 240×280",
+                  "Usage Time: 4-6 Days",
+                  "100+ sports modes",
+                  "Heart Rate and Blood oxygen measurement",
+                  "Heart rhythm monitoring", 
+                  "Weather", 
+                  "Sleep Tracking",
+                ] 
+              },
+              { 
+                productName: 'T88 Ultra Smart Watch', 
+                price: 2000, 
+                description: 'Comes in two variations: Black and white.Elegant design and identical to the latest Apple Watch, with a screen size of 2.0 inches, type IPs, with a resolution of 385*385 pixels. Features USB quick removal direct charge, smart life assistant functions like step tracking, heart rate monitoring, and smartphone connectivity for notifications.', 
+                image: [ 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/1.jpg?1406', 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/4.jpg?1406',
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/3.jpg?1406', 
                 ], 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [ 
                   "Battery capacity: 150 mAh", 
-                  "Screen size: 4.15*3.63cm/1.63* 1.43 inch", 
+                  "Supports All Android Devices - iOS via Wear Fit Pro app",
+                  "Bluetooth version of BT. V5.0",
+                  "280 mAh battery for continuous use that lasts 2-4 days of use",
+                  "Heart Rate and G-sensor",
+                  "screen size of 2.0 inches, type IPs, with a resolution of 385*385 pixels.", 
                   "Packing Size: 12.2*8.1*3.2cm/4.79*3.18*1.26 inch", 
                   "Net Weight: 45.0g/1.59oz", 
                   "Brand: Generic" 
@@ -92,8 +211,8 @@ var MVVM = {
                   "Stopwatch", 
                   "Female menstrual cycle reminder"
                 ] 
-            },
-            {
+              },
+              {
               productName: 'Itel 1.43" True 60Hz Smart Watch Horizon- ISW-O11', 
               price: 2000, 
               description: 'Enjoy hands-free convenience with voice assistant and Bluetooth phone call features. Designed with a sleek, narrow metal bezel and four customizable menu styles for a premium experience.', 
@@ -119,8 +238,8 @@ var MVVM = {
                 "Stopwatch", 
                 "Female menstrual cycle reminder"
               ] 
-          },
-          {
+              },
+              {
             productName: 'Itel Sones Smartwatch ISW-O11 Waterproof Native Storm Smart Watch Sones', 
             price: 2700, 
             description: 'Experience hands-free convenience with the voice assistant and Bluetooth phone call features. The watch features a narrow metal bezel design and offers four customizable menu styles.', 
@@ -146,9 +265,16 @@ var MVVM = {
               "Stopwatch", 
               "Female menstrual cycle reminder"
             ] 
-        } 
+              } 
             ]);
             
+            
+            this.performSearch = function() {
+              var self = this;
+              // The search is actually performed automatically by the computed observable
+              // This function can be used for additional actions on search if needed
+              console.log("Searching for: " + self.searchTerm());
+            };
             this.AirPodsList = ko.observable([
                 { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
                 image: [

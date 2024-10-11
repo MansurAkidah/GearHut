@@ -17,8 +17,8 @@
         <link href="assets/css/shop.css" rel="stylesheet" />
         <link href="assets/css/main.css" rel="stylesheet">
     </head>
-    <body oncontextmenu="return false">
-  <!-- ======= Header ======= -->
+    <body >
+  <!-- ======= Header ======= oncontextmenu="return false" -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -55,6 +55,10 @@
         <!--</ul>
       </nav> .navbar -->
         <form class="d-flex">
+          <!-- <div class="search-box">
+            <input type="text" id="globalSearchInput" placeholder="Search all products...">
+            <button onclick="performGlobalSearch()">Search</button>
+          </div> -->
           <button class="btn btn-outline-dark" type="button" data-bind="click:viewCart">
               <i class="bi-cart-fill me-1"></i>
               Cart
@@ -153,6 +157,7 @@
             <div class="tab-header text-center">
               <p>Products</p>
               <h3>AirPods</h3>
+              <input placeholder="Search by name or price..." id="searchAirPods" type="text" name="text" class="search-input">
             </div>
 
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:AirPodsList">
@@ -188,6 +193,7 @@
             <div class="tab-header text-center">
               <p>Welcome</p>
               <h3>Best Deals in the market</h3>
+              <input placeholder="Search by name or price..." id="searchAvailable" type="text" name="text" class="search-input">
             </div>
 
             
@@ -290,11 +296,12 @@
                 </div>
               </div>
           </div><!-- End Laptops section -->
-
+          <!--Phones section-->
           <div class="tab-pane fade" id="menu-phones">
             <div class="tab-header text-center">
               <p>Products</p>
               <h3>Phones</h3>
+              <input placeholder="Search by name or price..." id="searchPhones" type="text" name="text" class="search-input">
             </div>
 
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:phoneList">
@@ -323,7 +330,7 @@
                   </div>
               </div>
             </div>
-          </div><!-- End Phones Menu Content -->
+          </div><!-- End Phones Section -->
 
           <!--Smart Watch Section-->
           <div class="tab-pane fade" id="menu-smart">
@@ -331,8 +338,10 @@
             <div class="tab-header text-center">
               <p>Products</p>
               <h3>Smart Watch</h3>
+              <!-- <input type="text" id="searchInput" placeholder="Search by name or price..."> -->
+              <input placeholder="Search by name or price..." id="searchSmartWatch" type="text" name="text" class="search-input">
             </div>
-
+            
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:SmartWatchList">
               <div class="col mb-5">
                   <div class="card h-100">
@@ -681,5 +690,6 @@
         <script src="assets/js/knockout.js"></script>
         <!-- Core theme JS-->
         <script src="assets/js/index.js"></script>
+        
     </body>
 </html>
