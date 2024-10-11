@@ -145,9 +145,10 @@ var MVVM = {
                 price: 3500, 
                 description: 'Havit M9037 Smart Life Series-Smart Watch - With Voice Assistants', 
                 image: [ 
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFymcv339oGC_ZxzJqu6mjDtdQiK96BW1lWg&s',
                   'https://www.digitalstore.co.ke/cdn/shop/files/bb1_400x.webp?v=1712216730', 
                   'https://www.digitalstore.co.ke/cdn/shop/files/bb2_400x.webp?v=1712216730',
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/3.jpg?1406', 
+                  'https://skywave.co.ke/wp-content/uploads/2024/03/oraimo-Watch-ES-Amoled-OSW-41-431x431.jpg', 
                 ], 
                 inStock: 1, 
                 quantity: 1, 
@@ -163,10 +164,37 @@ var MVVM = {
                 ] 
               },
               { 
+                productName: 'Oraimo Watch 4 Plus OSW-801', 
+                price: 3500, 
+                description: 'Make calls directly on your wrist, without the hassle of picking up your phone. Get more connected with single-chip Bluetooth that ensures fast', 
+                image: [ 
+                  'https://cdn-img.oraimo.com/fit-in/600x600/AE/product/2023/11/21/OSW-801-680-9.jpg',
+                  'https://www.digitalstore.co.ke/cdn/shop/files/bb2_400x.webp?v=1712216730',
+                  'https://skywave.co.ke/wp-content/uploads/2024/03/oraimo-Watch-ES-Amoled-OSW-41-431x431.jpg', 
+                ], 
+                inStock: 1, 
+                quantity: 1, 
+                specs: [ 
+                  "Display Screen: 2.01'' TFT 240*282",
+                  "BT Version: V5.2",
+                  "Battery Capacity: 300mAh",
+                  "Battery Type: Lithium Polymer",
+                  "Battery Charging Time: 3h Normal",
+                  "Using Time: Up to 7 days",
+                  "Standby Time: 30 days",
+                  "Watch Size: 53.4*39.1*11.5mm (without strap)",
+                  "Weight: 41g (with strap)",
+                  "Material: ABS/PC/Silica Gel",
+                  "Waterproof: IP68 *",
+                  "oraimo Lab test result",
+                  "Model:osw-801"
+                ] 
+              },
+              { 
                 productName: 'T88 Ultra Smart Watch', 
                 price: 2000, 
                 description: 'Comes in two variations: Black and white.Elegant design and identical to the latest Apple Watch, with a screen size of 2.0 inches, type IPs, with a resolution of 385*385 pixels. Features USB quick removal direct charge, smart life assistant functions like step tracking, heart rate monitoring, and smartphone connectivity for notifications.', 
-                image: [ 
+                image: [ 'https://bluefirestore.com/wp-content/uploads/2023/05/e7803229-7baf-4d7c-b18b-257afde9bc1a.jpg',
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/1.jpg?1406', 
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/4.jpg?1406',
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/3.jpg?1406', 
@@ -185,14 +213,45 @@ var MVVM = {
                   "Brand: Generic" 
                 ] 
               },
+              { 
+                productName: 'X8 ultra smart', 
+                price: 1700, 
+                description: 'Versatile X8 Ultra Max Bluetooth Calling Watch compatible with both Android and iOS operating systems', 
+                image: [ 
+                  'https://makropkstore.blob.core.windows.net/makroresources/SiteResources/Products/smart-watches-gadget/oem/x8-ultra-smartwatch-49mm-with-bluetooth-calling-orange/c6d395a1-abff-48a6-a3f8-41e1daaa7d5a.webp', 
+                  'https://cdn.shopify.com/s/files/1/0267/3534/5709/files/W-O-Series-X8-Ultra-SmartWatch_1024x1024.jpg?v=1667569391',
+                  'https://5.imimg.com/data5/ANDROID/Default/2023/9/342965013/GQ/QR/CR/92816460/product-jpeg.jpg',
+                  'https://achishopping.com/cdn/shop/products/x8ultrabox.jpg?v=1668806857', 
+                  'https://i0.wp.com/madukani.co.ke/wp-content/uploads/2023/04/X8-ULTRA-Smart-Watch-4.jpg?fit=988%2C1028&ssl=1',
+                ], 
+                inStock: 1, 
+                quantity: 1, 
+                specs: [ 
+                  "Model:	X8 Ultra Max Bluetooth Calling Watch",
+                  "Sim :Support	No",
+                  "Water: Proof	Yes",
+                  "Modes:	Multi-Sport Modes",
+                  "Dimensions:	478112mm",
+                  "Strap Material:	Silicone",
+                  "Water Resistant:	IP67",
+                  "Weight:	50g",
+                  "Operating System:	Android and iOS",
+                  "Speaker:	Yes",
+                  "Screen Size:	2.2 Inches",
+                  "Screen Resolution:	240*296 Pixels",
+                  "Screen Type:	IPS Screen",
+                  "Battery Life:	2-5 Days",
+                  "Charging interface mode:	wireless charger cable"
+                ] 
+              },
               {
                 productName: 'Itel 1.83\'\' Sones Smart Watch', 
                 price: 2200, 
                 description: 'Features voice assistant and Bluetooth phone call functionality, allowing hands-free convenience without needing to use your phone. Boasts a sleek, narrow metal bezel design with four customizable menu styles.', 
-                image: [ 
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+                image: [ 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/58/3045732/1.jpg?7849',
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/00/6977512/5.jpg?5858', 
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/00/6977512/2.jpg?5858', 
+                  'https://pictures-nigeria.jijistatic.net/157688334_NjIwLTYyMC1lMTQyYWExM2Jk.webp'
                 ], 
                 inStock: 1, 
                 quantity: 1, 
