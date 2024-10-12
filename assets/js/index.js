@@ -140,8 +140,7 @@ var MVVM = {
             //#endregion
 
             this.SmartWatchList = ko.observableArray([  
-              { 
-                productName: 'Havit M9037', 
+              { productName: 'Havit M9037', 
                 price: 3500, 
                 description: 'Havit M9037 Smart Life Series-Smart Watch - With Voice Assistants', 
                 image: [ 
@@ -163,8 +162,7 @@ var MVVM = {
                   "Sleep Tracking",
                 ] 
               },
-              { 
-                productName: 'Oraimo Watch 4 Plus OSW-801', 
+              { productName: 'Oraimo Watch 4 Plus OSW-801', 
                 price: 3500, 
                 description: 'Make calls directly on your wrist, without the hassle of picking up your phone. Get more connected with single-chip Bluetooth that ensures fast', 
                 image: [ 
@@ -190,8 +188,7 @@ var MVVM = {
                   "Model:osw-801"
                 ] 
               },
-              { 
-                productName: 'T88 Ultra Smart Watch', 
+              { productName: 'T88 Ultra Smart Watch', 
                 price: 2000, 
                 description: 'Comes in two variations: Black and white.Elegant design and identical to the latest Apple Watch, with a screen size of 2.0 inches, type IPs, with a resolution of 385*385 pixels. Features USB quick removal direct charge, smart life assistant functions like step tracking, heart rate monitoring, and smartphone connectivity for notifications.', 
                 image: [ 'https://bluefirestore.com/wp-content/uploads/2023/05/e7803229-7baf-4d7c-b18b-257afde9bc1a.jpg',
@@ -213,8 +210,7 @@ var MVVM = {
                   "Brand: Generic" 
                 ] 
               },
-              { 
-                productName: 'X8 ultra smart', 
+              { productName: 'X8 ultra smart', 
                 price: 1700, 
                 description: 'Versatile X8 Ultra Max Bluetooth Calling Watch compatible with both Android and iOS operating systems', 
                 image: [ 
@@ -244,8 +240,7 @@ var MVVM = {
                   "Charging interface mode:	wireless charger cable"
                 ] 
               },
-              {
-                productName: 'Itel 1.83\'\' Sones Smart Watch', 
+              { productName: 'Itel 1.83\'\' Sones Smart Watch', 
                 price: 2200, 
                 description: 'Features voice assistant and Bluetooth phone call functionality, allowing hands-free convenience without needing to use your phone. Boasts a sleek, narrow metal bezel design with four customizable menu styles.', 
                 image: [ 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/58/3045732/1.jpg?7849',
@@ -271,8 +266,7 @@ var MVVM = {
                   "Female menstrual cycle reminder"
                 ] 
               },
-              {
-              productName: 'Itel 1.43" True 60Hz Smart Watch Horizon- ISW-O11', 
+              { productName: 'Itel 1.43" True 60Hz Smart Watch Horizon', 
               price: 2000, 
               description: 'Enjoy hands-free convenience with voice assistant and Bluetooth phone call features. Designed with a sleek, narrow metal bezel and four customizable menu styles for a premium experience.', 
               image: [ 
@@ -298,14 +292,12 @@ var MVVM = {
                 "Female menstrual cycle reminder"
               ] 
               },
-              {
-            productName: 'Itel Sones Smartwatch ISW-O11 Waterproof Native Storm Smart Watch Sones', 
+              { productName: 'Itel Sones Smartwatch ISW-O11 Waterproof Native Storm Smart Watch Sones', 
             price: 2700, 
             description: 'Experience hands-free convenience with the voice assistant and Bluetooth phone call features. The watch features a narrow metal bezel design and offers four customizable menu styles.', 
             image: [ 
-              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
-              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238', 
-              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/1938232/1.jpg?7238'
+              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/00/6977512/5.jpg?5858', 
+              'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/00/6977512/2.jpg?5858'
             ], 
             inStock: 1, 
             quantity: 1, 
@@ -337,9 +329,9 @@ var MVVM = {
             this.AirPodsList = ko.observable([
                 { productName: 'AirPods Max', price: 3500, description: 'Immerse yourself in a symphony of sound with AirPods Max - Over-Ear High-Fidelity Headphones.', 
                 image: [
-                  'https://futureaudiophile.com/wp-content/uploads/2022/09/2-Apple-AirPodsMax-ManyColors-1024x683.jpg',
+                  'https://www.sbsmobile.com/ned/227030-thickbox_default/skinpods-for-airpods-max.jpg',
                   'https://smartbuy.myimaginestore.com/media/mf_webp/jpg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/airpods-max-colors_2.webp',
-                  'https://www.sbsmobile.com/ned/227030-thickbox_default/skinpods-for-airpods-max.jpg'
+                  'https://futureaudiophile.com/wp-content/uploads/2022/09/2-Apple-AirPodsMax-ManyColors-1024x683.jpg',
                 ], inStock: 1, quantity: 1 , specs: [
                   "Active Noise Cancellation (ANC)",
                   "Spatial audio with dynamic head tracking",
@@ -986,7 +978,7 @@ var MVVM = {
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/77/2121452/1.jpg?7985',
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/77/2121452/5.jpg?7985'
                 ]
-                , inStock: 1, quantity: 1 , specs: ["4GB RAM +128GB Storage","Processor: MediaTek Helio G36 processor","Display: 6.71'' Dot Drop display","Rear Camera: 8MP main camera","Front Camera: 5MP front camera","7Battery & Charging: 5000mAh battery ","Security: Side fingerprint sensor; AI face unlock"]},
+                , inStock: 0, quantity: 1 , specs: ["4GB RAM +128GB Storage","Processor: MediaTek Helio G36 processor","Display: 6.71'' Dot Drop display","Rear Camera: 8MP main camera","Front Camera: 5MP front camera","7Battery & Charging: 5000mAh battery ","Security: Side fingerprint sensor; AI face unlock"]},
                 { productName: 'Itel S23',
                   price: 10940,
                   description: '6.6", 128GB + 4GB RAM, 50MP Camera, (Dual SIM), 4G, 5000mAh - Starry Black',
@@ -995,7 +987,7 @@ var MVVM = {
                     'https://ke.jumia.is/cms/external/pet/IT910MP3M9OGUNAFAMZ/1c61fcf7de33d97ac35c1f6a9e350c5a.jpg',
                     'https://ke.jumia.is/cms/external/pet/IT910MP3M9OGUNAFAMZ/28ad1ff1837d7e2db0a6d5abb4040c4d.jpg'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: [
                     "Size: 6.6 inches, 104.6 cm2 (~84.0% screen-to-body ratio)",
@@ -1015,7 +1007,7 @@ var MVVM = {
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/07/5691052/4.jpg?0511',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/07/5691052/2.jpg?0511'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: [
                     "Display: 6.5''",
@@ -1032,7 +1024,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/4088961/1.jpg?8425'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: [
                     "Display: 6.6'' 90Hz Hole Screen",
@@ -1053,7 +1045,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/4291641/1.jpg?8317'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["Height: 163.89mm","Width:75.39mm","Thickness:8.40mm","6.6''","HD+90Hz Refresh Rate","720*1612 Resolution","Octa-core","128GB ROM","5000mAh(typ)+18W","Android 13"]
                 },
@@ -1063,7 +1055,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/90/2338621/1.jpg?8497'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["Display: 6.6 inches", "Memory: 64GB + 2GB RAM", "Main Camera: 8MP+AI LENS DUAL FLASH LIGHT", "Selfie Camera: 5MP FF WITH FLASH LIGHT", "SIM Card Slot: DUAL NANO SIM+MICRO SD", "OS: Android™ 12", "Battery: 5000mAh"]
                 },
@@ -1073,7 +1065,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/6625831/1.jpg?4662'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["Display: 6.66\"", "Memory: 256GB + 8GB RAM", "Rear Camera: 64MP", "Front Camera: 16MP", "OS: Android 13", "CPU: MediaTek Helio G85", "Battery: 5000mAh"]
                 },
@@ -1083,7 +1075,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/1909161/1.jpg?9623'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["Operating System: Android 12 (Go edition), MIUI", "Chipset: Mediatek Helio G36 (12 nm)", "Display: 6.52\" HD+", "Memory: 3GB RAM + 64GB Internal storage", "Camera: 8MP Rear Camera, 5MP Front Camera", "Battery: 5000mAh(Typ), Support 10W Charge, In-box 10W charger", "WIFI, Bluetooth 5.0", "Dual SIM + Micro-SD Card Slot", "2G: GSM: 850 900 1800 1900 MHz"]
                 },
@@ -1093,7 +1085,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/182654/1.jpg?6559'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["Powered to Enjoy More", "4GB RAM + 64GB ROM", "4680mAh Big Battery", "5V/2A, Type-C Port", "HD+ 6.49'' In-Cell Waterdrop Screen", "89% Screen-to-Body Ratio"]
                 },
@@ -1103,7 +1095,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/4609161/1.jpg?4264'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["6.5'' display", "Android 12", "Octa-core processor", "13MP Rear camera and 2MP front camera", "32GB ROM 3GB RAM", "5000mAh Battery"]
                 },
@@ -1113,7 +1105,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3801651/1.jpg?0043'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["ITEL S23", "6.6\" HD+ 90HZ WATERDROP FULLSCREEN", "128GB ROM/4GB RAM(UP TO 8GB RAM)", "50MP AI REAR CAMERA", "HIGH-SPEED 4G LTE NETWORK", "5000MAH BATTERY/10W FAST CHARGE", "FINGERPRINT"]
                 },
@@ -1123,7 +1115,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/89/559235/1.jpg?7574'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["5.45\" toughened Glass Display", "5MP Rear Camera with Flash", "5MP Front Camera with Flash", "Android 11", "1GB RAM, 16GB Storage", "Dual Sim, 3G", "2500 mAh Battery", "Quad Core 1.3GHz processor", "Google Assistant Button", "Micro SD card slot Supports up to 64 GB"]
                 },
@@ -1133,7 +1125,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5477051/1.jpg?1651'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["SIZE 6.56-INCH", "SCREEN-TO-BODY RATIO 90%", "RESOLUTION 720*1612", "Android™ 12", "nternal Storage: 128GB", "RAM 4GB(UP TO 8GB)", "BATTERY CAPACITY 5000mAh"]
                 },
@@ -1143,7 +1135,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/24/1701001/1.jpg?3904'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["RAM: 3GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 8MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]
                 },
@@ -1153,7 +1145,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/3388031/2.jpg?8471'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["4GB RAM +128 GB internal storage", "5000mAh battery", "Dual-Sim", "Unisoc T612,1.8GHz processor", "50MP + 5MP front camera", "Memory Card, up to 1TB"]
                 },
@@ -1163,7 +1155,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/4880161/2.jpg?7654'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["RAM: 4GB", "Storage: 64GB", "Battery: 5000 mAh", "Camera: 50MP + 2MP", "Selfie: 5MP", "Display: 6.56 inch, IPS LCD", "Processor: Mediatek Helio P35", "Connectivity: Dual sim, 4G, Wi-Fi", "Colors: Midnight Black, Lake Blue", "OS: Android 12"]
                 },
@@ -1173,7 +1165,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/3484921/2.jpg?0896'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["6.5 inches, 102.0 cm2 (~82.1% screen-to-body ratio)", "4GB RAM", "64GB expandable storage, Card slot", "8-megapixel main rear camera", "5-megapixel front camera", "5,000mAh battery", "Android 12 (Go Edition)"]
                 },
@@ -1183,7 +1175,7 @@ var MVVM = {
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/2270321/1.jpg?0408'
                   ],
-                  inStock: 1,
+                  inStock: 0,
                   quantity: 1,
                   specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]
             }]);            
