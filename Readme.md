@@ -5,7 +5,7 @@ GearHut is a comprehensive web application for purchasing phone and laptop acces
 
 ## 🖼️ Screenshots
 ![Home Page](path/to/home_screenshot.png)
-![Product Catalog](path/to/catalog_screenshot.png)
+![Products](path/to/catalog_screenshot.png)
 ![Order Page](path/to/order_screenshot.png)
 
 ## 🌟 Key Features
