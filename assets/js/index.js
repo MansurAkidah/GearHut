@@ -137,6 +137,29 @@ var MVVM = {
             
             // Add event listener for real-time search
             document.getElementById('searchPhones').addEventListener('input', SearchPhones);
+
+            function SearchiPhones() {
+              // Get the search term
+              var searchTerm = document.getElementById('searchiPhones').value.toLowerCase();
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-iphones .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var productPrice = product.querySelector('span').textContent;
+                
+                // Check if the product name or price includes the search term
+                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+            
+            // Add event listener for real-time search
+            document.getElementById('searchiPhones').addEventListener('input', SearchiPhones);
             //#endregion
 
             this.SmartWatchList = ko.observableArray([  
@@ -191,8 +214,8 @@ var MVVM = {
               { productName: 'T88 Ultra Smart Watch', 
                 price: 2000, 
                 description: 'Comes in two variations: Black and white.Elegant design and identical to the latest Apple Watch, with a screen size of 2.0 inches, type IPs, with a resolution of 385*385 pixels. Features USB quick removal direct charge, smart life assistant functions like step tracking, heart rate monitoring, and smartphone connectivity for notifications.', 
-                image: [ 'https://bluefirestore.com/wp-content/uploads/2023/05/e7803229-7baf-4d7c-b18b-257afde9bc1a.jpg',
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/1.jpg?1406', 
+                image: [ 'https://deylamshop.ir/wp-content/uploads/2023/04/%D8%B3%D8%A7%D8%B9%D8%AA-%D9%87%D9%88%D8%B4%D9%85%D9%86%D8%AF-%D9%85%D8%AF%D9%84-T88-Ultra-2.jpeg',
+                  'https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/01/3962981/3.jpg?1406', 
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/4.jpg?1406',
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3962981/3.jpg?1406', 
                 ], 
@@ -1379,6 +1402,540 @@ var MVVM = {
                     "You can send it to friends as a gift"
                 ] 
               }
+            ]);
+            this.iPhoneList = ko.observableArray([
+              { 
+                productName: 'iPhone 11 (128GB)', 
+                price: 42000,
+                description: 'iPhone 11 128GB',
+                image: [
+                  'https://www.mobile-store.co.ke/images/iphone_11_64gb_03v2_negro_ad_l.webp',
+                  'https://mobileprokenya.odoo.com/web/image/product.template/11/image_1024?unique=0ed18df',
+                  'https://orifon.co.ke/wp-content/uploads/2021/08/iphone_11_128_gb_11.jpg'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A13 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: 'iPhone 11 (256GB)',
+                price: 45000,
+                description: 'iPhone 11 256GB',
+                image: [
+                  'https://fancytech.co.ke/wp-content/uploads/2024/11/iPhone-11-Pro-256GB-Lipa-Mdogo-Mdogo.jpg.webp',
+                  'https://infinitetech.co.ke/wp-content/uploads/2024/08/Untitled-design-2024-08-28T110321.153.jpg',
+                  'https://www.mobile-store.co.ke/images/iphone_11_64gb_03_blanco_ad_l.webp'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A13 Bionic chip", 
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '11 Pro (256GB)',
+                price: 48000,
+                description: 'iPhone 11 Pro 256GB',
+                image: [
+                  'https://smartphonestorekenya.com/wp-content/uploads/2020/09/apple-iphone-11-pro-256gb-5.8.jpg',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-11-Pro_Colors_091019_big.jpg.large.jpg',
+                  'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-11-pro-max-4.jpg'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 5.8 inch Super Retina XDR display",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A13 Bionic chip",
+                  "Battery life: Up to 18 hours of video playback"
+                ]
+              },
+              {
+                productName: '11 Pro max (256GB)',
+                price: 55000,
+                description: 'iPhone 11 Pro Max 256GB',
+                image: [
+                  'https://istore.ke/wp-content/uploads/2021/08/Apple-iPhone-11-Pro.jpg',
+                  'https://smartphonestorekenya.com/wp-content/uploads/2020/09/l_10198017_005.jpg',
+                  'https://dummyimage.com/640x340?text=iPhone+11+Pro+Max+256GB'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.5 inch Super Retina XDR display",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A13 Bionic chip",
+                  "Battery life: Up to 20 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 (128GB)',
+                price: 52000,
+                description: 'iPhone 12 128GB',
+                image: [
+                  'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-red.jpg',
+                  'https://dummyimage.com/640x340?text=iPhone+12+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 (256GB)',
+                price: 55000,
+                description: 'iPhone 12 256GB',
+                image: [
+                  'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-purple.jpg',
+                  'https://dummyimage.com/640x340?text=iPhone+12+256GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 mini (128GB)',
+                price: 45000,
+                description: 'iPhone 12 mini 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+12+mini+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+12+mini+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+mini+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 5.4 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 15 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 Pro (256GB)',
+                price: 62000,
+                description: 'iPhone 12 Pro 256GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+256GB',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+256GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 Pro (128GB)',
+                price: 58000,
+                description: 'iPhone 12 Pro 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display", 
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 Pro max (128GB)',
+                price: 68000,
+                description: 'iPhone 12 Pro Max 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.7 inch Super Retina XDR display",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 20 hours of video playback"
+                ]
+              },
+              {
+                productName: '12 Pro max (256GB)',
+                price: 72000,
+                description: 'iPhone 12 Pro Max 256GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+256GB',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+256GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.7 inch Super Retina XDR display",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A14 Bionic chip",
+                  "Battery life: Up to 20 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 mini (128GB)',
+                price: 55000,
+                description: 'iPhone 13 mini 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+mini+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+mini+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+mini+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 5.4 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 mini (256GB)',
+                price: 62000,
+                description: 'iPhone 13 mini 256GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+mini+256GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+mini+256GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+mini+256GB+3' 
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 5.4 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 17 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 (128GB)',
+                price: 60000,
+                description: 'iPhone 13 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras", 
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 19 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 (256GB)',
+                price: 65000,
+                description: 'iPhone 13 256GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+256GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+256GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Ultra Wide and Wide cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 19 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 Pro (128GB)',
+                price: 73000,
+                description: 'iPhone 13 Pro 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 22 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 Pro (256GB)',
+                price: 79000,
+                description: 'iPhone 13 Pro 256GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+256GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+256GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 22 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 Pro (512GB)',
+                price: 82000,
+                description: 'iPhone 13 Pro 512GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+512GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+512GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+512GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 22 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 Pro max (128GB)',
+                price: 83000,
+                description: 'iPhone 13 Pro Max 128GB',
+                image: [
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+128GB',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+128GB+2',
+                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 28 hours of video playback"
+                ]
+              },
+              {
+                productName: '13 Pro max (256GB)',
+                price: 87000,
+                description: 'iPhone 13 Pro Max 256GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+256GB',
+                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+256GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                "Processor: A15 Bionic chip",
+                "Battery life: Up to 28 hours of video playback"
+                ]
+                },
+                {
+                productName: '13 Pro max (512GB)',
+                price: 93000,
+                description: 'iPhone 13 Pro Max 512GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+512GB',
+                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+512GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+512GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                "Processor: A15 Bionic chip",
+                "Battery life: Up to 28 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 (128GB)',
+                price: 75000,
+                description: 'iPhone 14 128GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+128GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+128GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.1 inch Super Retina XDR display",
+                "Camera: Dual 12MP Wide and Ultra Wide cameras",
+                "Processor: A15 Bionic chip",
+                "Battery life: Up to 20 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 (256GB)',
+                price: 80000,
+                description: 'iPhone 14 256GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+256GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+256GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.1 inch Super Retina XDR display",
+                "Camera: Dual 12MP Wide and Ultra Wide cameras",
+                "Processor: A15 Bionic chip",
+                "Battery life: Up to 20 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 Pro (128GB)',
+                price: 87000,
+                description: 'iPhone 14 Pro 128GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+128GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+128GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                "Processor: A16 Bionic chip",
+                "Battery life: Up to 23 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 Pro (256GB)',
+                price: 95000,
+                description: 'iPhone 14 Pro 256GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+256GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+256GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                "Processor: A16 Bionic chip",
+                "Battery life: Up to 23 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 Pro max (128GB)',
+                price: 92000,
+                description: 'iPhone 14 Pro Max 128GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+128GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+128GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+128GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                "Processor: A16 Bionic chip",
+                "Battery life: Up to 29 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 Pro max (256GB)',
+                price: 100000,
+                description: 'iPhone 14 Pro Max 256GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+256GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+256GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+256GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                "Processor: A16 Bionic chip",
+                "Battery life: Up to 29 hours of video playback"
+                ]
+                },
+                {
+                productName: '14 Pro max (512GB)',
+                price: 112000,
+                description: 'iPhone 14 Pro Max 512GB',
+                image: [
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+512GB',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+512GB+2',
+                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+512GB+3'
+                ],
+                
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                "Processor: A16 Bionic chip",
+                "Battery life: Up to 29 hours of video playback"
+                ]
+                }
             ]);
             this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja','KU', 'Along Thika road','Thika', "Other"])
             // this.showOtherLocation = ko.computed(() => {

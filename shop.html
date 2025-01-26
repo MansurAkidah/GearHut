@@ -121,7 +121,7 @@
         <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-airpods">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-airpods">
               <h4>AirPods</h4>
             </a>
           </li><!-- End tab nav item -->
@@ -132,8 +132,13 @@
             </a> End tab nav item 
           </li>-->
           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-iphones">
+              <h4>iPhones</h4>
+            </a>
+          </li><!-- End tab nav item -->
+          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-phones">
-              <h4>Phones</h4>
+              <h4>Androids</h4>
             </a>
           </li><!-- End tab nav item -->
           <li class="nav-item">
@@ -143,7 +148,7 @@
           </li> <!--End tab nav item -->
 
           <li class="nav-item">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-comrades">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-comrades">
               <h4>Best Deals</h4>
             </a>
           </li><!-- End tab nav item -->
@@ -152,7 +157,7 @@
 
         <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
           <!--Airpods section-->
-          <div class="tab-pane fade" id="menu-airpods">
+          <div class="tab-pane fade active show" id="menu-airpods">
 
             <div class="tab-header text-center">
               <p>Products</p>
@@ -188,7 +193,7 @@
             </div>
           </div><!-- End Airpods section -->
           <!--Comrades-->
-          <div class="tab-pane fade active show" id="menu-comrades">
+          <div class="tab-pane fade" id="menu-comrades">
 
             <div class="tab-header text-center">
               <p>Welcome</p>
@@ -296,6 +301,41 @@
                 </div>
               </div>
           </div><!-- End Laptops section -->
+          <!--iPhones section-->
+          <div class="tab-pane fade" id="menu-iphones">
+            <div class="tab-header text-center">
+              <p>Products</p>
+              <h3>iPhones</h3>
+              <input placeholder="Search iPhone by name or price..." id="searchiPhones" type="text" name="text" class="search-input">
+            </div>
+
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:iPhoneList">
+              <div class="col mb-5">
+                  <div class="card h-100">
+                      <!-- Sale badge-->
+                      <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                      <!-- Product image-->
+                      <img class="card-img-top" data-bind="attr: { src: image[0], 'data-images': JSON.stringify(image) }, click:$root.viewProduct" alt="..." /><!--src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"-->
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              <!-- Product name-->
+                              <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                              <!-- Product price-->
+                              <p>Ksh.<span data-bind="text:price"></span></p>
+                          </div>
+                      </div>
+                      <!-- Product actions-->
+                      <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                      </div>
+                      <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div><!-- End Phones Section -->
           <!--Phones section-->
           <div class="tab-pane fade" id="menu-phones">
             <div class="tab-header text-center">
@@ -667,15 +707,25 @@
             </div>
           </div>
         </div>
-
-
         <!-- end of product details modal -->
-        <button class="custombutton tooltip">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
-          </svg>
-          <span class="tooltiptext">go up</span>
+        
+        <!-- From Uiverse.io by Gaurang7717 --> 
+        <button class="Btn-whatsapp">
+          <span class="svgContainer">
+            <svg
+              viewBox="0 0 448 512"
+              fill="white"
+              height="1.6em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+              ></path>
+            </svg>
+          </span>
+          <span class="BG"></span>
         </button>
+
         <!-- Footer-->
         <footer class="py-2 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; GearHut 2023</p></div>
