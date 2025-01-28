@@ -1484,7 +1484,7 @@ var MVVM = {
             this.iPhoneList = ko.observableArray([
               { 
                 productName: 'iPhone 11 (128GB)', 
-                price: 42000,
+                price: 43000,
                 description: 'iPhone 11 128GB',
                 image: [
                   'https://www.mobile-store.co.ke/images/iphone_11_64gb_03v2_negro_ad_l.webp',
@@ -1503,7 +1503,7 @@ var MVVM = {
               },
               {
                 productName: 'iPhone 11 (256GB)',
-                price: 45000,
+                price: 46000,
                 description: 'iPhone 11 256GB',
                 image: [
                   'https://fancytech.co.ke/wp-content/uploads/2024/11/iPhone-11-Pro-256GB-Lipa-Mdogo-Mdogo.jpg.webp',
@@ -1522,7 +1522,7 @@ var MVVM = {
               },
               {
                 productName: '11 Pro (256GB)',
-                price: 48000,
+                price: 49000,
                 description: 'iPhone 11 Pro 256GB',
                 image: [
                   'https://smartphonestorekenya.com/wp-content/uploads/2020/09/apple-iphone-11-pro-256gb-5.8.jpg',
@@ -1541,7 +1541,7 @@ var MVVM = {
               },
               {
                 productName: '11 Pro max (256GB)',
-                price: 55000,
+                price: 56000,
                 description: 'iPhone 11 Pro Max 256GB',
                 image: [
                   'https://istore.ke/wp-content/uploads/2021/08/Apple-iPhone-11-Pro.jpg',
@@ -1560,7 +1560,7 @@ var MVVM = {
               },
               {
                 productName: '12 (128GB)',
-                price: 52000,
+                price: 53000,
                 description: 'iPhone 12 128GB',
                 image: [
                   'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-red.jpg',
@@ -1579,7 +1579,7 @@ var MVVM = {
               },
               {
                 productName: '12 (256GB)',
-                price: 55000,
+                price: 56000,
                 description: 'iPhone 12 256GB',
                 image: [
                   'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-purple.jpg',
@@ -1598,7 +1598,7 @@ var MVVM = {
               },
               {
                 productName: '12 mini (128GB)',
-                price: 45000,
+                price: 46000,
                 description: 'iPhone 12 mini 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343705000',
@@ -1617,7 +1617,7 @@ var MVVM = {
               },
               {
                 productName: '12 Pro (256GB)',
-                price: 62000,
+                price: 63000,
                 description: 'iPhone 12 Pro 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=940&hei=1112&fmt=png-alpha&.v=1604021661000',
@@ -1636,7 +1636,7 @@ var MVVM = {
               },
               {
                 productName: '12 Pro (128GB)',
-                price: 58000,
+                price: 59000,
                 description: 'iPhone 12 Pro 128GB',
                 image: [
                   'https://repairlogic.gr/wp-content/uploads/2021/12/iphone-12-pro-family-hero-all_940x-6-300x300.jpg.webp',
@@ -1656,7 +1656,7 @@ var MVVM = {
               },
               {
                 productName: '12 Pro max (128GB)',
-                price: 68000,
+                price: 69000,
                 description: 'iPhone 12 Pro Max 128GB',
                 image: [
                   'https://www.phoneplacekenya.com/wp-content/uploads/2020/08/Apple-iPhone-12-Pro-Max.jpg',
@@ -1675,7 +1675,7 @@ var MVVM = {
               },
               {
                 productName: '12 Pro max (256GB)',
-                price: 72000,
+                price: 73000,
                 description: 'iPhone 12 Pro Max 256GB',
                 image: [
                   'https://appleguyza.co.za/wp-content/uploads/2022/08/IMG_7019.jpg',
@@ -1695,7 +1695,7 @@ var MVVM = {
               },
               {
                 productName: '13 mini (128GB)',
-                price: 55000,
+                price: 56000,
                 description: 'iPhone 13 mini 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-mini-midnight-2022?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072980362',
@@ -1714,7 +1714,7 @@ var MVVM = {
               },
               {
                 productName: '13 mini (256GB)',
-                price: 62000,
+                price: 63000,
                 description: 'iPhone 13 mini 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-mini-midnight-2022_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1671646516129',
@@ -1733,7 +1733,7 @@ var MVVM = {
               },
               {
                 productName: '13 (128GB)',
-                price: 60000,
+                price: 61000,
                 description: 'iPhone 13 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-mini-midnight-2022?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1679072980362',
@@ -1752,7 +1752,7 @@ var MVVM = {
               },
               {
                 productName: '13 (256GB)',
-                price: 65000,
+                price: 66000,
                 description: 'iPhone 13 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-blue-select-2021?wid=940&hei=1112&fmt=png-alpha',
@@ -1772,7 +1772,7 @@ var MVVM = {
               },
               {
                 productName: '13 Pro (128GB)',
-                price: 73000,
+                price: 74000,
                 description: 'iPhone 13 Pro 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1631220221000',
@@ -1791,7 +1791,7 @@ var MVVM = {
               },
               {
                 productName: '13 Pro (256GB)',
-                price: 79000,
+                price: 80000,
                 description: 'iPhone 13 Pro 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000',
@@ -1810,7 +1810,7 @@ var MVVM = {
               },
               {
                 productName: '13 Pro (512GB)',
-                price: 82000,
+                price: 83000,
                 description: 'iPhone 13 Pro 512GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-silver-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000',
@@ -1829,7 +1829,7 @@ var MVVM = {
               },
               {
                 productName: '13 Pro max (128GB)',
-                price: 83000,
+                price: 84000,
                 description: 'iPhone 13 Pro Max 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652957000',
@@ -1848,7 +1848,7 @@ var MVVM = {
               },
               {
                 productName: '13 Pro max (256GB)',
-                price: 87000,
+                price: 88000,
                 description: 'iPhone 13 Pro Max 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000',
@@ -1867,7 +1867,7 @@ var MVVM = {
               },
               {
                 productName: '13 Pro max (512GB)',
-                price: 93000,
+                price: 94000,
                 description: 'iPhone 13 Pro Max 512GB',
                 image: [
                   'https://mac-more.co.ke/wp-content/uploads/2024/02/i-img1200x1200-1694935175kr6tlb14.jpg',
@@ -1886,7 +1886,7 @@ var MVVM = {
               },
               {
                 productName: '14 (128GB)',
-                price: 75000,
+                price: 76000,
                 description: 'iPhone 14 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-blue?wid=5120&hei=2880&fmt=p-jpg&.v=1661026582322',
@@ -1905,7 +1905,7 @@ var MVVM = {
               },
               {
                 productName: '14 (256GB)',
-                price: 80000,
+                price: 81000,
                 description: 'iPhone 14 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=5120&hei=2880&fmt=p-jpg&.v=1661026579503',
@@ -1924,7 +1924,7 @@ var MVVM = {
               },
               {
                 productName: '14 Pro (128GB)',
-                price: 87000,
+                price: 88000,
                 description: 'iPhone 14 Pro 128GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-deeppurple?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841896',
@@ -1943,7 +1943,7 @@ var MVVM = {
               },
               {
                 productName: '14 Pro (256GB)',
-                price: 95000,
+                price: 96000,
                 description: 'iPhone 14 Pro 256GB',
                 image: [
                   'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-gold?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841907',
