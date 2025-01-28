@@ -45,6 +45,52 @@ var MVVM = {
             //       e.preventDefault();
             //   }
             // }
+            //#region setMode
+            // Function to set the dark mode state
+            function setDarkMode(isDark) {
+              const body = document.body;
+              if (isDark) {
+                  body.classList.add('dark-mode');
+                  localStorage.setItem('darkMode', 'enabled');
+              } else {
+                  body.classList.remove('dark-mode');
+                  localStorage.setItem('darkMode', 'disabled');
+              }
+            }
+
+            // Function to toggle dark mode
+            function toggleDarkMode() {
+              const darkModeToggle = document.querySelector('.switch input');
+              const isDark = darkModeToggle.checked;
+              setDarkMode(isDark);
+            }
+
+            // Function to initialize dark mode based on user's previous preference
+            function initDarkMode() {
+              const darkModeToggle = document.querySelector('.switch input');
+              const darkMode = localStorage.getItem('darkMode');
+              
+              // Check if user has a previous dark mode preference
+              if (darkMode === 'enabled') {
+                  darkModeToggle.checked = true;
+                  setDarkMode(true);
+              }
+              
+              // Check system preference if no previous preference exists
+              else if (darkMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  darkModeToggle.checked = true;
+                  setDarkMode(true);
+              }
+              
+              // Add event listener for toggle changes
+              darkModeToggle.addEventListener('change', toggleDarkMode);
+            }
+
+            // Initialize dark mode when the page loads
+            document.addEventListener('DOMContentLoaded', initDarkMode);
+            //#endregion
+
+            
             //#region Search
             function SearchSmart() {
               // Get the search term
@@ -69,88 +115,118 @@ var MVVM = {
             // Add event listener for real-time search
             document.getElementById('searchSmartWatch').addEventListener('input', SearchSmart);
   
-            function SearchAvailable() {
-              // Get the search term
-              var searchTerm = document.getElementById('searchAvailable').value.toLowerCase();
-              
-              // Get all the product elements
-              var products = document.querySelectorAll('#menu-comrades .col');
-              
-              products.forEach(function(product) {
-                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
-                var productPrice = product.querySelector('span').textContent;
-                
-                // Check if the product name or price includes the search term
-                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
-                  product.style.display = ''; // Show the product
-                } else {
-                  product.style.display = 'none'; // Hide the product
-                }
-              });
-            }
             
-            // Add event listener for real-time search
-            document.getElementById('searchAvailable').addEventListener('input', SearchAvailable);
-            
-            function SearchAirpods() {
-              // Get the search term
-              var searchTerm = document.getElementById('searchAirPods').value.toLowerCase();
-              
-              // Get all the product elements
-              var products = document.querySelectorAll('#menu-airpods .col');
-              
-              products.forEach(function(product) {
-                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
-                var productPrice = product.querySelector('span').textContent;
-                
-                // Check if the product name or price includes the search term
-                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
-                  product.style.display = ''; // Show the product
-                } else {
-                  product.style.display = 'none'; // Hide the product
-                }
-              });
-            }
-            
-            // Add event listener for real-time search
-            document.getElementById('searchAirPods').addEventListener('input', SearchAirpods);
-
-            function SearchPhones() {
-              // Get the search term
-              var searchTerm = document.getElementById('searchPhones').value.toLowerCase();
-              
-              // Get all the product elements
-              var products = document.querySelectorAll('#menu-phones .col');
-              
-              products.forEach(function(product) {
-                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
-                var productPrice = product.querySelector('span').textContent;
-                
-                // Check if the product name or price includes the search term
-                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
-                  product.style.display = ''; // Show the product
-                } else {
-                  product.style.display = 'none'; // Hide the product
-                }
-              });
-            }
-            
-            // Add event listener for real-time search
-            document.getElementById('searchPhones').addEventListener('input', SearchPhones);
 
             function SearchiPhones() {
-              // Get the search term
+              // Get both filter values
               var searchTerm = document.getElementById('searchiPhones').value.toLowerCase();
+              var maxPrice = document.getElementById('priceRangeiPhones').value;
+              document.getElementById('priceValueiPhones').textContent = maxPrice;
               
               // Get all the product elements
               var products = document.querySelectorAll('#menu-iphones .col');
               
               products.forEach(function(product) {
                 var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
-                var productPrice = product.querySelector('span').textContent;
+                var priceText = product.querySelector('span').textContent;
+                var price = parseInt(priceText.replace(/[^0-9]/g, ''));
                 
-                // Check if the product name or price includes the search term
-                if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                // Show product only if it matches both filters
+                var matchesSearch = productName.includes(searchTerm) || priceText.includes(searchTerm);
+                var matchesPrice = price <= maxPrice;
+                
+                if (matchesSearch && matchesPrice) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+
+            // Add event listeners to both inputs
+            document.getElementById('searchiPhones').addEventListener('input', SearchiPhones);
+            document.getElementById('priceRangeiPhones').addEventListener('input', SearchiPhones);
+
+            function SearchAvailable() {
+              // Get both filter values
+              var searchTerm = document.getElementById('searchAvailable').value.toLowerCase();
+              var maxPrice = document.getElementById('priceRangeAvailable').value;
+              document.getElementById('priceValueAvailable').textContent = maxPrice;
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-comrades .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var priceText = product.querySelector('span').textContent;
+                var price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                
+                // Show product only if it matches both filters
+                var matchesSearch = productName.includes(searchTerm) || priceText.includes(searchTerm);
+                var matchesPrice = price <= maxPrice;
+                
+                if (matchesSearch && matchesPrice) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+
+            // Add event listeners to both inputs
+            document.getElementById('searchAvailable').addEventListener('input', SearchAvailable);
+            document.getElementById('priceRangeAvailable').addEventListener('input', SearchAvailable);
+
+            function SearchAirpods() {
+              // Get both filter values
+              var searchTerm = document.getElementById('searchAirPods').value.toLowerCase();
+              var maxPrice = document.getElementById('priceRangeAirPods').value;
+              document.getElementById('priceValueAirPods').textContent = maxPrice;
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-airpods .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var priceText = product.querySelector('span').textContent;
+                var price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                
+                // Show product only if it matches both filters
+                var matchesSearch = productName.includes(searchTerm) || priceText.includes(searchTerm);
+                var matchesPrice = price <= maxPrice;
+                
+                if (matchesSearch && matchesPrice) {
+                  product.style.display = ''; // Show the product
+                } else {
+                  product.style.display = 'none'; // Hide the product
+                }
+              });
+            }
+
+            // Add event listeners to both inputs
+            document.getElementById('searchAirPods').addEventListener('input', SearchAirpods);
+            document.getElementById('priceRangeAirPods').addEventListener('input', SearchAirpods);
+
+            
+            function SearchPhonesAll() {
+              // Get both filter values
+              var searchTerm = document.getElementById('searchPhones').value.toLowerCase();
+              var maxPrice = document.getElementById('priceRangePhones').value;
+              document.getElementById('priceValuePhones').textContent = maxPrice;
+              
+              // Get all the product elements
+              var products = document.querySelectorAll('#menu-phones .col');
+              
+              products.forEach(function(product) {
+                var productName = product.querySelector('.fw-bolder').textContent.toLowerCase();
+                var priceText = product.querySelector('span').textContent;
+                var price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                
+                // Show product only if it matches both filters
+                var matchesSearch = productName.includes(searchTerm) || priceText.includes(searchTerm);
+                var matchesPrice = price <= maxPrice;
+                
+                if (matchesSearch && matchesPrice) {
                   product.style.display = ''; // Show the product
                 } else {
                   product.style.display = 'none'; // Hide the product
@@ -158,8 +234,10 @@ var MVVM = {
               });
             }
             
-            // Add event listener for real-time search
-            document.getElementById('searchiPhones').addEventListener('input', SearchiPhones);
+            // Add event listeners to both inputs
+            document.getElementById('searchPhones').addEventListener('input', SearchPhonesAll);
+            document.getElementById('priceRangePhones').addEventListener('input', SearchPhonesAll);
+            
             //#endregion
 
             this.SmartWatchList = ko.observableArray([  
@@ -1468,7 +1546,7 @@ var MVVM = {
                 image: [
                   'https://istore.ke/wp-content/uploads/2021/08/Apple-iPhone-11-Pro.jpg',
                   'https://smartphonestorekenya.com/wp-content/uploads/2020/09/l_10198017_005.jpg',
-                  'https://dummyimage.com/640x340?text=iPhone+11+Pro+Max+256GB'
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-11-Pro-Max_Colors_091019_big.jpg.large.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1486,8 +1564,8 @@ var MVVM = {
                 description: 'iPhone 12 128GB',
                 image: [
                   'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-red.jpg',
-                  'https://dummyimage.com/640x340?text=iPhone+12+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12_10132020_big.jpg.large.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1505,8 +1583,8 @@ var MVVM = {
                 description: 'iPhone 12 256GB',
                 image: [
                   'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12/iphone-12-purple.jpg',
-                  'https://dummyimage.com/640x340?text=iPhone+12+256GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-green-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000',
+                  'https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple_iPhone-12-spring21_purple_04202021_big.jpg.large.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1523,9 +1601,9 @@ var MVVM = {
                 price: 45000,
                 description: 'iPhone 12 mini 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+12+mini+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+12+mini+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+mini+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343705000',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone12mini-spring21_purple_04202021_big.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-white-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343706000'
                 ],
                 
                 inStock: 1, 
@@ -1542,9 +1620,9 @@ var MVVM = {
                 price: 62000,
                 description: 'iPhone 12 Pro 256GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+256GB',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+256GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=940&hei=1112&fmt=png-alpha&.v=1604021661000',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-12-Pro-Max_Pacific-Blue_10132020_big.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=940&hei=1112&fmt=png-alpha&.v=1604021659000'
                 ],
                 
                 inStock: 1, 
@@ -1561,9 +1639,10 @@ var MVVM = {
                 price: 58000,
                 description: 'iPhone 12 Pro 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+128GB+3'
+                  'https://repairlogic.gr/wp-content/uploads/2021/12/iphone-12-pro-family-hero-all_940x-6-300x300.jpg.webp',
+                  'https://i.ebayimg.com/images/g/FmcAAOSw6WFm76nZ/s-l400.jpg',
+                  'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-r1.jpg',
+                  'https://www.manlylaptops.com.au/assets/full/MLPHN99170-G.jpg?20240509122340'
                 ],
                 
                 inStock: 1, 
@@ -1580,9 +1659,9 @@ var MVVM = {
                 price: 68000,
                 description: 'iPhone 12 Pro Max 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+128GB+3'
+                  'https://www.phoneplacekenya.com/wp-content/uploads/2020/08/Apple-iPhone-12-Pro-Max.jpg',
+                  'https://i0.wp.com/oalixsmartcloud.co.ke/wp-content/uploads/2023/04/V7.png?fit=600%2C600&ssl=1',
+                  'https://pcrigenerati.eu/wp-content/uploads/2023/01/004936PCR-EU.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1599,9 +1678,10 @@ var MVVM = {
                 price: 72000,
                 description: 'iPhone 12 Pro Max 256GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+256GB',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+256GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+12+Pro+Max+256GB+3'
+                  'https://appleguyza.co.za/wp-content/uploads/2022/08/IMG_7019.jpg',
+                  'https://mobileprokenya.odoo.com/web/image/product.template/3075/image_1024?unique=0ed18df',
+                  'https://i.ebayimg.com/images/g/bF4AAOSwp2tlczHF/s-l1200.jpg',
+                  'https://eshop.odoo.com/web/image/product.template/1/image_1024/Apple%20iPhone%2012%20Pro%20Max?unique=ecc2f59'
                 ],
                 
                 inStock: 1, 
@@ -1618,9 +1698,9 @@ var MVVM = {
                 price: 55000,
                 description: 'iPhone 13 mini 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+mini+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+mini+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+mini+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-mini-midnight-2022?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072980362',
+                  'https://www.dimprice.co.uk/image/cache/catalog/Apple/appple-iphone-13-mini-pink-06-800x800.png',
+                  'https://www.financialexpress.com/wp-content/uploads/2021/09/iphone13-1.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1637,9 +1717,9 @@ var MVVM = {
                 price: 62000,
                 description: 'iPhone 13 mini 256GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+mini+256GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+mini+256GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+mini+256GB+3' 
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-mini-midnight-2022_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1671646516129',
+                  'https://i.ebayimg.com/00/s/MTI2MFgxNjAw/z/rZMAAOSwIPhh6yWi/$_57.JPG?set_id=8800005007',
+                  'https://cdn.shopify.com/s/files/1/0874/4068/7387/files/whats_in_the_box_d.jpg?v=1736528514' 
                 ],
                 
                 inStock: 1, 
@@ -1656,9 +1736,9 @@ var MVVM = {
                 price: 60000,
                 description: 'iPhone 13 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-mini-midnight-2022?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1679072980362',
+                  'https://images.fonearena.com/blog/wp-content/uploads/2021/09/Apple-iPhone-13-Pro_FoneArena-1-1024x577.jpg',
+                  'https://thumbs.dreamstime.com/b/antalya-turkey-november-back-view-new-iphone-pro-smartphone-box-236206895.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1675,9 +1755,10 @@ var MVVM = {
                 price: 65000,
                 description: 'iPhone 13 256GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+256GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+256GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-blue-select-2021?wid=940&hei=1112&fmt=png-alpha',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202207-6-1inch-blue?wid=5120&hei=2880&fmt=p-jpg',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone13_hero_09142021_inline.jpg.large.jpg',
+                  'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1694,9 +1775,9 @@ var MVVM = {
                 price: 73000,
                 description: 'iPhone 13 Pro 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1631220221000',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652957000',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_iPhone-13-Pro-Max_09142021_inline.jpg.large.jpg'
                 ],
                 
                 inStock: 1, 
@@ -1713,9 +1794,9 @@ var MVVM = {
                 price: 79000,
                 description: 'iPhone 13 Pro 256GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+256GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+256GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_Colors_09142021_big.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000'
                 ],
                 
                 inStock: 1, 
@@ -1732,9 +1813,9 @@ var MVVM = {
                 price: 82000,
                 description: 'iPhone 13 Pro 512GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+512GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+512GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+512GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-silver-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000',
+                  'https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple_iPhone-13-Pro_iPhone-13-Pro-Max_09142021_big.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-sierra-blue-witb-2021_FMT_WHH?wid=560&hei=744&fmt=png-alpha&.v=1629943697000'
                 ],
                 
                 inStock: 1, 
@@ -1751,9 +1832,9 @@ var MVVM = {
                 price: 83000,
                 description: 'iPhone 13 Pro Max 128GB',
                 image: [
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+128GB',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+128GB+2',
-                  'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652957000',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_New-Camera-System_09142021_big.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652955000'
                 ],
                 
                 inStock: 1, 
@@ -1770,172 +1851,172 @@ var MVVM = {
                 price: 87000,
                 description: 'iPhone 13 Pro Max 256GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+256GB',
-                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+256GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000',
+                  'https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple_iPhone-13-Pro_Lifestyle-01_09142021_big.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-silver-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
-                "Processor: A15 Bionic chip",
-                "Battery life: Up to 28 hours of video playback"
+                  "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 28 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '13 Pro max (512GB)',
                 price: 93000,
                 description: 'iPhone 13 Pro Max 512GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+512GB',
-                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+512GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+13+Pro+Max+512GB+3'
+                  'https://mac-more.co.ke/wp-content/uploads/2024/02/i-img1200x1200-1694935175kr6tlb14.jpg',
+                  'https://zurimall.co.ke/wp-content/uploads/2022/12/Artboard-1-copy@300x-100-1-1.jpg',
+                  'https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/e/0/v/-original-imagh7g8urcwshmn.jpeg?q=20&crop=false'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras",
-                "Processor: A15 Bionic chip",
-                "Battery life: Up to 28 hours of video playback"
+                  "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 12MP Ultra Wide, Wide, and Telephoto cameras", 
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 28 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 (128GB)',
                 price: 75000,
                 description: 'iPhone 14 128GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+128GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+128GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-blue?wid=5120&hei=2880&fmt=p-jpg&.v=1661026582322',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907_inline.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-model-unselect-gallery-1-202209?wid=5120&hei=2880&fmt=p-jpg&.v=1660753619946'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.1 inch Super Retina XDR display",
-                "Camera: Dual 12MP Wide and Ultra Wide cameras",
-                "Processor: A15 Bionic chip",
-                "Battery life: Up to 20 hours of video playback"
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Wide and Ultra Wide cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 20 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 (256GB)',
                 price: 80000,
                 description: 'iPhone 14 256GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+256GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+256GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=5120&hei=2880&fmt=p-jpg&.v=1661026579503',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-blue-220907_inline.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-model-unselect-gallery-2-202209_GEO_US?wid=5120&hei=2880&fmt=p-jpg&.v=1660753617559'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.1 inch Super Retina XDR display",
-                "Camera: Dual 12MP Wide and Ultra Wide cameras",
-                "Processor: A15 Bionic chip",
-                "Battery life: Up to 20 hours of video playback"
+                  "Screen size: 6.1 inch Super Retina XDR display",
+                  "Camera: Dual 12MP Wide and Ultra Wide cameras",
+                  "Processor: A15 Bionic chip",
+                  "Battery life: Up to 20 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 Pro (128GB)',
                 price: 87000,
                 description: 'iPhone 14 Pro 128GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+128GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+128GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-deeppurple?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841896',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907_inline.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=5120&hei=2880&fmt=p-jpg&.v=1660753619946'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
-                "Processor: A16 Bionic chip",
-                "Battery life: Up to 23 hours of video playback"
+                  "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                  "Processor: A16 Bionic chip",
+                  "Battery life: Up to 23 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 Pro (256GB)',
                 price: 95000,
                 description: 'iPhone 14 Pro 256GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+256GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+256GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-gold?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841907',
+                  'https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-2-202209?wid=5120&hei=2880&fmt=p-jpg&.v=1660753619940'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
-                "Processor: A16 Bionic chip",
-                "Battery life: Up to 23 hours of video playback"
+                  "Screen size: 6.1 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                  "Processor: A16 Bionic chip",
+                  "Battery life: Up to 23 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 Pro max (128GB)',
                 price: 92000,
                 description: 'iPhone 14 Pro Max 128GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+128GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+128GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+128GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-finish-select-202209-6-7inch-deeppurple?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841896',
+                  'https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-lifestyle-01-220907_Full-Bleed-Image.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-model-unselect-gallery-1-202209?wid=5120&hei=2880&fmt=p-jpg&.v=1660753619946'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
-                "Processor: A16 Bionic chip",
-                "Battery life: Up to 29 hours of video playback"
+                  "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                  "Processor: A16 Bionic chip",
+                  "Battery life: Up to 29 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 Pro max (256GB)',
                 price: 100000,
                 description: 'iPhone 14 Pro Max 256GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+256GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+256GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+256GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-finish-select-202209-6-7inch-gold?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841894',
+                  'https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-lifestyle-02-220907_Full-Bleed-Image.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-model-unselect-gallery-2-202209?wid=5120&hei=2880&fmt=p-jpg&.v=1660753619940'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
-                "Processor: A16 Bionic chip",
-                "Battery life: Up to 29 hours of video playback"
+                  "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                  "Processor: A16 Bionic chip",
+                  "Battery life: Up to 29 hours of video playback"
                 ]
-                },
-                {
+              },
+              {
                 productName: '14 Pro max (512GB)',
                 price: 112000,
                 description: 'iPhone 14 Pro Max 512GB',
                 image: [
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+512GB',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+512GB+2',
-                'https://dummyimage.com/640x340?text=iPhone+14+Pro+Max+512GB+3'
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-finish-select-202209-6-7inch-spaceblack?wid=5120&hei=2880&fmt=p-jpg&.v=1663703841896',
+                  'https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-lifestyle-03-220907_Full-Bleed-Image.jpg.large.jpg',
+                  'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-storage-select-202209-6-7inch-spaceblack_AV1?wid=5120&hei=2880&fmt=p-jpg&.v=1671474959519'
                 ],
                 
                 inStock: 1, 
                 quantity: 1, 
                 specs: [
-                "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
-                "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
-                "Processor: A16 Bionic chip",
-                "Battery life: Up to 29 hours of video playback"
+                  "Screen size: 6.7 inch Super Retina XDR display with ProMotion",
+                  "Camera: Triple 48MP Wide, 12MP Ultra Wide, and 12MP Telephoto cameras",
+                  "Processor: A16 Bionic chip",
+                  "Battery life: Up to 29 hours of video playback"
                 ]
-                }
+              }
             ]);
             this.locations = ko.observableArray(['CBD', 'Nairobi West', 'South C','Juja','KU', 'Along Thika road','Thika', "Other"])
             // this.showOtherLocation = ko.computed(() => {
