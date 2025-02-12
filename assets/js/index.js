@@ -484,7 +484,7 @@ var MVVM = {
                   "Compact and portable charging case"
                 ]
                   },
-                { productName: 'AirPods Pro', price: 1500, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
+                { productName: 'AirPods Pro', price: 1900, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
                   image: [
                     'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
                     'https://i.ebayimg.com/images/g/0fkAAOSwNINgZlag/s-l500.jpg',
@@ -1281,7 +1281,109 @@ var MVVM = {
                   specs: ["Display: 6.6\"", "Memory: 64GB Internal, 4GB RAM", "OS: Android", "Rear Camera: 50MP + 5MP + 2MP + 2MP", "Front Camera: 13MP", "Battery:  5000mAh"]
             }]);            
             this.AvailableList = ko.observable([
-              { productName: 'TWS Original Airpods Pro 3', price: 850, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
+              { 
+                productName: 'Oraimo FreePods Lite', 
+                price: 1700, 
+                prevPrice: 2200, 
+                description: 'Experience true wireless freedom with Oraimo FreePods Lite featuring premium sound quality, long battery life, and comfortable fit.',
+                image: [
+                  'https://cdn-img.oraimo.com/fit-in/600x600/NG/album/otw-330/otw-330-3.jpg',
+                  'https://oraimo-shop.s3.eu-west-1.amazonaws.com/tinymce/images/ca206ff913c81368323fef5f7332dd5665226de18038c.jpg',
+                  'https://rukminim2.flixcart.com/image/850/1000/xif0q/headphone/j/i/n/freepods-lite-otw-330-oraimo-original-imagsxyu3bdfkdhm.jpeg?q=90&crop=false',
+                  'https://cdn-img.oraimo.com/fit-in/600x600/NG/album/otw-330/otw-330-5.jpg'
+                ],
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Up to 24 hours total playtime with charging case",
+                  "Bluetooth 5.0 for stable connection",
+                  "Touch controls for easy operation",
+                  "IPX5 water resistance",
+                  "Ergonomic design for comfortable fit",
+                  "Built-in microphone for calls",
+                  "Instant pairing technology"
+                ]
+              },
+              { 
+                productName: 'iTel Buds Ace', 
+                price: 1300, 
+                prevPrice: 1800, 
+                description: 'iTel Buds Ace TWS earbuds deliver crystal clear sound with deep bass and seamless connectivity for your daily entertainment.',
+                image: [
+                  'https://alkayconcepts.com/wp-content/uploads/2024/08/budace22.jpg',
+                  'https://m.media-amazon.com/images/I/61NWlcG8jVL.jpg',
+                  'https://cdn.sanity.io/images/q5ix3yzs/production/9bc3ebc5ac3ac00d15a1c15664043065565cd519-1200x1200.png?fit=max&auto=format'
+                ],
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "20 hours total playtime with charging case",
+                  "10mm dynamic drivers",
+                  "Smart touch controls",
+                  "Bluetooth 5.0 connectivity",
+                  "Ergonomic and lightweight design",
+                  "Voice assistant support",
+                  "Quick charging capability"
+                ]
+              },
+              { 
+                productName: 'iTel Buds Ace ANC', 
+                price: 1800, 
+                prevPrice: 2500, 
+                description: 'Experience immersive audio with iTel Buds Ace ANC featuring active noise cancellation and premium sound quality for an enhanced listening experience.',
+                image: [
+                  'https://img.drz.lazcdn.com/static/bd/p/3e007a2751baf4fa43e6d74beee88c37.jpg_720x720q80.jpg_.webp',
+                  'https://www.itel-life.com/fileadmin/assets/img/plp/BudsAce/PC-image/BudsAcePC_10.jpg',
+                  'https://cdn.sanity.io/images/q5ix3yzs/production/a6d607e8ceae2f88b9ea4d23e68acfc1c790bba2-4284x4284.jpg?fit=max&auto=format'
+                ],
+                inStock: 1, 
+                quantity: 1, 
+                specs: [
+                  "Active Noise Cancellation up to 25dB",
+                  "Transparency mode for ambient sound",
+                  "30 hours total playtime with case",
+                  "Dual device connectivity",
+                  "Low latency gaming mode",
+                  "IPX5 water resistance",
+                  "USB-C fast charging",
+                  "Bluetooth 5.2 technology"
+                ]
+              },
+              { productName: 'AirPods Pro', price: 1700,
+                prevPrice: 1900, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
+                image: [
+                  'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
+                  'https://i.ebayimg.com/images/g/0fkAAOSwNINgZlag/s-l500.jpg',
+                  
+                ], inStock: 1, quantity: 1, specs: [
+                  "Active Noise Cancellation (ANC)",
+                  "Transparency mode",
+                  "Adaptive EQ for audio optimization",
+                  "Sweat and water resistance (IPX4)",
+                  "Wireless charging case included"
+                ]
+                },
+                {
+                  productName: 'Oraimo Airbuds 4',
+                  price: 2350,
+                  prevPrice: 2800,
+                  description: 'Premium wireless earbuds with enhanced features',
+                  image: [
+                    'https://www.phoneplacekenya.com/wp-content/uploads/2024/02/Oraimo-Airbuds-4.jpg',
+                    'https://cdn-img.oraimo.com/tinymce/images/058403717182272b7051c34638ef7be765c1f8805d489.jpg',
+                    'https://cdn-img.oraimo.com/tinymce/images/227a384d9501c19d3a3dc896649be94765d5629d551eb.jpg'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: [
+                    "Active noise reduction",
+                    "Touch controls",
+                    "IPX5 water resistance",
+                    "40 hours total playtime",
+                    "Bluetooth 5.2"
+                  ]
+                },
+              { productName: 'TWS Original Airpods Pro 3', price: 750, prevPrice: 950, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
               image: [
                 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
@@ -1296,7 +1398,7 @@ var MVVM = {
               "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'Pro 5s', price: 1000, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
+              { productName: 'Pro 5s', price: 900, prevPrice: 1200, description: 'True Wireless Communication: Enjoy the freedom of movement with no wires to hold you back. The earphones connect wirelessly to your device for a seamless audio experience.', 
                 image: [
                     'https://static-01.daraz.com.np/p/aa109dc5ca5984584b79bd197af090a2.jpg',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/100417/3.jpg?2146',
@@ -1308,7 +1410,7 @@ var MVVM = {
                 quantity: 1, 
                 specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
               },
-              { productName: 'JBL TWS 4 Earbuds', price: 1000, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+              { productName: 'JBL TWS 4 Earbuds', price: 900, prevPrice: 1200, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/3732541/1.jpg?8352',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/5507111/1.jpg?5858',
@@ -1318,7 +1420,7 @@ var MVVM = {
                 quantity: 1, 
                 specs: ["Sweat proof", "Compatible with all mobile phone (android or ios) and music players", "Touch sensitive controls"] 
               },
-              { productName: 'Air R03', price: 1000, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
+              { productName: 'Air R03', price: 900, prevPrice: 1200, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
                 image: [
                   'https://meowpo.com/liveimages/meow_product_images/3580303014.jpg',
                   'https://meowpo.com/liveimages/meow_product_images/2709324513.jpg',
@@ -1333,7 +1435,26 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'In-Ear Earphone Stereo', price: 1000, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', 
+              {
+                productName: 'ITEL SONES Smart Watch',
+                price: 1750,
+                prevPrice: 2000,
+                description: 'Smart watch with health and fitness tracking',
+                image: [
+                  'https://chomart.com/storage/images/itel-sones-smart-watch-native-storm-ip68-waterproof-blue-sogxp164837.webp',
+                  'https://cdn.sanity.io/images/q5ix3yzs/production/ca90e563e63de5141b6654f376037f0e05e4dc96-1440x1440.jpg?fit=max&auto=format'
+                ],
+                inStock: 1,
+                quantity: 1,
+                specs: [
+                  "Heart rate monitoring",
+                  "Sleep tracking",
+                  "Multiple sport modes",
+                  "Call notifications",
+                  "Water resistant"
+                ]
+              },
+              { productName: 'In-Ear Earphone Stereo', price: 900, prevPrice: 1200, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', 
                 image: [
                   'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/576237/6.jpg?1179',
                   'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
@@ -1345,24 +1466,8 @@ var MVVM = {
                 "Compatible Models: for Android/for iPhone"
               ]
               },
-              // { productName: 'AirPods Pro', price: 1850, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
-              //   image: [
-              //     'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
-              //     'https://stmobilesinternational.com/wp-content/uploads/2022/12/Apple-AirPods-Pro-2nd-Gen-with-MagSafe-Case-USB%E2%80%91C-Charging.jpeg',
-              //     'https://helios-i.mashable.com/imagery/articles/06p5PGAjzDSZysaktotmIwr/hero-image.fill.size_1248x702.v1699805275.jpg',
-              //     'https://cdn.mos.cms.futurecdn.net/8EH5WexwtVCryqxpWX8X8m.jpg'
-              //   ], 
-              //   inStock: 1, quantity: 1, specs: [
-              //   "Active Noise Cancellation (ANC)",
-              //   "Transparency mode",
-              //   "Adaptive EQ for audio optimization",
-              //   "Sweat and water resistance (IPX4)",
-              //   "Wireless charging case included"
-              // ]
-              // },
-              { productName: 'Air R02', price: 950, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
+              { productName: 'Air R02', price: 950, prevPrice: 1150, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
                 image: [
-                  //'https://bejikkala.ir/wp-content/uploads/2023/04/%D9%87%D9%86%D8%AF%D8%B2%D9%81%D8%B1%DB%8C-%D8%A7%DB%8C%D8%B1%D9%BE%D8%A7%D8%AF-jbl-AIR-R02-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%88%D8%B1-%D9%88-%DA%AF%DB%8C%D8%B1%D9%87-1.jpg',
                   'https://elbay.ge/wp-content/uploads/2023/09/jbl-air-r02-%E1%83%91%E1%83%9D%E1%83%AE-2.jpg',
                   'https://img1.ibay.com.mv/is1/full/2024/07/item_5588110_598.jpg',
                   'https://elbay.ge/wp-content/uploads/2023/09/jbl-air-r02-%E1%83%91%E1%83%9D%E1%83%AE-2.jpg'
@@ -1374,7 +1479,7 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'Air R03s', price: 950, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
+              { productName: 'Air R03s', price: 950, prevPrice: 1150, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
                   image: [
                       'https://pictures-kenya.jijistatic.com/46195395_NjIwLTgyNy04MTljOTVmY2Fk.webp',
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
@@ -1384,7 +1489,104 @@ var MVVM = {
                   quantity: 1, 
                   specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
               },
-              { productName: 'Stereo F9 Bluetooth Earphone', price: 900, description: 'Stereo F9 Bluetooth Earphone', 
+              
+              {
+                productName: 'Playstation 5 controller',
+                price: 9000,
+                prevPrice: 10500,
+                description: 'Official PS5 DualSense wireless controller',
+                image: [
+                  'https://www.pcrichard.com/dw/image/v2/BFXM_PRD/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw42daebc9/images/hires/Z_1000044153.jpg?sw=800&sh=800&sm=fit',
+                  'https://videogamesplus.ca/cdn/shop/files/Screenshot_2024-10-08_121509_739x405.png?v=1728404164',
+                  'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_125853827?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402'
+                ],
+                inStock: 1,
+                quantity: 1,
+                specs: [
+                  "Wireless connectivity",
+                  "Haptic feedback",
+                  "Adaptive triggers",
+                  "Built-in microphone",
+                  "USB-C charging port"
+                ]
+              },
+              {
+                productName: 'Wireless Earbuds + Free Silicone Case',
+                price: 650,
+                prevPrice: 750,
+                description: 'Wireless earbuds with protective silicone case included',
+                image: [
+                  'https://pictures-kenya.jijistatic.com/34661399_NjIwLTgyNy1mZWFkYjllMjUy.webp'
+                ],
+                inStock: 1,
+                quantity: 1,
+                specs: [
+                  "Bluetooth connectivity",
+                  "Touch controls",
+                  "Free silicone case",
+                  "Charging case included",
+                  "Compatible with all devices"
+                ]
+              },
+              {
+                productName: 'Oraimo Conch 2 Earphones',
+                price: 250,
+                prevPrice: 350,
+                description: 'Wired earphones with enhanced bass',
+                image: [
+                  'https://www.smartcomputersketech.co.ke/wp-content/uploads/2023/12/Oraimo-Conch-2-Stylish-Deeper-Bass-In-ear-Earphone-1.png',
+                  'https://restockitssupplies.com/wp-content/uploads/2023/09/Oraimo-OEP-E11-Deeper-Bass-Earphone-Restockits-4.jpeg'
+                ],
+                inStock: 1,
+                quantity: 1,
+                specs: [
+                  "Enhanced bass",
+                  "Built-in microphone",
+                  "3.5mm jack",
+                  "Tangle-free cable",
+                  "Universal compatibility"
+                ]
+              },
+              
+              {
+                productName: 'Wireless Rechargeable Mouse',
+                price: 800,
+                prevPrice: 1000,
+                description: 'Wireless optical mouse with rechargeable battery',
+                image: [
+                  'https://www.territories.co.ke/wp-content/uploads/2024/06/Untitled-design-22.jpg'
+                ],
+                inStock: 1,
+                quantity: 1,
+                specs: [
+                  "Rechargeable battery",
+                  "Wireless connectivity",
+                  "Adjustable DPI",
+                  "Ergonomic design",
+                  "Compatible with all computers"
+                ]
+              },
+              {
+                productName: 'Oraimo Type C to 3.5mm Audio Jack',
+                price: 300,
+                prevPrice: 450,
+                description: 'Connect earphones or aux cable to your Type-C device',
+                image: [
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/93/1288961/1.jpg?0927',
+                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/93/1288961/2.jpg?0927',
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5b0e7wfBK2Fzisw_ZgDN8dlWlzaP53a5OVg&s'
+                ],
+                inStock: 1,
+                quantity: 1,
+                specs: [
+                  "Type-C to 3.5mm conversion",
+                  "Hi-Fi audio support",
+                  "Plug and play",
+                  "Compact design",
+                  "Compatible with most Type-C devices"
+                ]
+              },
+              { productName: 'Stereo F9 Bluetooth Earphone', price: 900, prevPrice: 1100, description: 'Stereo F9 Bluetooth Earphone', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/75/812253/1.jpg?0315',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/3896571/1.jpg?8004'
@@ -1400,7 +1602,7 @@ var MVVM = {
                     "Sweat/rainy waterproofing"
                 ] 
               },
-              { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', 
+              { productName: 'Silicone Protective Case Cover', price: 150, prevPrice: 350, description: 'Silicone material made, durable and wear-resistant', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/948983/1.jpg?7829'
                 ],
@@ -1412,7 +1614,7 @@ var MVVM = {
                     "Portable, Anti-scratch, Dust-proof, Anti-fall"
                 ] 
               },
-              { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', 
+              { productName: 'Silicone Protective Case Cover', price: 150, prevPrice: 350, description: 'Silicone material made, durable and wear-resistant', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/948983/1.jpg?7828'
                 ],
@@ -1424,7 +1626,7 @@ var MVVM = {
                     "Portable, Anti-scratch, Dust-proof, Anti-fall"
                 ] 
               },
-              { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', 
+              { productName: 'Silicone Protective Case Cover', price: 150, prevPrice: 350, description: 'Silicone material made, durable and wear-resistant', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/446983/1.jpg?2121'
                 ],
@@ -1436,7 +1638,7 @@ var MVVM = {
                     "Portable, Anti-scratch, Dust-proof, Anti-fall"
                 ] 
               },
-              { productName: 'Silicone Protective Case Cover', price: 150, description: 'Silicone material made, durable and wear-resistant', 
+              { productName: 'Silicone Protective Case Cover', price: 150, prevPrice: 350, description: 'Silicone material made, durable and wear-resistant', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/646983/1.jpg?2174'
                 ],
@@ -1448,7 +1650,7 @@ var MVVM = {
                     "Portable, Anti-scratch, Dust-proof, Anti-fall"
                 ] 
               },
-              { productName: 'Protective TPU Cover Case For AirPods Pro', price: 1000, description: 'Protective TPU Cover Case For AirPods Pro', 
+              { productName: 'Protective TPU Cover Case For AirPods Pro', price: 900, prevPrice: 1200, description: 'Protective TPU Cover Case For AirPods Pro', 
                 image: [
                     'https://i.ebayimg.com/images/g/6~kAAOSwgmBfySTN/s-l1200.jpg',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/693295/3.jpg?4138',
@@ -1464,7 +1666,7 @@ var MVVM = {
                     "Portable, Anti-scratch, Dust-proof, Anti-fall"
                 ] 
               },
-              { productName: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', price: 250, description: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', 
+              { productName: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', price: 250, prevPrice: 450, description: '2Pcs Anti-lost Anti-slip Soft Earcaps Earphone', 
                 image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/948983/1.jpg?7828',
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/955584/1.jpg?5324',

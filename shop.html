@@ -18,153 +18,27 @@
         <link href="assets/css/main.css" rel="stylesheet">
         <style>
           /* Valentine's Day Theme */
-          body {
-              background-color: #fff0f3;
-          }
           
-          .header {
-              background: linear-gradient(to right, #ff8fa3, #ff5c8a);
-          }
-          
-          .section-header h2, .section-header p {
-              color: #d4145a;
-          }
-          
-          .card {
-              border-color: #ffb3c1;
-              box-shadow: 0 4px 8px rgba(255, 92, 138, 0.1);
-          }
-          
-          .card:hover {
-              border-color: #ff5c8a;
-              transform: translateY(-5px);
-              transition: all 0.3s ease;
-          }
-          
-          .btn-outline-dark {
-              border-color: #ff5c8a;
-              color: #ff5c8a;
-          }
-          
-          .btn-outline-dark:hover {
-              background-color: #ff5c8a;
-              color: white;
-          }
-          
-          /* Valentine's Badge */
-          .valentine-badge {
-              background-color: #FF69B4;
-              color: white;
-              padding: 8px;
-              border-radius: 15px;
-              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-          }
-          
-          /* Heart animation */
-          @keyframes heartbeat {
-              0% { transform: scale(1); }
-              50% { transform: scale(1.1); }
-              100% { transform: scale(1); }
-          }
-          
-          .heart-icon {
-              animation: heartbeat 1s infinite;
-              display: inline-block;
-          }
       </style>
     </head>
     <body >
   <!-- ======= Header ======= oncontextmenu="return false" -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
       <a href="https://g-hut-eight.vercel.app/" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>GearHut<span>.</span></h1>
       </a>
-
-      <!-- <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="https://g-hut-eight.vercel.app/">Home</a></li> -->
-          <!-- <li><a href="index.html#about">About</a></li> -->
-          <!-- <li><a href="#menu">Menu</a></li> -->
-          <!-- <li><a href="#">Products</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Our Products</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a data-bs-toggle="tab" data-bs-target="#menu-airpods">Airpods</a></li>
-                  <li class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-cables"><a>Cables</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a href="index.html#contact">Contact</a></li> -->
-        <!--</ul>
-      </nav> .navbar -->
-        <form class="d-flex">
-          <!-- <div class="search-box">
-            <input type="text" id="globalSearchInput" placeholder="Search all products...">
-            <button onclick="performGlobalSearch()">Search</button>
-          </div> -->
-          <button class="btn btn-outline-dark" type="button" data-bind="click:viewCart">
-              <i class="bi-cart-fill me-1"></i>
-              Cart
-              <span class="badge bg-dark text-white ms-1 rounded-pill" data-bind="text:count">0</span>
-          </button>
-        </form>
-      <!-- <a class="btn-book-a-table" href="shop.html">Book a Table</a> -->
-      <!-- <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i> -->
-
+      
+      <form class="d-flex">
+        <button class="btn btn-valentine" type="button" data-bind="click:viewCart">
+          <i class="bi-cart-fill me-1"></i>
+          Cart
+          <span class="badge badge-valentine rounded-pill" data-bind="text:count">0</span>
+        </button>
+      </form>
     </div>
   </header><!-- End Header -->
-        <!-- Navigation-->
-       <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="button" data-bind="click:viewCart">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill" data-bind="text:count">0</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </nav> -->
-        <!-- Header-->
-        <!-- <header class="bg-dark py-3">
-            <div class="container px-4 px-lg-5 my-2">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop at GearHut</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With our variety choices</p>
-                </div>
-            </div>
-        </header> -->
+        
         <!--Product list Section-->
 
           <!-- ======= Menu Section ======= -->
@@ -175,41 +49,35 @@
           <!-- <p>Welcome to our <span>Shop</span></p> -->
         </div>
         <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
-
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-airpods">
               <h4>AirPods</h4>
             </a>
-          </li><!-- End tab nav item -->
-
-          <!--<li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-cables">
-              <h4>Speakers</h4>
-            </a> End tab nav item 
-          </li>-->
+          </li>
+        
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-iphones">
               <h4>iPhones</h4>
             </a>
-          </li><!-- End tab nav item -->
+          </li>
+        
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-phones">
               <h4>Androids</h4>
             </a>
-          </li><!-- End tab nav item -->
+          </li>
+        
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-smart">
               <h4>Smart Watches</h4>
             </a>
-          </li> <!--End tab nav item -->
-
+          </li>
+        
           <li class="nav-item">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-comrades">
               <h4>Valentine's Deals</h4>
             </a>
-          </li><!-- End tab nav item -->
-
-
+          </li>
         </ul>
 
         <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
@@ -256,42 +124,42 @@
           <!--Comrades-->
           <div class="tab-pane fade active show" id="menu-comrades">
 
-            <div class="tab-header text-center">
-              <p>Welcome</p>
-              <h3>Valentine's Deals</h3>
-              <input placeholder="Search by name or price..." id="searchAvailable" type="text" name="text" class="search-input">
+            <div class="valentine-header text-center position-relative">
+              <p>Welcome to our</p>
+              <h3>Valentine's Special Deals</h3>
+              <input placeholder="Search for the perfect gift..." id="searchAvailable" type="text" name="text" class="search-input">
               <div class="price-filter">
-                <input type="range" id="priceRangeAvailable" min="0" max="1000" value="1000">
-                <span id="priceValueAvailable">1000</span>
+                <input type="range" id="priceRangeAvailable" min="0" max="2000" value="2000">
+                <span id="priceValueAvailable">Ksh. 1000</span>
               </div>
             </div>
-
             
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" data-bind="foreach:AvailableList">
               <div class="col mb-5">
-                  <div class="card h-100">
-                      <!-- Sale badge-->
-                      <div data-bind="visible:!inStock" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
-                      <!-- Product image-->
-                      <!-- <img class="card-img-top" data-bind="attr: { src: image[0]  }, click:$root.viewProduct" alt="..." /> -->
-                      <img class="card-img-top" data-bind="attr: { src: image[0], 'data-images': JSON.stringify(image) }, click:$root.viewProduct"  alt="..." />
-                      <!-- Product details-->
-                      <div class="card-body p-4">
-                          <div class="text-center">
-                              <!-- Product name-->
-                              <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
-                              <!-- Product price-->
-                              <p>Ksh.<span data-bind="text:price"></span></p>
-                          </div>
+                <div class="card h-100">
+                  <div data-bind="visible:!inStock" class="badge position-absolute" style="top: 0.5rem; right: 0.5rem">Sold Out</div>
+                  <img class="card-img-top" data-bind="attr: { src: image[0], 'data-images': JSON.stringify(image) }, click:$root.viewProduct" alt="..." />
+                  <div class="card-body p-2">
+                    <div class="text-center">
+                      <h5 class="fw-bolder" data-bind="text:productName">Fancy Product</h5>
+                      <div class="d-flex justify-content-center small text-warning mb-2">
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
                       </div>
-                      <!-- Product actions-->
-                      <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
-                      </div>
-                      <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
-                      </div>
+                      <p>Ksh.<span class="text-muted text-decoration-line-through" data-bind="text:prevPrice"></span></p>
+                      <p>Ksh.<span data-bind="text:price"></span></p>
+                    </div>
                   </div>
+                  <div data-bind="visible:inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" data-bind="click:$root.addCart">Add to cart</a></div>
+                  </div>
+                  <div data-bind="visible:!inStock" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bind="click:$root.addRequest">Request</a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div><!-- End Airpods section -->

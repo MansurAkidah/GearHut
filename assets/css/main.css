@@ -1765,3 +1765,400 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+
+/*Added valentine vibe*/
+body {
+  background-color: #fff0f3;
+}
+
+.header {
+  background: linear-gradient(to right, #ff8fa3, #ff5c8a);
+}
+
+.section-header h2, .section-header p {
+  color: #d4145a;
+}
+
+.card {
+  border-color: #ffb3c1;
+  box-shadow: 0 4px 8px rgba(255, 92, 138, 0.1);
+}
+
+.card:hover {
+  border-color: #ff5c8a;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-dark {
+  border-color: #ff5c8a;
+  color: #ff5c8a;
+}
+
+.btn-outline-dark:hover {
+  background-color: #ff5c8a;
+  color: white;
+}
+
+/* Valentine's Badge */
+.valentine-badge {
+  background-color: #FF69B4;
+  color: white;
+  padding: 8px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Heart animation */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart-icon {
+  animation: heartbeat 1s infinite;
+  display: inline-block;
+}
+
+/*valentine theme enhanced*/
+.valentine-header {
+background: linear-gradient(135deg, #ff94a4 0%, #ff4d6d 100%);
+padding: 1rem 1rem;
+border-radius: 1rem;
+margin-bottom: 2rem;
+box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+.valentine-header p {
+color: white;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+font-family: 'Segoe UI', sans-serif;
+}
+
+.valentine-header h3 {
+color: white;
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 1.5rem;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+border: 2px solid #ff94a4;
+border-radius: 2rem;
+padding: 0.75rem 1.5rem;
+width: 100%;
+max-width: 400px;
+margin-bottom: 1rem;
+transition: all 0.3s ease;
+}
+
+.search-input:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.3);
+}
+
+.price-filter {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+margin-top: 1rem;
+}
+
+input[type="range"] {
+width: 200px;
+height: 8px;
+background: #ff94a4;
+border-radius: 4px;
+-webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+background: #ff4d6d;
+border-radius: 50%;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+transform: scale(1.1);
+}
+
+.card {
+border: none;
+transition: all 0.3s ease;
+border-radius: 1rem;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(255, 77, 109, 0.2);
+}
+
+.card-img-top {
+height: 200px;
+object-fit: cover;
+transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+transform: scale(1.05);
+}
+
+.badge {
+background-color: #ff4d6d !important;
+padding: 0.5rem 1rem;
+font-size: 0.9rem;
+border-radius: 1rem;
+}
+
+.card-body {
+padding: 1.5rem !important;
+}
+
+.fw-bolder {
+color: #333;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+
+.text-warning {
+color: #ff4d6d !important;
+}
+
+.text-muted {
+color: #ff94a4 !important;
+}
+
+.btn-outline-dark {
+border: 2px solid #ff4d6d;
+color: #ff4d6d;
+border-radius: 1rem;
+padding: 0.5rem 1rem;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+background-color: #ff4d6d;
+color: white;
+transform: translateY(-2px);
+}
+
+/* Add heart decorations */
+.valentine-header::before,
+.valentine-header::after {
+content: '♥';
+color: rgba(255, 255, 255, 0.3);
+font-size: 2rem;
+position: absolute;
+animation: float 3s ease-in-out infinite;
+}
+
+.valentine-header::before {
+left: 10%;
+top: 20%;
+}
+
+.valentine-header::after {
+right: 10%;
+top: 30%;
+}
+
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+
+.header {
+background: linear-gradient(135deg, #fff5f6 0%, #ffe9ec 100%);
+box-shadow: 0 2px 15px rgba(255, 77, 109, 0.1);
+transition: all 0.3s ease;
+}
+
+.header .logo {
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.header .logo h1 {
+font-size: 2rem;
+font-weight: 700;
+color: #ff4d6d;
+margin: 0;
+position: relative;
+}
+
+.header .logo h1 span {
+color: #ff94a4;
+}
+
+/* Add floating hearts animation */
+.header .logo h1::before,
+.header .logo h1::after {
+content: '♥';
+font-size: 0.5em;
+position: absolute;
+opacity: 0;
+animation: float-hearts 3s ease-in-out infinite;
+}
+
+.header .logo h1::before {
+top: -15px;
+left: 40%;
+animation-delay: 0.5s;
+}
+
+.header .logo h1::after {
+top: -10px;
+right: 40%;
+animation-delay: 1s;
+}
+
+@keyframes float-hearts {
+0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+50% { opacity: 0.6; }
+100% { transform: translateY(-20px) rotate(360deg); opacity: 0; }
+}
+
+/* Valentine's cart button */
+.btn-valentine {
+background-color: transparent;
+border: 2px solid #ff4d6d;
+color: #ff4d6d;
+border-radius: 25px;
+padding: 0.5rem 1.5rem;
+transition: all 0.3s ease;
+font-weight: 600;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.btn-valentine:hover {
+background-color: #ff4d6d;
+color: white;
+transform: translateY(-2px);
+box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+.btn-valentine .bi-cart-fill {
+transition: all 0.3s ease;
+}
+
+.btn-valentine:hover .bi-cart-fill {
+transform: scale(1.1);
+}
+
+.badge-valentine {
+background-color: #ff4d6d !important;
+color: white !important;
+font-weight: 600;
+padding: 0.35em 0.65em;
+transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.header .logo h1 {
+  font-size: 1.5rem;
+}
+
+.btn-valentine {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+}
+
+.nav-tabs {
+  border: none;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: linear-gradient(135deg, #fff5f6 0%, #ffe9ec 100%);
+  border-radius: 2rem;
+  margin: 1rem 0;
+}
+
+.nav-tabs .nav-item {
+  position: relative;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  padding: 1rem 1.5rem;
+  color: #666;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-tabs .nav-link h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #ff4d6d;
+}
+
+.nav-tabs .nav-link.active {
+  background: linear-gradient(135deg, #ff94a4 0%, #ff4d6d 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+/* Valentine's decorative elements */
+.nav-tabs .nav-link::before {
+  content: '♥';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #ff94a4;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover::before,
+.nav-tabs .nav-link.active::before {
+  top: 5px;
+  opacity: 0.6;
+}
+
+.nav-tabs .nav-link.active::before {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  .nav-tabs .nav-link h4 {
+    font-size: 0.9rem;
+  }
+}
