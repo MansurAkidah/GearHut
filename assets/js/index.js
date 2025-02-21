@@ -28,6 +28,10 @@ var MVVM = {
             this.shippingFee = ko.observable(110);
             this.otherLocation = ko.observable('');
             this.showOtherLocation = ko.observable(false);
+
+            this.query = ko.observable("");  // Stores the user input
+            this.locations = ko.observableArray([]);  // Stores fetched locations
+            
             // document.onkeydown = (e) => { 
             //   if(e.key == 123){
             //     e.preventDefault();
@@ -238,6 +242,36 @@ var MVVM = {
             document.getElementById('searchPhones').addEventListener('input', SearchPhonesAll);
             document.getElementById('priceRangePhones').addEventListener('input', SearchPhonesAll);
             
+            this.fetchLocations = async function() {
+              debugger;
+              const query = document.getElementById('locationInput').value;
+              const suggestionsContainer = document.getElementById('suggestions');
+              
+              if (query.length < 3) { 
+                  suggestionsContainer.innerHTML = ''; 
+                  return; 
+              }
+  
+              try {
+                  const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}&countrycodes=KE`);
+                  const data = await response.json();
+                  
+                  suggestionsContainer.innerHTML = ''; // Clear previous results
+                  
+                  data.forEach(place => {
+                      const div = document.createElement('div');
+                      div.textContent = place.display_name;
+                      div.onclick = () => {
+                          document.getElementById('locationInput').value = place.display_name;
+                          suggestionsContainer.innerHTML = '';
+                      };
+                      suggestionsContainer.appendChild(div);
+                  });
+              } catch (error) {
+                  console.error('Error fetching locations:', error);
+              }
+          }
+  
             //#endregion
 
             this.SmartWatchList = ko.observableArray([  
@@ -1479,16 +1513,7 @@ var MVVM = {
                 "Compatible with Android and iOS devices"
               ]
               },
-              { productName: 'Air R03s', price: 950, prevPrice: 1150, description: 'Introducing Denise - the Air-R02 with extraordinary sound quality and stylish design.', 
-                  image: [
-                      'https://pictures-kenya.jijistatic.com/46195395_NjIwLTgyNy04MTljOTVmY2Fk.webp',
-                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
-                      'https://pictures-kenya.jijistatic.com/34661399_NjIwLTgyNy1mZWFkYjllMjUy.webp'
-                  ],
-                  inStock: 1, 
-                  quantity: 1, 
-                  specs: ["Listening time: 3 hours", "360mAh charging case", "Lightning charging cable"] 
-              },
+             
               
               {
                 productName: 'Playstation 5 controller',
@@ -1516,7 +1541,9 @@ var MVVM = {
                 prevPrice: 750,
                 description: 'Wireless earbuds with protective silicone case included',
                 image: [
-                  'https://pictures-kenya.jijistatic.com/34661399_NjIwLTgyNy1mZWFkYjllMjUy.webp'
+                  'https://pictures-kenya.jijistatic.com/46195395_NjIwLTgyNy04MTljOTVmY2Fk.webp',
+                      'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
+                      'https://pictures-kenya.jijistatic.com/34661399_NjIwLTgyNy1mZWFkYjllMjUy.webp'
                 ],
                 inStock: 1,
                 quantity: 1,
@@ -2240,25 +2267,32 @@ var MVVM = {
                 /* Do something when ShowOpened changes.
                   newValue variable holds the new value, obviously. :) */
             });
-            this.location.subscribe(function(newValue){
+            this.location.subscribe( async function(newValue){
               debugger;
                var self = this;
-              //var n = self.locationText();
-              //var inp = document.getElementById('locationInput');
-              if ( newValue =='Other') {
-                // this.locationInput(true);
-                // inp.classList.remove('disabled');
-                debugger;
-                this.showOtherLocation(true);
+
+              var query = self.location().trim();
+              if (query.length < 3) {
+                  self.locations([]); // Clear suggestions if input is too short
+                  return;
               }
-              else{
-                //this.locationInput(false);
-                //inp.classList.add('disabled');
-                this.showOtherLocation(false);
-                debugger;
+              
+              try {
+                  const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}&countrycodes=KE`);
+                  const data = await response.json();
+                  self.locations(data);
+                  debugger;
+              } catch (error) {
+                  console.error('Error fetching locations:', error);
               }
-              debugger;
+
             }.bind(this));
+            this.selectLocation = function(place) {
+              debugger;
+              self.location(place.display_name); // Set input to selected place
+              self.locations([]); // Hide suggestions
+            };
+
             this.isProductInList = function(productName) {
                 var availableProducts = this.AvailableList();
                 

@@ -16,10 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="assets/css/shop.css" rel="stylesheet" />
         <link href="assets/css/main.css" rel="stylesheet">
-        <style>
-          /* Valentine's Day Theme */
-          
-      </style>
+        
     </head>
     <body >
   <!-- ======= Header ======= oncontextmenu="return false" -->
@@ -75,7 +72,7 @@
         
           <li class="nav-item">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-comrades">
-              <h4>Valentine's Deals</h4>
+              <h4>Best Deals</h4>
             </a>
           </li>
         </ul>
@@ -126,8 +123,8 @@
 
             <div class="valentine-header text-center position-relative">
               <p>Welcome to our</p>
-              <h3>Valentine's Special Deals</h3>
-              <input placeholder="Search for the perfect gift..." id="searchAvailable" type="text" name="text" class="search-input">
+              <h3>Special Deals</h3>
+              <input placeholder="Search for the perfect deal..." id="searchAvailable" type="text" name="text" class="search-input">
               <div class="price-filter">
                 <input type="range" id="priceRangeAvailable" min="0" max="2000" value="2000">
                 <span id="priceValueAvailable">Ksh. 1000</span>
@@ -497,37 +494,37 @@
                                       <form data-bind="visible: checkout">
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                                <label for="name">Name:&nbsp;&nbsp;&nbsp;</label>
-                                                <input id="name" type="text" class="form-control" placeholder="John Doe" data-bind="value: names" required/>
                                             </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                            <label for="name">Name:&nbsp;&nbsp;&nbsp;</label>
+                                            <input id="name" type="text" class="form-control" placeholder="John Doe" data-bind="value: names" required/>
+                                            <label for="location">Location:</label>
+
+                                            <!-- <input type="text" id="locationInput" placeholder="Start typing a place..." data-bind="value: location, valueUpdate: 'afterkeydown', event: { keyup: MVVM.fetchLocations }">
+                                            <div class="suggestions" data-bind="visible: locations().length > 0">
+                                              <div data-bind="foreach: MVVM.locations">
+                                                  <p data-bind="text: display_name, click: $parent.selectLocation"></p>
+                                              </div>
+                                            </div> -->
+
+                                            <input type="text" id="locationInput" list="locationList" placeholder="Type your location..."
+                                                data-bind="value: location, valueUpdate: 'input', event: { input: MVVM.fetchLocations }">
+                                            
+                                            <datalist id="locationList" data-bind="foreach: MVVM.locations">
+                                                <option data-bind="value: display_name"></option>
+                                            </datalist>
+                                            <!-- <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                                                 <label for="location">Location:</label>
                                                 <select class="form-control" data-bind="options: locations,
                                                                   value: location,
                                                                   optionsCaption: 'Choose...'"></select>
-                                                <!-- <input id="locationInput" type="text" class="form-control" placeholder="Nairobi" data-bind="value: locationText " required/> -->
+                                                
                                             </li>
-                                            <!-- <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0" data-bind="visible: $parent.showOtherLocation">
-                                              <label for="otherLocation">Other Location:</label>
-                                              <input id="otherLocation" type="text" class="form-control" placeholder="Enter location" data-bind="value: otherLocation" required/>
+                                            <li data-bind="visible: showOtherLocation" class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                              <label for="otherLocation">:&nbsp;&nbsp;&nbsp;</label>
+                                              <input id="otherLocation" type="text" class="form-control" placeholder="Enter your location" data-bind="value: otherLocation" required/>
                                             </li> -->
-                                            <!--<li data-bind="visible:locationInput" class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0" >
-                                                <label for="location">Location:</label> 
-                                              <input id="locationInput" type="text" class="form-control disabled" placeholder="Nairobi" data-bind="value: locationText " required/>
-                                            </li>-->
-                                            <!-- <div class="form-group">
-                                              <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" data-bind="checked: termsAgreed" id="invalidCheck" required>
-                                                <label class="form-check-label" for="invalidCheck">
-                                                  Agree to <a href="terms.html">terms and conditions</a>
-                                                </label>
-                                                <div class="invalid-feedback">
-                                                  You must agree before submitting.
-                                                </div>
-                                              </div>
-                                            </div> -->
-                                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                                <button type="submit" class="btn btn-success btn-lg btn-block " id="orderButton" data-bind="click: sendMessage"><i class="bi bi-whatsapp"></i>  Order products</button><!--disabled-->
+                                            <li class="list-group-item d-flex justify-content-between align-items-center mt-1 border-0 px-0 pb-0">
+                                                <button type="submit" class="checkoutBtn" id="orderButton" data-bind="click: sendMessage"><i class="bi bi-whatsapp"></i>Place Order</button><!--disabled-->
                                             </li>
                                         </ul>
                                     </form>

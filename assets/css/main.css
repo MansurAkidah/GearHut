@@ -1768,7 +1768,7 @@ section {
 
 
 /*Added valentine vibe*/
-body {
+/* body {
   background-color: #fff0f3;
 }
 
@@ -1799,19 +1799,19 @@ body {
 .btn-outline-dark:hover {
   background-color: #ff5c8a;
   color: white;
-}
+} */
 
 /* Valentine's Badge */
-.valentine-badge {
+/* .valentine-badge {
   background-color: #FF69B4;
   color: white;
   padding: 8px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+} */
 
 /* Heart animation */
-@keyframes heartbeat {
+/* @keyframes heartbeat {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
@@ -1820,10 +1820,10 @@ body {
 .heart-icon {
   animation: heartbeat 1s infinite;
   display: inline-block;
-}
+} */
 
 /*valentine theme enhanced*/
-.valentine-header {
+/* .valentine-header {
 background: linear-gradient(135deg, #ff94a4 0%, #ff4d6d 100%);
 padding: 1rem 1rem;
 border-radius: 1rem;
@@ -1952,10 +1952,10 @@ transition: all 0.3s ease;
 background-color: #ff4d6d;
 color: white;
 transform: translateY(-2px);
-}
+} */
 
 /* Add heart decorations */
-.valentine-header::before,
+/* .valentine-header::before,
 .valentine-header::after {
 content: '♥';
 color: rgba(255, 255, 255, 0.3);
@@ -2001,10 +2001,10 @@ position: relative;
 
 .header .logo h1 span {
 color: #ff94a4;
-}
+} */
 
 /* Add floating hearts animation */
-.header .logo h1::before,
+/* .header .logo h1::before,
 .header .logo h1::after {
 content: '♥';
 font-size: 0.5em;
@@ -2029,10 +2029,10 @@ animation-delay: 1s;
 0% { transform: translateY(0) rotate(0deg); opacity: 0; }
 50% { opacity: 0.6; }
 100% { transform: translateY(-20px) rotate(360deg); opacity: 0; }
-}
+} */
 
 /* Valentine's cart button */
-.btn-valentine {
+/* .btn-valentine {
 background-color: transparent;
 border: 2px solid #ff4d6d;
 color: #ff4d6d;
@@ -2066,10 +2066,10 @@ color: white !important;
 font-weight: 600;
 padding: 0.35em 0.65em;
 transition: all 0.3s ease;
-}
+} */
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 .header .logo h1 {
   font-size: 1.5rem;
 }
@@ -2119,10 +2119,10 @@ transition: all 0.3s ease;
   background: linear-gradient(135deg, #ff94a4 0%, #ff4d6d 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
-}
+} */
 
 /* Valentine's decorative elements */
-.nav-tabs .nav-link::before {
+/* .nav-tabs .nav-link::before {
   content: '♥';
   position: absolute;
   top: -20px;
@@ -2142,10 +2142,10 @@ transition: all 0.3s ease;
 
 .nav-tabs .nav-link.active::before {
   color: white;
-}
+} */
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -2162,3 +2162,45 @@ transition: all 0.3s ease;
     font-size: 0.9rem;
   }
 }
+
+.checkoutBtn {
+  color: #090909;
+  padding: 0.5em 1em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.checkoutBtn:hover {
+  border: 1px solid white;
+}
+
+.checkoutBtn:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
+
+
+#locationInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+.suggestions {
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  background: white;
+  width: calc(100% - 22px);
+}
+.suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+.suggestions div:hover {
+  background: #f0f0f0;
+} */
