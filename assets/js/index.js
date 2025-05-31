@@ -1420,7 +1420,7 @@ var MVVM = {
                 },
                 {
                   productName: 'Air Max P9 Pro',
-                  price: 3500,
+                  price: 1500,
                   description: 'Experience premium wireless audio with the Air Max P9 Pro - Professional Over-Ear Bluetooth Headphones with advanced connectivity and superior sound quality.',
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/3.jpg?6132',
@@ -1441,7 +1441,7 @@ var MVVM = {
                     "Stereo channel audio delivery"
                   ]
                 },
-              { productName: 'TWS Original Airpods Pro 3', price: 750, prevPrice: 950, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
+              { productName: 'TWS Original Airpods Pro 3', price: 650, prevPrice: 750, description: 'Smartphone earbuds HiFi sound.', 
               image: [
                 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
