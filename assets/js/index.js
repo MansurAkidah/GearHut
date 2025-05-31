@@ -531,29 +531,7 @@ var MVVM = {
                     "Wireless charging case included"
                   ]
                   },
-                {
-  productName: 'Air Max P9 Pro',
-  price: 3500,
-  description: 'Experience premium wireless audio with the Air Max P9 Pro - Professional Over-Ear Bluetooth Headphones with advanced connectivity and superior sound quality.',
-  image: [
-    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/3.jpg?6132',
-    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/4.jpg?6132',
-    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/1.jpg?6132',
-    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/2.jpg?6132'
-  ],
-  inStock: 1,
-  quantity: 1,
-  specs: [
-    "Bluetooth 5.0 protocol for stable connection",
-    "10 meters transmission range",
-    "Power display and call function support",
-    "NFC function for easy pairing",
-    "Voice control and music support",
-    "Multipoint connection capability",
-    "Professional over-ear design",
-    "Stereo channel audio delivery"
-  ]
-},
+                
                 { productName: 'JBL Live Pro 2', price: 19999, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', 
                   image: [
                     'https://www.jbl.com.sg/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6a81b882/1.JBL_Live%20Pro%202_Product%20image_Hero_Blue.png?sw=537&sfrm=png',
@@ -1438,6 +1416,29 @@ var MVVM = {
                     "IPX5 water resistance",
                     "40 hours total playtime",
                     "Bluetooth 5.2"
+                  ]
+                },
+                {
+                  productName: 'Air Max P9 Pro',
+                  price: 3500,
+                  description: 'Experience premium wireless audio with the Air Max P9 Pro - Professional Over-Ear Bluetooth Headphones with advanced connectivity and superior sound quality.',
+                  image: [
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/3.jpg?6132',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/4.jpg?6132',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/1.jpg?6132',
+                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/2.jpg?6132'
+                  ],
+                  inStock: 1,
+                  quantity: 1,
+                  specs: [
+                    "Bluetooth 5.0 protocol for stable connection",
+                    "10 meters transmission range",
+                    "Power display and call function support",
+                    "NFC function for easy pairing",
+                    "Voice control and music support",
+                    "Multipoint connection capability",
+                    "Professional over-ear design",
+                    "Stereo channel audio delivery"
                   ]
                 },
               { productName: 'TWS Original Airpods Pro 3', price: 750, prevPrice: 950, description: 'Smartphone earbuds HiFi sound headphonesStyle.', 
