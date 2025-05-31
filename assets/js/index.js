@@ -1421,7 +1421,7 @@ var MVVM = {
                 {
                   productName: 'Air Max P9 Pro',
                   price: 1500,
-                  prevPrice: 2000,
+                  prevPrice: 1700,
                   description: 'Experience premium wireless audio with the Air Max P9 Pro - Professional Over-Ear Bluetooth Headphones with advanced connectivity and superior sound quality.',
                   image: [
                     'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/33/7573221/3.jpg?6132',
