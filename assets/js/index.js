@@ -518,19 +518,7 @@ var MVVM = {
                   "Compact and portable charging case"
                 ]
                   },
-                { productName: 'AirPods Pro', price: 1900, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
-                  image: [
-                    'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
-                    'https://i.ebayimg.com/images/g/0fkAAOSwNINgZlag/s-l500.jpg',
-                    
-                  ], inStock: 1, quantity: 1, specs: [
-                    "Active Noise Cancellation (ANC)",
-                    "Transparency mode",
-                    "Adaptive EQ for audio optimization",
-                    "Sweat and water resistance (IPX4)",
-                    "Wireless charging case included"
-                  ]
-                  },
+                
                 
                 { productName: 'JBL Live Pro 2', price: 19999, description: 'Elevate your audio experience to new heights with JBL Live Pro 2 – where style meets superior sound.', 
                   image: [
@@ -547,18 +535,7 @@ var MVVM = {
                     "Voice assistant support (e.g., Google Assistant, Siri)"
                   ]
                   },
-                { productName: 'Sony WF-1000XM4', price: 4000, description: 'Dive into a world of unparalleled audio with Sony WF-1000XM4 and its industry-leading Noise Cancelation.', 
-                  image: ['https://www.pricepoint.co.ke/wp-content/uploads/2022/06/Sony-WF-1000XM4-silver.jpg',
-                    'https://www.counterpointresearch.com/wp-content/uploads/2022/04/Counterpoint-Sony-WF-1000XM4-Review.jpg',
-                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/88/6180761/1.jpg?7845'
-                  ], inStock: 1, quantity: 1 ,specs: [
-                    "Industry-leading Noise Cancellation",
-                    "High-resolution audio with LDAC",
-                    "Up to 8 hours of battery life on a single charge",
-                    "Additional 16 hours with the charging case",
-                    "Speak-to-Chat feature for automatic pause/play"
-                  ]
-                  },
+                
                 { productName: 'Samsung Galaxy Buds Pro', price: 4800, description: 'Unleash immersive sound with intelligent ANC - Samsung Galaxy Buds Pro is your gateway to audio brilliance.', 
                   image: [
                     'https://digitalphones.co.ke/wp-content/uploads/2021/03/Samsung-Galaxy-Buds-Pro.jpg',
@@ -572,18 +549,7 @@ var MVVM = {
                     "IPX7 water resistance for durability"
                   ]
                   },
-                { productName: 'Mi True Wireless Earbuds Basic 2 in Kenya', price: 4000, description: 'The Wireless Earbuds Basic 2 is equipped with the latest Bluetooth 5.0 chip.', 
-                    image: [
-                      'https://www.mobilehub.co.ke/storage/2023/09/mi-true-wireless-earbuds-basic-2-650x650-1.jpg',
-                      'https://www.digitalstore.co.ke/cdn/shop/products/71XQ_EjG8QL._AC_SX679_458c68be-5199-4d49-9544-b872fa83ed80_600x.jpg?v=1647686609',
-                    ], inStock: 1, quantity: 1 , specs: [
-                      "Bluetooth Version :5.0",
-                      "Battery Life :(Single Charge ) 5H",
-                      "Additional 20 hours with the charging case",
-                      "Effective Distance: 10Metres ",
-                      "Microphone Yes"
-                    ]
-                    },
+                
                 { productName: 'Bose QuietComfort Earbuds', price: 4900, description: 'Indulge in pure serenity with Bose QuietComfort Earbuds - Noise-Canceling True Wireless Earbuds.', image: [
                   'https://phonesstorekenya.com/wp-content/uploads/2023/11/QuietComfort-Earbuds-003.jpg',
                   'https://cdn.vox-cdn.com/thumbor/yHQexpmsIp24XKyBcwKC3EXTGos=/0x0:2040x1360/1400x1400/filters:focal(1058x772:1059x773)/cdn.vox-cdn.com/uploads/chorus_asset/file/21946559/IMG_0720-1.0.jpeg',
@@ -596,48 +562,7 @@ var MVVM = {
                     "Customizable touch controls for music and calls"
                   ]
                   },
-                { productName: 'Google Pixel Buds A-Series', price: 4200, description: 'Embark on a journey of rich sound and clear calls with Google Pixel Buds A-Series.', 
-                  image: [
-                    'https://gadgetcentral.co.ke/wp-content/uploads/2023/05/1622726491_1635923.jpg',
-                    'https://lh3.googleusercontent.com/g6l5UAXSFGZ3oiE2N-hGj7TwcAxsq84Pk4H93umJUgJnQ0OyL3XfSyOP65Nt_KYw0t5688w2pYZDoz-Rfs1C9pngonPxAh0VWPU=s0',
-                    'https://images.fonearena.com/blog/wp-content/uploads/2021/09/Pixel-Buds-A-Series_FoneArena-2-1024x548.jpg',
-                    'https://i.etsystatic.com/21656020/r/il/b8bb82/2622239385/il_570xN.2622239385_cbob.jpg'
-                ], inStock: 1, quantity: 1, specs: [
-                    "Rich sound and clear calls with Adaptive Sound",
-                    "Up to 5 hours of listening time on a single charge",
-                    "Additional 24 hours with the charging case",
-                    "Quick Charge: 15 minutes for up to 3 hours of listening",
-                    "Hands-free Google Assistant integration"
-                  ]
-                  },
-                { productName: 'Anker Soundcore Liberty Air 2 Pro', price: 4300, description: 'Immerse yourself in a world of sound with Anker Soundcore Liberty Air 2 Pro - Hybrid Active Noise Cancellation.', 
-                  image: [
-                    'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/918569/1.jpg?3445',
-                    'https://www.digitaltrends.com/wp-content/uploads/2021/01/anker-soundcore-liberty-air-2-pro-00012.jpg?fit=1200%2C9999&p=1',
-                    'https://anker.com.sg/cdn/shop/files/01_9fd3a704-7444-46d2-a8a9-ecef0824d645.jpg?v=1704879782',
-                    'https://images-na.ssl-images-amazon.com/images/I/51snKP8HWiL._AC_UL600_SR600,600_.jpg'
-                ], inStock: 1, quantity: 1 , specs: [
-                    "Hybrid Active Noise Cancellation for immersive sound",
-                    "Up to 7 hours of playtime on a single charge",
-                    "Additional 26 hours with the charging case",
-                    "HearID personalized sound for a customized listening experience",
-                    "4 built-in microphones for clear calls and voice assistant support"
-                  ]
-                  },
-                { productName: 'Jabra Elite 85t', price: 3750, description: 'Escape into tranquility with Jabra Elite 85t and its advanced Active Noise Cancellation.', 
-                  image: [
-                    'https://cdn.mos.cms.futurecdn.net/3WszNpeYzKi7vWaREaJnrM.jpg',
-                    'https://i.ebayimg.com/images/g/tdIAAOSwh-FjqeW6/s-l1200.jpg',
-                    'https://www.techielass.com/content/images/2021/12/20211221_081122.jpg',
-                    'https://cdn.pickr.com.au/wp-content/uploads/2021/02/85F17DC7-AC36-4FF6-9E14-A4A54B020324.jpeg'
-                  ], inStock: 0, quantity: 1 , specs: [
-                    "Advanced Active Noise Cancellation (ANC)",
-                    "Up to 5.5 hours of battery life on a single charge",
-                    "Additional 25 hours with the charging case",
-                    "6-microphone technology for clear calls and wind noise protection",
-                    "Customizable equalizer for personalized sound"
-                  ]
-                  },
+                
                 { productName: 'OnePlus Buds Pro', price: 3600, description: 'Elevate your audio experience with OnePlus Buds Pro - Smart Adaptive Noise Cancellation at its best.', 
                   image: ['https://www.phoneplacekenya.com/wp-content/uploads/2022/05/OnePlus-Buds-Pro.png',
                     'https://phonesstorekenya.com/wp-content/uploads/2024/05/OnePlus-Buds-Pro-2.jpg',
@@ -682,40 +607,8 @@ var MVVM = {
                     "Ergonomic design for a comfortable and secure fit"
                   ]
                   },
-                { productName: 'Skullcandy Indy Evo', price: 13100, description: 'Experience freedom with Skullcandy Indy Evo - True Wireless In-Ear Earbuds.', 
-                  image: [
-                    'https://m.media-amazon.com/images/I/6119HR9g38L.jpg',
-                    'https://m.media-amazon.com/images/I/71gxk3w6NrL.jpg',
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_RSYTvUXAF5fAI0bFOlGAhjot-gnbw-Ojw&s',
-                    'https://support.skullcandy.com/hc/article_attachments/25991292515479'
-                  ], inStock: 0, quantity: 1 , specs: [
-                    "True Wireless In-Ear Earbuds",
-                    "Up to 30 hours of total battery life with the charging case",
-                    "Built-in Tile tracker for easy locating",
-                    "IP55 sweat, water, and dust resistance",
-                    "Touch controls for music, calls, and voice assistant",
-                    "Ambient Mode for environmental awareness",
-                    "Rapid charge: 10 minutes for 2 hours of playback",
-                    "Bluetooth connectivity for wireless convenience"
-                  ]
-                  },
-                { productName: 'Huawei FreeBuds 4i', price: 12000, description: 'Dive into pure audio bliss with Huawei FreeBuds 4i - Active Noise Cancellation Earbuds.', 
-                  image: [
-                    'https://m.media-amazon.com/images/I/61+M23aLr2L.jpg',
-                    'https://www.digitalstore.co.ke/cdn/shop/products/Freebuds4i3_1024x.jpg?v=1626959397',
-                    'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/audio/freebuds4i/specs-img/pc_2x-3.jpg',
-                    
-                ], inStock: 1, quantity: 1, specs: [
-                    "Active Noise Cancellation for an immersive listening experience",
-                    "Up to 10 hours of playback on a single charge",
-                    "Additional 6.5 hours with the charging case",
-                    "Dual-microphone system for clear calls and noise reduction",
-                    "Touch controls for music playback and calls",
-                    "Lightweight and comfortable in-ear design",
-                    "Awareness mode for environmental sound awareness",
-                    "Bluetooth 5.2 for stable and efficient wireless connectivity"
-                  ]
-                  },
+                
+                
                 { productName: 'Beats Studio Buds', price: 3800, description: 'Unleash the power of sound with Beats Studio Buds - True Wireless Noise Cancelling Earbuds.', 
                   image: [
                     'https://phonesstorekenya.com/wp-content/uploads/2023/12/Beats-Studio-buds-001.jpg',
@@ -732,21 +625,7 @@ var MVVM = {
                     "USB-C charging for quick and convenient power replenishment"
                   ]
                   },
-                { productName: 'JBL Free X', price: 13000, description: 'Immerse yourself in the music with JBL Free X - Truly Wireless In-Ear Headphones.', image: [
-                  'https://mm.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfe1a3d59/JBL_FREEx_Hero_Black.png',
-                  'https://manuals.plus/wp-content/uploads/2020/12/JBL-FREE-X-with-Charging-Case_12-300x216.png?ezimgfmt=rs:368x265/rscb1/ng:webp/ngcb1',
-                  'https://tradezone.ac/cdn/shop/products/71Hwuk_88AL._AC_SL1500_800x.jpg?v=1574963714'
-                ], inStock: 1, quantity: 1 , specs: [
-                    "Truly Wireless In-Ear Headphones",
-                    "Up to 4 hours of playback on a single charge",
-                    "Additional 20 hours with the charging case",
-                    "Hands-free calls with built-in microphone",
-                    "Comfortable and secure fit for active lifestyles",
-                    "Splashproof design for protection against sweat and light rain",
-                    "Easy touch controls for music playback and calls",
-                    "Smart charging case with LED indicators"
-                  ]
-                  },
+                
             ]);
             this.speakerList = ko.observable([
                 { productName: 'Jbl Charge 5 ', price: 22000, description: 'JBL CHARGE 5 - Bold JBL Original Pro Sound', image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/20/223269/1.jpg?7704', inStock: 1, quantity: 1, specs: [
@@ -1384,20 +1263,7 @@ var MVVM = {
                   "Bluetooth 5.2 technology"
                 ]
               },
-              { productName: 'AirPods Pro', price: 1700,
-                prevPrice: 1900, description: 'Immerse yourself in pure audio perfection with AirPods Pro featuring advanced Noise Cancellation technology.', 
-                image: [
-                  'https://www.phoneplacekenya.com/wp-content/uploads/2019/11/Apple-Airpods-Pro.png',
-                  'https://i.ebayimg.com/images/g/0fkAAOSwNINgZlag/s-l500.jpg',
-                  
-                ], inStock: 1, quantity: 1, specs: [
-                  "Active Noise Cancellation (ANC)",
-                  "Transparency mode",
-                  "Adaptive EQ for audio optimization",
-                  "Sweat and water resistance (IPX4)",
-                  "Wireless charging case included"
-                ]
-                },
+              
                 {
                   productName: 'Oraimo Airbuds 4',
                   price: 2350,
@@ -1442,7 +1308,7 @@ var MVVM = {
                     "Stereo channel audio delivery"
                   ]
                 },
-              { productName: 'TWS Original Airpods Pro 3', price: 650, prevPrice: 750, description: 'Smartphone earbuds HiFi sound.', 
+              { productName: 'TWS Original Airpods Pro 3', price: 600, prevPrice: 750, description: 'Smartphone earbuds HiFi sound.', 
               image: [
                 'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg',
                 'https://5.imimg.com/data5/SELLER/Default/2022/6/LR/NO/QG/138494772/1654961443259-png-1000x1000.png',
@@ -1479,9 +1345,8 @@ var MVVM = {
                 quantity: 1, 
                 specs: ["Sweat proof", "Compatible with all mobile phone (android or ios) and music players", "Touch sensitive controls"] 
               },
-              { productName: 'Air R03', price: 900, prevPrice: 1200, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
+              { productName: 'Air R03', price: 800, prevPrice: 1000, description: 'Experience the freedom of Air-R03 Wireless TWS Earbuds – Your perfect companion for untethered music bliss!', 
                 image: [
-                  'https://meowpo.com/liveimages/meow_product_images/3580303014.jpg',
                   'https://meowpo.com/liveimages/meow_product_images/2709324513.jpg',
                   'https://ph-test-11.slatic.net/p/f4e9c47904cd540e9e0fd08faa635f35.jpg',
                   'https://basket-14.wbcontent.net/vol2102/part210232/210232094/images/big/2.webp'
@@ -1513,18 +1378,7 @@ var MVVM = {
                   "Water resistant"
                 ]
               },
-              { productName: 'In-Ear Earphone Stereo', price: 900, prevPrice: 1200, description: 'Wireless Bluetooth 5.2 In-Ear Earphone Stereo Headset', 
-                image: [
-                  'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/576237/6.jpg?1179',
-                  'https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/H/O/122813_1667536907.jpg'
-                ], inStock: 1, quantity: 1, specs: [
-                "Bluetooth Version: 5.2",
-                "Wearing Mode: Neckband",
-                "Charging Time: 2-3 Hours",
-                "Playing Time: About 6 Hours",
-                "Compatible Models: for Android/for iPhone"
-              ]
-              },
+              
               { productName: 'Air R02', price: 950, prevPrice: 1150, description: 'True wireless earbuds that comes with a Free anti fingerprint silicone case. Bluetooth v5.0 supports both android and IOS devices. Smooth in ear design', 
                 image: [
                   'https://elbay.ge/wp-content/uploads/2023/09/jbl-air-r02-%E1%83%91%E1%83%9D%E1%83%AE-2.jpg',
@@ -1566,7 +1420,6 @@ var MVVM = {
                 prevPrice: 750,
                 description: 'Wireless earbuds with protective silicone case included',
                 image: [
-                  'https://pictures-kenya.jijistatic.com/46195395_NjIwLTgyNy04MTljOTVmY2Fk.webp',
                       'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/5093861/1.jpg?0428',
                       'https://pictures-kenya.jijistatic.com/34661399_NjIwLTgyNy1mZWFkYjllMjUy.webp'
                 ],
